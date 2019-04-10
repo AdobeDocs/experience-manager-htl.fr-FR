@@ -12,8 +12,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 18871af8-e44b-4eec-a483-fcc765dae58f
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: ht
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
 
 ---
 
@@ -62,7 +62,7 @@ Nous créons également un nœud de contenu qui utilise le composant **`info`** 
 * `title = "My Example"`
 * `description = "This is some example content."`
 
-Voici la structure résultant de référentiel :
+Voici la structure de référentiel obtenue :
 
 ### Structure du référentiel {#repository-structure}
 
@@ -124,7 +124,7 @@ Cette option tente de récupérer `title` à partir de différentes sources et c
 
 ## Dépendances {#dependencies}
 
-Imaginons que nous avons une classe d’utilitaires qui est déjà équipée de fonctionnalités intelligentes, comme la logique par défaut pour le titre de navigation ou la restriction d’une chaîne à une certaine longueur :
+Imaginons que nous ayons une classe d’utilitaires qui est déjà équipée de fonctionnalités intelligentes, comme la logique par défaut pour le titre de navigation ou la restriction d’une chaîne à une certaine longueur :
 
 ```
 use(['../utils/MyUtils.js'], function (utils) {
