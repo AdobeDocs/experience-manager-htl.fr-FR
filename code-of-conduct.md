@@ -1,6 +1,6 @@
 ---
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
-translation-type: tm+mt
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: ht
 
 ---
 # Code de conduite d’Adobe
@@ -62,5 +62,5 @@ foi s’exposent temporairement ou de façon permanente à des répercussions d�
 
 ## Attribution
 
-Ce code de conduite est adapté du [Covenant Covenant](https://contributor-covenant.org), version 1.4,
-disponible à [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)
+Ce code de conduite est adapté à partir de la [Charte code de conduite contributeur ](https://contributor-covenant.org), version 1.4,
+disponible à l’adresse [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
