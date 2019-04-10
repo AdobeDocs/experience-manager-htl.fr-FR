@@ -12,8 +12,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: fe071a7e-0dae-45c1-9f86-80c558483f87
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: ht
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
 
 ---
 
@@ -28,9 +28,9 @@ Ces objets vous permettent d’accéder facilement aux informations fréquemment
 
 | Nom de variable | Description |
 |--- |--- |
-| properties | Liste des propriétés de la ressource active. Sauvegardé par [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| pageProperties | Liste des propriétés de la page active. Sauvegardé par [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.hmtl) |
-| inheritedPageProperties | Liste des propriétés héritées de la page active. Sauvegardé par [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| properties | Liste des propriétés de la ressource active. Prise en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| pageProperties | Liste des propriétés de la page active. Prise en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.hmtl) |
+| inheritedPageProperties | Liste des propriétés héritées de la page active. Prise en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 
 ## Objets pris en charge par l’environnement Java {#java-backed-objects}
