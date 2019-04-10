@@ -14,8 +14,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: ht
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
 
 ---
 
@@ -35,7 +35,7 @@ Les expressions peuvent être placées dans une séquence d’échappement en aj
 
 >[!NOTE]
 >
->Pour tester les exemples fournis sur cette page, un environnement d'exécution en direct appelé [Lu Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) peut être utilisé.
+>Pour essayer la plupart des exemples fournis sur cette page, un environnement d’exécution en temps réel appelé [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) peut être utilisé.
 
 La syntaxe d’expression inclut des [variables](#variables), des [littéraux](#literals), des [opérateurs](#operators) et des [options](#options) :
 
@@ -327,7 +327,7 @@ ${'Page {0} of {1}' @ format=[current, total]}
 
 ### Internationalisation   {#internationalization}
 
-Convertit la chaîne dans la langue de la *source* active (voir ci-dessous), en utilisant le [dictionnaire](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/i18n-translator) actif. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
+Traduit la chaîne dans la langue de la *source* actuelle (voir ci-dessous), à l’aide du [dictionnaire](https://helpx.adobe.com/fr/experience-manager/6-3/sites/developing/using/i18n-translator) actuel. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
 
 ```xml
 ${'Page' @ i18n}
@@ -405,7 +405,7 @@ L’échappement et la protection XSS peuvent également être désactivées :
 
 ### Paramètres de contexte   {#context-settings}
 
-| Contexte | Quand utiliser la personnalisation | Ses effets |
+| Contexte | Quand utiliser la personnalisation | Effets |
 |--- |--- |--- |
 | text | Valeur par défaut pour le contenu à l’intérieur des éléments | Code tous les caractères HTML spéciaux. |
 | html | Pour produire les balises en toute sécurité | Filtre le code HTML pour respecter les règles de confidentialité d’AntiSamy, en supprimant ce qui ne correspond pas aux règles. |
