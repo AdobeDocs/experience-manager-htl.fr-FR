@@ -12,8 +12,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 58aa6ea8-1d45-4f6f-a77e-4819f593a19d
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: ht
+source-git-commit: 7a94b0b010461b29d2b74c9c717e3b218d0ca5a8
 
 ---
 
@@ -310,7 +310,7 @@ La définition d’un identificateur dans l’instruction `data-sly-list` vous p
 </dl>
 ```
 
-Vous pouvez également accéder aux propriétés dynamiquement :
+Vous pouvez également accéder aux propriétés de façon dynamique :
 
 ```xml
 <dl data-sly-list.child="${myObj}">
@@ -390,7 +390,7 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM offre une logique claire et simple contrôlant les balises de décoration qui encapsulent les éléments inclus. Pour plus d'informations, voir [Decoration Tag](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/decoration-tag.html) dans la documentation de développement des composants.
+>AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, voir [Balise de décoration](https://helpx.adobe.com/fr/experience-manager/6-4/sites/developing/using/decoration-tag.html) dans la documentation sur le développement de composants.
 
 ## inclusion {#include}
 
@@ -518,7 +518,7 @@ Les exemples suivants indiquent que le format est spécifié en premier, puis la
 
 >[!NOTE]
 >
->Pour obtenir des détails complets sur le format que vous pouvez utiliser, consultez [la spécification HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
+>Pour des détails complets sur le format que vous pouvez utiliser, consultez la [Spécification de HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
 
 ### data-sly-use avec des ressources {#data-sly-use-with-resources}
 
@@ -573,7 +573,7 @@ public class ProductSettings {
 
 ### Correctif pour @extension {#fix-for-extension}
 
-@extension fonctionne pour tous les scénarios dans AEM 6.3. Avant, vous pouviez obtenir un résultat comme *www.adobe.com.html*. De plus, il vérifie également si l’extension doit être ajoutée ou non.
+Dans AEM 6.3, @extension fonctionne pour tous les scénarios. Avant, vous pouviez obtenir un résultat comme *www.adobe.com.html*. De plus, il vérifie également si l’extension doit être ajoutée ou non.
 
 ```xml
 ${ link @ extension = 'html' }
