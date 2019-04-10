@@ -1,6 +1,6 @@
 ---
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
-translation-type: tm+mt
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: ht
 
 ---
 # Contribution
@@ -23,13 +23,13 @@ Commencez par soumettre un problème. Les validateurs existants de ce projet peu
 
 Toutes les contributions de tierces parties à ce projet doivent être accompagnées d’un contrat de licence de contributeur
 signé. Cela donne à Adobe l’autorisation de redistribuer vos contributions
-dans le cadre du projet. [Signez notre CLA](http://opensource.adobe.com/cla.html). Vous n’avez besoin de soumettre un CLA Adobe qu’une seule fois. Par conséquent, si vous l’avez déjà soumis, vous n’avez rien à faire.
+dans le cadre du projet. [Signer notre CLA](http://opensource.adobe.com/cla.html). Vous n’avez besoin de soumettre un CLA Adobe qu’une seule fois. Par conséquent, si vous l’avez déjà soumis, vous n’avez rien à faire.
 
 ## Révision du code
 
 Toutes les soumissions doivent prendre la forme de demandes d’extraction et doivent être examinées
-par les validateurs du projet. Lisez [la documentation
-de la demande d'extraction de github](https://help.github.com/articles/about-pull-requests/)pour plus d'informations sur l'envoi de demandes d'extraction.
+par les validateurs du projet. Lisez [documentation relative aux demandes d’extraction de GitHub]( https://help.github.com/articles/about-pull-requests/)
+pour plus d’informations sur l’envoi de demandes d’extraction.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
@@ -45,4 +45,4 @@ n’hésitez pas à contacter les validateurs existants pour en discuter.
 
 ## Problèmes de sécurité
 
-Les problèmes de sécurité ne doivent pas être signalés dans ce suivi de problèmes. Envoyez plutôt [un problème à nos experts en sécurité.](https://helpx.adobe.com/security/alertus.html)
+Les problèmes de sécurité ne doivent pas être signalés dans ce suivi de problèmes. Au lieu de cela, [soumettez un problème à nos experts en sécurité](https://helpx.adobe.com/security/alertus.html).
