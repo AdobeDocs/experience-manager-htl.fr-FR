@@ -13,8 +13,8 @@ mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 index: y
 internal: n
 snippet: y
-translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: ht
+source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
 
 ---
 
@@ -23,8 +23,8 @@ source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 Voici des exemples de code pour HTL :
 
-* [Implémentation de référence We.Retail](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/we-retail.html)\
+* [Implémentation de référence We.Retail](https://helpx.adobe.com/fr/experience-manager/6-4/sites/developing/using/we-retail.html)\
    Site AEM entièrement implémenté avec HTL.
 
-* [Exemple de TodoMVC HTL](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)\
+* [Exemple TodoMVC HTL](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)\
    Implémentation AEM + HTL du célèbre exercice.
