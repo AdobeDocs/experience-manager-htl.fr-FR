@@ -1,10 +1,11 @@
 ---
 cloud: experience-cloud
-product: HTL Adobe Experience Manager
-archtype: admin
+product: Experience Manager
+sub-product: experience manager htl
+archetype: admin
 user-guide-title: Aide de HTL Experience Manager
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 60258140976a8d2182c4d75c18863c4b607bffbd
 
 ---
 
