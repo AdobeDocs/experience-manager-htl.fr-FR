@@ -1,17 +1,17 @@
 ---
 title: Use-API HTL
 seo-title: Use-API Adobe HTL
-description: Deux API sont disponibles pour HTL : Use-API Java et Use-API JavaScript.
-seo-description: Deux API sont disponibles pour Adobe HTL : Use-API Java et Use-API JavaScript.
-uuid: ab44aa5c-ce7e-40b9-97fb-e86c6a28405c 
+description: 'Deux API sont disponibles pour HTL : Use-API Java et Use-API JavaScript.'
+seo-description: 'Deux API sont disponibles pour Adobe HTL : Use-API Java et Use-API JavaScript.'
+uuid: 'ab44aa5c-ce7e-40b9-97fb-e86c6a28405c '
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: html-template-language
 content-type: référence
 discoiquuid: 89004426-eb59-4b63-913f-51bf98662773
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 5cbaf9c747acf748d12559c2c8e3aba4600cf9a4
 
 ---
 
