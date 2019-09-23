@@ -1,10 +1,8 @@
 ---
 title: Use-API JavaScript HTL
 seo-title: Use-API JavaScript HTL
-description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance
-  écrit en JavaScript.
-seo-description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code
-  d’assistance écrit en JavaScript.
+description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript.
+seo-description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript.
 uuid: 7ab34b10-30ac-44d6-926b-0234f52e5541
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
@@ -12,8 +10,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 18871af8-e44b-4eec-a483-fcc765dae58f
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: bd1962e25d152be4f1608d0a83d8d5b3e728b4aa
 
 ---
 
