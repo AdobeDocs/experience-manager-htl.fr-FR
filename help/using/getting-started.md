@@ -1,18 +1,15 @@
 ---
 title: Prise en main d’HTL
 seo-title: Prise en main d’HTL
-description: HTL pris en charge par AEM remplace JSP en tant que système de modèle
-  côté serveur favori et recommandé pour HTML dans AEM.
-seo-description: Le langage HTL (HTML Template Language) pris en charge par Adobe Experience Manager
-  remplace JSP en tant que système de modèle côté serveur préféré et recommandé pour
-  HTML dans AEM.
+description: HTL pris en charge par AEM remplace JSP en tant que système de modèle côté serveur favori et recommandé pour HTML dans AEM.
+seo-description: Le langage HTL (HTML Template Language) pris en charge par Adobe Experience Manager remplace JSP en tant que système de modèle côté serveur préféré et recommandé pour HTML dans AEM.
 uuid: 4a7d6748-8cdf-4280-a85d-6c5319abf487
 content-type: référence
 topic-tags: introduction
 discoiquuid: 3bf2ca75-0d68-489d-bd1c-1d4fd730c61a
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 1e3df6159b48da27460f3ad95c22c13d025b1a72
 
 ---
 
@@ -44,18 +41,18 @@ Même au sein d’un même composant, des fichiers HTL peuvent être utilisés e
 
 Avant de commencer à utiliser le langage HTL, nous vous conseillons de lire d’abord les réponses aux questions liées à la comparaison entre JSP et HTL.
 
-**HTL est-il plus limité que JSP ?**HTL n’est pas vraiment plus limité que JSP, dans la mesure où ce qui peut être réalisé avec JSP est également faisable avec HTL. Cependant, la conception de HTL est plus stricte que celle de JSP sur plusieurs aspects. C’est pourquoi ce qui peut être réalisé à partir d’un seul fichier JSP peut devoir être divisé dans une classe Java ou un fichier JavaScript pour être réalisable en HTL. Mais cela est généralement souhaitable pour garantir une bonne séparation des problèmes entre la logique et l’annotation.
+**HTL est-il plus limité que JSP ?** HTL n’est pas vraiment plus limité que JSP, dans la mesure où ce qui peut être réalisé avec JSP est également faisable avec HTL. Cependant, la conception de HTL est plus stricte que celle de JSP sur plusieurs aspects. C’est pourquoi ce qui peut être réalisé à partir d’un seul fichier JSP peut devoir être divisé dans une classe Java ou un fichier JavaScript pour être réalisable en HTL. Mais cela est généralement souhaitable pour garantir une bonne séparation des problèmes entre la logique et l’annotation.
 
 **HTL prend-il en charge les bibliothèques de balises JSP ?**
-Non, mais comme l’indique la section [Téléchargement des bibliothèques client](getting-started.md#loading-client-libraries), les instructions [template & call](block-statements.md#template-call) offrent un schéma similaire.
+Non, mais comme l’indique la section [Téléchargement des bibliothèques client](getting-started.md#loading-client-libraries), les instructions [template &amp; call](block-statements.md#template-call) offrent un schéma similaire.
 
 **Les fonctionnalités HTL peuvent-elles être élargies pour un projet AEM ?**
-**Non, mais comme l’indique la section [Téléchargement des bibliothèques client](getting-started.md#loading-client-libraries), les instructions [template & call](block-statements.md#template-call) offrent un schéma similaire.
-Non, cela n’est pas possible. HTL dispose de mécanismes d’extension puissants pour la réutilisation de la logique ([Use-API](getting-started.md#use-api-for-accessing-logic)) et du balisage (les instructions [template & call](block-statements.md#template-call)), qui peuvent être utilisés pour modulariser le code des projets.
+**Non, mais comme l’indique la section [Téléchargement des bibliothèques client](getting-started.md#loading-client-libraries), les instructions [template &amp; call](block-statements.md#template-call) offrent un schéma similaire.
+Non, cela n’est pas possible. HTL dispose de mécanismes d’extension puissants pour la réutilisation de la logique ([Use-API](getting-started.md#use-api-for-accessing-logic)) et du balisage (les instructions [template &amp; call](block-statements.md#template-call)), qui peuvent être utilisés pour modulariser le code des projets.
 
-**Quels sont les principaux avantages de HTL par rapport à JSP ?**La sécurité et l’efficacité des projets sont les principaux avantages et sont détaillés dans la [Présentation](overview.md).
+**Quels sont les principaux avantages de HTL par rapport à JSP ?** La sécurité et l’efficacité des projets sont les principaux avantages et sont détaillés dans la [Présentation](overview.md).
 
-**JSP finira-t-il par disparaître ?**Pour l’instant, rien de tel n’est prévu.
+**JSP finira-t-il par disparaître ?** Pour l’instant, rien de tel n’est prévu.
 
 ## Concepts fondamentaux de HTL {#fundamental-concepts-of-htl}
 
@@ -73,9 +70,9 @@ Voici un premier exemple, qui peut être contenu tel quel dans un fichier **`tem
 
 Nous pouvons distinguer deux différents types de syntaxe :
 
-* **[Instructions de bloc](block-statements.md)** Pour afficher de manière conditionnelle l’élément **&lt;h1&gt;**, un attribut de données HTML5 `[data-sly-test](block-statements.md#test)` est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec `data-sly`.
+* **[Instructions](block-statements.md)** de bloc Pour afficher sous condition l’ **&lt;h1&gt;** , un attribut de données `[data-sly-test](block-statements.md#test)` HTML5 est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec `data-sly`.
 
-* **[Langage d’expression](expression-language.md)**Les expressions HTL sont délimitées par des caractères `${` et `}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
+* **[Langage d’expression](expression-language.md)** Les expressions HTL sont délimitées par des caractères `${` et `}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
 Les deux pages liées ci-dessus fournissent une liste détaillée des fonctionnalités disponibles pour la syntaxe.
 
@@ -100,7 +97,7 @@ C’est pourquoi l’exemple suivant :
 </sly>
 ```
 
-produit quelque chose comme le code HTML suivant, mais uniquement s’il existe à la fois une propriété **`jcr:title`** et **`jcr:decription` définie, et si aucun d’entre elles n’est vide :**
+produit quelque chose comme le code HTML suivant, mais uniquement s’il existe à la fois une propriété **`jcr:title`** et **`jcr:decription`définie, et si aucun d’entre elles n’est vide :**
 
 ```xml
 <h1>MY TITLE</h1>
@@ -299,7 +296,7 @@ Encore une fois, cela est possible parce que HTL comprend la syntaxe HTML et peu
 
 En outre, le type de variable placé dans l’expression est important :
 
-* **Chaîne :**
+* **Chaîne:**
    * **non vide :** définit la chaîne comme valeur d’attribut.
    * **vide :** supprime l’attribut.
 
@@ -358,7 +355,7 @@ Voici deux exemples courts :
 
 Dans le deuxième exemple ci-dessus, au cas où les éléments HTML **`head`** et **`body`** sont placés dans des fichiers différents, le modèle **`clientlib.html`** doit alors être chargé dans chaque fichier qui le requiert.
 
-La section sur les instructions [template & call](block-statements.md#template-call) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
+La section sur les instructions [template &amp; call](block-statements.md#template-call) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
 
 ### Transmission des données au client {#passing-data-to-the-client}
 
