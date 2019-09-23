@@ -1,10 +1,8 @@
 ---
 title: Présentation de HTL
 seo-title: Présentation du langage HTL Adobe
-description: Le langage HTL est le système de modèle côté serveur préféré et conseillé
-  d’Adobe Experience Manager pour HTML.
-seo-description: Le langage HTL est le système de modèle côté serveur préféré et conseillé
-  d’Adobe Experience Manager pour HTML.
+description: 'Le langage HTL est le système de modèle côté serveur préféré et conseillé d’Adobe Experience Manager pour HTML. '
+seo-description: 'Le langage HTL est le système de modèle côté serveur préféré et conseillé d’Adobe Experience Manager pour HTML. '
 uuid: 196e79f4-f9ff-451d-86e5-394feecd2e50
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
@@ -14,15 +12,15 @@ discoiquuid: f94c2abc-2752-4922-9369-acb76c3f00e9
 disttype: dist5
 gnavtheme: light
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 41d6afffb2f01def6398c0a17c53b28769b43f4b
 
 ---
 
 
 # Présentation de HTL {#what-is-htl}
 
-**Anciennement appelé *Sightly***
+**Anciennement appelé&#x200B;*Sightly***
 
 Mise à jour : août 2016
 
