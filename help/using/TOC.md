@@ -1,6 +1,6 @@
 ---
 cloud: experience-cloud
-product: Experience Manager
+product: experience manager
 sub-product: experience manager htl
 archetype: admin
 user-guide-title: Aide de HTL Experience Manager
