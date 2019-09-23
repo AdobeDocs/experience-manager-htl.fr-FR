@@ -1,12 +1,8 @@
 ---
 title: Langage d’expression HTL
 seo-title: Langage d’expression HTL
-description: Le langage HTL (HTML Template Language) utilise un langage d’expression
-  pour accéder aux structures de données qui fournissent les éléments dynamiques de
-  la sortie HTML.
-seo-description: Le langage HTL (HTML Template Language) utilise un langage d’expression
-  pour accéder aux structures de données qui fournissent les éléments dynamiques de
-  la sortie HTML.
+description: Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML.
+seo-description: 'Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML. '
 uuid: 38b4a259-03b5-4847-91c6-e20377600070
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
@@ -14,8 +10,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 84ed515309831fe413abf317d8739f2bba79afdb
 
 ---
 
@@ -35,7 +31,7 @@ Les expressions peuvent être placées dans une séquence d’échappement en aj
 
 >[!NOTE]
 >
->Pour essayer la plupart des exemples fournis sur cette page, un environnement d’exécution en temps réel appelé [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) peut être utilisé.
+>To try out the examples provided on this page, a live execution environment called the [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) can be used.
 
 La syntaxe d’expression inclut des [variables](#variables), des [littéraux](#literals), des [opérateurs](#operators) et des [options](#options) :
 
@@ -60,7 +56,7 @@ L’exemple ci-dessus montre également que les fonctions getter Java, comme `ge
 
 ### Caractères valides de l’identificateur {#valid-indentifier-characters}
 
-Les noms des variables, appelés identificateurs, respectent certaines règles. Ils doivent commencer par une lettre (**`A`**-**`Z`** et **`a`**-**`z`**) ou un trait de soulignement (**`_`**), et les caractères suivants peuvent également être des chiffres (****`9`-`0`****) ou deux-points (**`:`**). Les lettres unicode telles que **`å`** et **`ü` ne peuvent pas être utilisées dans les identificateurs.**
+Les noms des variables, appelés identificateurs, respectent certaines règles. Ils doivent commencer par une lettre (**`A`**-**`Z`** et **`a`**-**`z`**) ou un trait de soulignement (**`_`**), et les caractères suivants peuvent également être des chiffres (****`9`-`0`****) ou deux-points (**`:`**). Les lettres unicode telles que **`å`** et **`ü`ne peuvent pas être utilisées dans les identificateurs.**
 
 Étant donné que le caractère deux-points (**:**) est courant dans des noms de propriété AEM, il est pratique que ce soit un caractère valide d’identificateur :
 
@@ -183,7 +179,7 @@ Les tableaux permettent de fournir une liste de valeurs du modèle.
 
 Ces opérateurs sont généralement utilisés avec des valeurs booléennes. Cependant, comme en JavaScript, ils renvoient la valeur de l’un des opérandes spécifiés. Ainsi, si vous les utilisez avec des valeurs non booléennes, ils peuvent renvoyer une valeur non booléenne.
 
-Si une valeur peut être convertie en **`true`**, la valeur est dite vraie. Si une valeur peut être convertie en **`false`**, la valeur est dite fausse. Les valeurs qui peuvent être converties en **`false` sont les suivantes : les variables indéfinies, les valeurs null, le chiffre zéro et les chaînes vides.**
+Si une valeur peut être convertie en **`true`**, la valeur est dite vraie. Si une valeur peut être convertie en **`false`**, la valeur est dite fausse. Les valeurs qui peuvent être converties en **`false`sont les suivantes : les variables indéfinies, les valeurs null, le chiffre zéro et les chaînes vides.**
 
 #### Logique du « SAUF »{#logical-not}
 
@@ -327,7 +323,7 @@ ${'Page {0} of {1}' @ format=[current, total]}
 
 ### Internationalisation   {#internationalization}
 
-Traduit la chaîne dans la langue de la *source* actuelle (voir ci-dessous), à l’aide du [dictionnaire](https://helpx.adobe.com/fr/experience-manager/6-3/sites/developing/using/i18n-translator) actuel. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
+Convertit la chaîne dans la langue de la *source* active (voir ci-dessous), en utilisant le [dictionnaire](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/i18n-translator) actif. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
 
 ```xml
 ${'Page' @ i18n}
