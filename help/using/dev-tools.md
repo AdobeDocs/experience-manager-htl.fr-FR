@@ -13,8 +13,8 @@ mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 index: y
 internal: n
 snippet: y
-translation-type: ht
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+translation-type: tm+mt
+source-git-commit: eb80a5859f86c894dbcb53bbfc9e2841c48a7d98
 
 ---
 
@@ -23,12 +23,12 @@ source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 Les outils de développement suivants sont disponibles pour HTL :
 
-* [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)\
+* [Boucle d'impression Eval Lecture HTL](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)\
    Environnement d’exécution en temps réel pour jouer avec le langage, idéal pour l’apprentissage.
 
-* [Extension AEM Brackets](https://helpx.adobe.com/fr/experience-manager/6-4/sites/developing/using/aem-brackets.html)\
+* [Extension AEM Brackets](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/aem-brackets.html)\
    Outil simple pour que les développeurs frontaux travaillent sur des composants AEM.
 
-* [Extension AEM Eclipse](https://helpx.adobe.com/fr/experience-manager/6-4/sites/developing/using/aem-eclipse.html)\
+* [Extension AEM Eclipse](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/aem-eclipse.html)\
    Outil pour que les développeurs back-end créent des projets AEM et les modifient facilement.
 
