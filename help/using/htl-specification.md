@@ -13,8 +13,8 @@ deletedby: alvawb
 discoiquuid: 7fb48e5d-7d8d-4fb3-9f2d-59ce7669dcaf
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 redirecttarget: https //github.com/Adobe-Marketing-Cloud/sightly-spec
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: 3bd23c7a662024b236898d129728bef8b554f3ed
 
 ---
 
@@ -25,4 +25,4 @@ Le langage HTL (HTML Template Language), anciennement connu sous le nom de Sight
 
 La spécification HTL définit la syntaxe et le comportement de ce langage.
 
-La spécification HTL complète est détaillée dans notre [référentiel Open Source Git](https://github.com/adobe/htl-spec)
+The full HTL Specification is detailed in our [Open Source Git repository](https://github.com/adobe/htl-spec)
