@@ -1,10 +1,8 @@
 ---
 title: Instructions du bloc HTL
 seo-title: Instructions du bloc HTL
-description: Les instructions du bloc HTL sont des attributs de données personnalisés
-  ajoutés directement au code HTML existant.
-seo-description: Les instructions du bloc HTL sont des attributs de données personnalisés
-  ajoutés directement au code HTML existant.
+description: Les instructions du bloc HTL sont des attributs de données personnalisés ajoutés directement au code HTML existant.
+seo-description: 'Les instructions du bloc HTL sont des attributs de données personnalisés ajoutés directement au code HTML existant. '
 uuid: 0624fb6e-6989-431b-aabc-1138325393f1
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
@@ -12,8 +10,8 @@ topic-tags: html-template-language
 content-type: référence
 discoiquuid: 58aa6ea8-1d45-4f6f-a77e-4819f593a19d
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-translation-type: ht
-source-git-commit: 7a94b0b010461b29d2b74c9c717e3b218d0ca5a8
+translation-type: tm+mt
+source-git-commit: afc29cbad83caeb549097da3fc33fd9147f1157a
 
 ---
 
@@ -24,7 +22,7 @@ Les instructions du bloc HTL sont des attributs `data` personnalisés ajoutés d
 
 ## Élément sly {#sly-element}
 
-L’**élément &lt;sly&gt;** n’apparaît pas dans le code HTML résultant et peut être utilisé à la place de data-sly-unwrap. L’objectif de l’élément &lt;sly&gt; est de rendre plus évident le fait que l’élément n’est pas généré. Si vous le souhaitez, vous pouvez continuer à utiliser data-sly-unwrap.
+The **&lt;sly&gt; element** does not get displayed in the resulting HTML and can be used instead of the data-sly-unwrap. The goal of the &lt;sly&gt; element is to make it more obvious that the element is not outputted. Si vous le souhaitez, vous pouvez continuer à utiliser data-sly-unwrap.
 
 ```xml
 <sly data-sly-test.varone="${properties.yourProp}"/>
@@ -128,7 +126,7 @@ est équivalent à
 <p data-sly-text="${properties.jcr:description}">Lorem ipsum</p>
 ```
 
-Tous deux afficheront la valeur **`jcr:description` comme texte du paragraphe. ** L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur d’origine.
+Tous deux afficheront la valeur **`jcr:description`comme texte du paragraphe.** L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur d’origine.
 
 ## attribut   {#attribute}
 
@@ -390,7 +388,7 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, voir [Balise de décoration](https://helpx.adobe.com/fr/experience-manager/6-4/sites/developing/using/decoration-tag.html) dans la documentation sur le développement de composants.
+>AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, reportez-vous à la [balise](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/decoration-tag.html) Décoration dans la documentation des composants en développement.
 
 ## inclusion {#include}
 
@@ -518,7 +516,7 @@ Les exemples suivants indiquent que le format est spécifié en premier, puis la
 
 >[!NOTE]
 >
->Pour des détails complets sur le format que vous pouvez utiliser, consultez la [Spécification de HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
+>For complete details on the format you can use, refer to [HTL-specification](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
 
 ### data-sly-use avec des ressources {#data-sly-use-with-resources}
 
