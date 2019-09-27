@@ -1,6 +1,6 @@
 ---
 cloud: experience-cloud
-solution-title: HTL Experience Cloud
+solution-title: Formation et support
 solution-hub-url: https://helpx.adobe.com/fr/support/experience-manager/6-4.html
 solution-image: null
 getting-started-title: Prise en main
@@ -9,8 +9,8 @@ tutorials-title: Tutoriels
 tutorials-url: https://helpx.adobe.com/fr/experience-manager/kt/index/aem-6-4-videos.html
 git-repo: https://github.com/AdobeDocs/experience-manager-htl.en
 index: y
-translation-type: ht
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+translation-type: tm+mt
+source-git-commit: febf84d3ae38626891574ba05958678a3b23aaf1
 
 ---
 
