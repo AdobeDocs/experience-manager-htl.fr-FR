@@ -4,7 +4,7 @@ product: experience manager
 sub-product: experience manager htl
 archetype: admin
 user-guide-title: Aide de HTL Experience Manager
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 60258140976a8d2182c4d75c18863c4b607bffbd
 
 ---
