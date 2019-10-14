@@ -1,8 +1,8 @@
 ---
-title: Présentation d’AEM HTL
-seo-title: Présentation de la documentation technique AEM HTL.
-description: L’objectif de HTL, pris en charge par AEM, est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
-seo-description: Ce document expose les principes et l’objectif du langage de modèle HTML - HTML - pris en charge par Adobe Experience Manager. HTL est une structure Web d’entreprise hautement productive qui améliore la sécurité et permet aux développeurs HTML dépourvus de connaissances Java de mieux participer aux projets AEM.
+title: Présentation d’AEM HTL
+seo-title: Présentation de la documentation technique d’AEM HTL.
+description: L’objectif de HTL, pris en charge par AEM, est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance du langage Java de participer de manière plus efficace aux projets AEM.
+seo-description: Ce document expose les principes et la finalité du langage HTL (HTML Template Language) pris en charge par Adobe Experience Manager. HTL offre une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance du langage Java de participer de manière plus efficace aux projets AEM.
 uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
 contentOwner: Utilisateur
 products: SG_EXPERIENCEMANAGER/HTL
@@ -11,7 +11,7 @@ content-type: référence
 discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 skyline: test de la réplication
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 0aa1e905fd6d24f7031dceb0a8a89b56da198719
 
 ---
