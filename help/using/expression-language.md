@@ -11,7 +11,7 @@ content-type: référence
 discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 84ed515309831fe413abf317d8739f2bba79afdb
+source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
 
 ---
 
@@ -45,8 +45,10 @@ Sans rien avoir à spécifier, HTL permet d’accéder à tous les objets qui é
 
 Il existe deux manières d’accéder aux propriétés des variables : avec une notation par points ou avec une notation d’accolades :
 
-`${currentPage.title}  
-${currentPage['title']} or ${currentPage["title"]}`
+```
+${currentPage.title}  
+${currentPage['title']} or ${currentPage["title"]}
+```
 
 La notation par points, plus simple, est préférable dans la plupart des cas, et la notation d’accolades doit être utilisée pour accéder à des propriétés qui contiennent des caractères d’identificateur non valides ou pour accéder à des propriétés de façon dynamique. Les deux chapitres suivants fournissent des détails sur ces deux cas.
 
@@ -222,7 +224,7 @@ Cet opérateur peut être utilisé pour tester si l’une des deux conditions s�
 
 Comme l’opérateur logique OU renvoie la première variable correcte, il peut également être utilisé de manière pratique pour fournir des valeurs de substitution.
 
-affiche de manière conditionnelle les attributs HTML, car HTL supprime les attributs dont la valeur définie par les expressions donne une valeur false ou une chaîne vide. Ainsi, l’exemple ci-dessous affiche **`properties.jcr:`**title s’il existe et n’est pas vide ; autrement il affiche **`properties.jcr:description`** s’il existe et n’est pas vide ; autrement il affiche le message "no title or description provided" :
+affiche de manière conditionnelle les attributs HTML, car HTL supprime les attributs dont la valeur définie par les expressions donne une valeur false ou une chaîne vide. So the example below will display **`properties.jcr:`** title if it exists and is not empty, else it falls back to dislaying **`properties.jcr:description`** if it exists and is not empty, else it will display the message "no title or description provided":
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
