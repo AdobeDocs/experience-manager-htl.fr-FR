@@ -11,7 +11,7 @@ content-type: référence
 discoiquuid: 126ebc9d-5f7b-47a4-aea2-c8840d34864c
 mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 48f09cfbdc5ef0bc5b951de1444ce40ea53dc07f
+source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
 
 ---
 
@@ -45,7 +45,7 @@ Nous avons également ajouté du contenu pour que le rendu de ce composant s’e
 }
 ```
 
-Lorsque ce contenu est consulté, le fichier HTL est exécuté. Dans le code HTL, nous utilisons l’objet de contexte **`properties`** pour accéder aux `title` et `description` de la ressource active et les afficher. Le code HTML de sortie sera :
+Lorsque ce contenu est consulté, le fichier HTL est exécuté. Within the HTL code we use the context object **`properties`** to access the current resource's `title` and `description` and display them. Le code HTML de sortie sera :
 
 ### `view-source:http://localhost:4502/content/my-example.html` {#view-source-http-localhost-content-my-example-html}
 
