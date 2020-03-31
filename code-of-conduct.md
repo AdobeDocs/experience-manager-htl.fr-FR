@@ -1,6 +1,6 @@
 ---
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
-translation-type: ht
+source-git-commit: f09b2268dc4745a8c2e3c53bb20fa3d35f6a7c2b
+translation-type: tm+mt
 
 ---
 # Code de conduite d’Adobe
@@ -23,7 +23,7 @@ positif :
 * Respecter les différents points de vue et expériences
 * Accepter les critiques constructives
 * Se concentrer sur ce qui est le mieux pour la communauté
-* Faire preuve d'empathie envers les autres membres de la communauté
+* Faire preuve d’empathie envers les autres membres de la communauté
 
 Voici quelques exemples de comportement de participants inacceptable :
 
@@ -47,20 +47,19 @@ menaçants, injurieux ou nuisibles.
 
 ## Portée
 
-Ce code de conduite s’applique à la fois aux espaces du projet et
-publics lorsqu’une personne représente le projet ou sa communauté. Parmi les exemples de représentation d’un projet ou d’une communauté, citons l’utilisation d’une adresse électronique officielle de projet, la publication par le biais d’un compte de réseau social officiel ou l’agissement en tant que représentant désigné à l’occasion d’un événement en ligne ou hors ligne. La représentation d’un projet peut être définie plus précisément et clarifiée par les responsables du projet.
+Ce code de conduite s’applique à la fois à l’&#39;espace du projet et
+aux environnements publics lorsqu’une personne représente le projet ou sa communauté. Parmi les exemples de représentation d’un projet ou d’une communauté, citons l’utilisation d’une adresse électronique officielle de projet, la publication par le biais d’un compte de réseau social officiel ou l’agissement en tant que représentant désigné à l’occasion d’un événement en ligne ou hors ligne. La représentation d’un projet peut être définie plus précisément et clarifiée par les responsables du projet.
 
 ## Application
 
 Les cas de comportements abusifs, harcelants ou tout autre comportement inacceptable peuvent être signalés en contactant l’équipe du projet à l’adresse Grp-opensourceoffice@adobe.com. Toutes
 les plaintes sont examinées et analysées ; elles se traduiront par une réponse jugée nécessaire et adaptée aux circonstances. L’équipe du projet est
-tenue de maintenir la confidentialité en ce qui concerne le déclarant d’un incident.
-Des informations supplémentaires sur les stratégies d’application spécifiques peuvent être publiées séparément.
+tenue de maintenir la confidentialité en ce qui concerne le déclarant d’un incident. Des informations supplémentaires sur les stratégies d’application spécifiques peuvent être publiées séparément.
 
 Les responsables de projet qui ne suivent pas ou n’appliquent pas le code de conduite de bonne
 foi s’exposent temporairement ou de façon permanente à des répercussions définies par d’autres membres de la direction du projet.
 
 ## Attribution
 
-Ce code de conduite est adapté à partir de la [Charte code de conduite contributeur ](https://contributor-covenant.org), version 1.4,
+Ce code de conduite provient de l’adaptation de la [Charte du contributeur](https://contributor-covenant.org), version 1.4,
 disponible à l’adresse [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
