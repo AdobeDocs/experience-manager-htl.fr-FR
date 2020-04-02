@@ -1,5 +1,5 @@
 ---
-source-git-commit: f09b2268dc4745a8c2e3c53bb20fa3d35f6a7c2b
+source-git-commit: fd7751869a45019e1492218df9cc7824ef507870
 translation-type: tm+mt
 
 ---
@@ -52,9 +52,9 @@ Regardez la vidéo suivante pour un aperçu rapide de la création de problèmes
 
 ### Contributions des employés Adobe
 
-Si vous êtes un employé d’Adobe et souhaitez effectuer une demande d’extraction, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`.
+Si vous êtes un employé d’Adobe et avez une contribution, utilisez l’ `AdobeDocs` organisation dans le git d’entreprise.
 
-Pour tout problème, n&#39;hésitez pas à utiliser les référentiels publics.
+Nous sommes évidemment heureux de toute contribution et examinerons votre contribution si elle est effectuée dans le référentiel public. Toutefois, les demandes d’extraction des employés Adobe sont plus faciles à traiter et peuvent être approuvées plus rapidement dans le référentiel d’entreprise. Assurez-vous que toute information de propriété exclusive ne soit discutée que sur le repo de l&#39;entreprise.
 
 ## Informations supplémentaires
 
