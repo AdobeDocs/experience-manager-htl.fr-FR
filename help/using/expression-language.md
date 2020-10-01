@@ -2,10 +2,10 @@
 title: Langage d’expression HTL
 description: Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 81%
+source-wordcount: '1854'
+ht-degree: 79%
 
 ---
 
@@ -194,7 +194,7 @@ Cet opérateur peut être utilisé pour tester si l’une des deux conditions s�
 
 Comme l’opérateur logique OU renvoie la première variable correcte, il peut également être utilisé de manière pratique pour fournir des valeurs de substitution.
 
-affiche de manière conditionnelle les attributs HTML, car HTL supprime les attributs dont la valeur définie par les expressions donne une valeur false ou une chaîne vide. So the example below will display **`properties.jcr:`** title if it exists and is not empty, else it falls back to displaying **`properties.jcr:description`** if it exists and is not empty, else it will display the message &quot;no title or description provided&quot;:
+Il peut également être utilisé pour afficher de manière conditionnelle des attributs HTML, car HTL supprime les attributs dont les valeurs sont définies par des expressions dont la valeur est false ou une chaîne vide. So the example below will display **`properties.jcr:`** title if it exists and is not empty, else it falls back to displaying **`properties.jcr:description`** if it exists and is not empty, else it will display the message &quot;no title or description provided&quot;:
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
