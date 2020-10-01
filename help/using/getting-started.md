@@ -2,9 +2,9 @@
 title: Prise en main d’HTL
 description: HTL pris en charge par AEM remplace JSP en tant que système de modèle côté serveur favori et recommandé pour HTML dans AEM.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '2490'
+source-wordcount: '2471'
 ht-degree: 92%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 # Prise en main d’HTL {#getting-started-with-htl}
 
-Le langage de modèle HTML (HTML Template Language) pris en charge par Adobe Experience Manager (AEM) est le système de modèle côté serveur recommandé et préféré pour HTML dans AEM. Il remplace JSP (JavaServer Pages) comme utilisé dans les versions précédentes d’AEM.
+Le langage de modèle HTML (HTML Template Language) pris en charge par Adobe Experience Manager (AEM) est le système de modèle côté serveur recommandé et préféré pour HTML en AEM. Il remplace JSP (JavaServer Pages) comme utilisé dans les versions précédentes d’AEM.
 
 >[!NOTE]
 >
@@ -61,9 +61,9 @@ Voici un premier exemple, qui peut être contenu tel quel dans un fichier **`tem
 
 Nous pouvons distinguer deux différents types de syntaxe :
 
-* **[Instructions](block-statements.md)**de blocage - Pour afficher de manière conditionnelle l&#39;élément **&lt;h1>**, un attribut de données[`data-sly-test`](block-statements.md#test)HTML5 est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec`data-sly`.
+* **[Instructions](block-statements.md)** de blocage - Pour afficher de manière conditionnelle l&#39;élément **&lt;h1>** , un attribut de données [`data-sly-test`](block-statements.md#test) HTML5 est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec `data-sly`.
 
-* **[Langue](expression-language.md)**d’Expression - Les expressions HTML sont délimitées par des caractères`${`et`}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
+* **[Langue](expression-language.md)** d’Expression - Les expressions HTML sont délimitées par des caractères `${` et `}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
 Les deux pages liées ci-dessus fournissent une liste détaillée des fonctionnalités disponibles pour la syntaxe.
 
@@ -110,12 +110,6 @@ et l’élément DIV peut avoir été annoté avec la condition :
     <p>${properties.jcr:description}</p>
 </div>
 ```
-
->[!NOTE]
->
->L’élément SLY a été introduit avec AEM 6.1 ou HTL 1.1.
->
->Auparavant, l’attribut [`data-sly-unwrap`](block-statements.md) devait être utilisé à la place.
 
 ### Commentaires HTL   {#htl-comments}
 
