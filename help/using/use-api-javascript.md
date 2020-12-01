@@ -36,7 +36,7 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 });
 ```
 
-## Un exemple simple   {#a-simple-example}
+## Un exemple simple    {#a-simple-example}
 
 Nous définissons un composant, `info`, situé à l’adresse
 
@@ -157,7 +157,7 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## Extension   {#extending}
+## Extension    {#extending}
 
 Le motif de dépendance peut également être utilisé pour améliorer la logique d’un autre composant (en général, le `sling:resourceSuperType` du composant actif).
 
