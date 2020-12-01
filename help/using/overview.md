@@ -22,13 +22,13 @@ Le langage HTL accroît la sécurité des sites qui l’utilisent dans leur mise
 
 Si le même résultat peut être obtenu avec des langages de modèle en JSP, le développeur doit s’assurer manuellement que l’échappement adéquat est appliqué à chaque variable. Comme une simple omission ou erreur sur un échappement appliqué suffit potentiellement à entraîner une vulnérabilité de type attaque multisite par scripts (XSS), nous avons décidé d’automatiser cette tâche avec HTL. Si nécessaire, les développeurs peuvent tout de même indiquer un échappement différent sur les expressions, mais avec HTL, le comportement par défaut est bien plus susceptible de corresponde au comportement souhaité, ce qui réduit la probabilité d’erreurs.
 
-## Développement simplifié   {#simplified-development}
+## Développement simplifié    {#simplified-development}
 
 Il est facile d’apprendre le langage de modèle HTML. Ses fonctionnalités sont volontairement limitées pour assurer un apprentissage simple et direct. Il comporte également des mécanismes performants pour structurer les balises et appeler la logique, tout en appliquant toujours une séparation stricte des problèmes entre l’annotation et la logique. HTL lui-même est aux standards du HTML5, car il utilise des expressions et des attributs de données pour annoter les balises avec le comportement dynamique souhaité, ce qui signifie qu’il n’interrompt pas la disponibilité des balises, qui restent lisibles. Notez que l’évaluation des expressions et des attributs de données est effectuée entièrement du côté serveur et ne sera pas visible du côté client, où toute autre structure JavaScript souhaitée peut être utilisée sans interférence.
 
 Ces fonctionnalités permettent aux développeurs HTML sans connaissance préalable de Java et avec peu de connaissances spécifiques du produit de modifier les modèles HTL. Ils peuvent ainsi faire partie de l’équipe de développement et cela simplifie la collaboration avec les développeurs Java de plein-pile. Réciproquement, cela permet aux développeurs Java de se concentrer sur le code principal sans se soucier du HTML.
 
-## Réduction des coûts   {#reduced-costs}
+## Réduction des coûts    {#reduced-costs}
 
 Une sécurité renforcée, un développement simplifié et une meilleure collaboration des équipes se traduisent dans les projets AEM par des efforts réduits, une mise sur le marché plus rapide et un moindre coût total de propriété du parc.
 
