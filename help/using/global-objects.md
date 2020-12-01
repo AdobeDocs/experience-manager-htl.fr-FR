@@ -20,9 +20,9 @@ Ces objets vous permettent d’accéder facilement aux informations fréquemment
 
 | Nom de variable | Description |
 |--- |--- |
-| `properties` | Liste des propriétés de la ressource active. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Liste des propriétés de la page active. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `inheritedPageProperties` | Liste des propriétés héritées de la page active. Backed by [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Liste des propriétés de la ressource active. Soutenu par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Liste des propriétés de la page active. Soutenu par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `inheritedPageProperties` | Liste des propriétés héritées de la page active. Soutenu par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Objets pris en charge par l’environnement Java {#java-backed-objects}
 
@@ -58,7 +58,7 @@ Les variables les plus utiles du tableau ci-dessous sont mises en gras.
 
 ## Objets pris en charge par l’environnement JavaScript {#javascript-backed-objects}
 
-Il est possible de sauvegarder la logique HTML avec JavaScript. Cependant, la méthode préférée ou recommandée consiste à utiliser des modèles [Sling.](https://sling.apache.org/documentation/bundles/models.html)
+Il est possible de sauvegarder la logique HTML avec JavaScript. Cependant, la méthode préférée ou recommandée est l&#39;utilisation de [modèles Sling.](https://sling.apache.org/documentation/bundles/models.html)
 
 <!-- 
 
