@@ -14,5 +14,5 @@ ht-degree: 35%
 
 Voici les normes HTL :
 
-* [La spécification](https://github.com/adobe/htl-spec) HTL - Pour les avocats spécialisés en langues, la syntaxe formelle et la description de la fonction.
-* [Le TCK](https://github.com/adobe/htl-tck) HTL - Une suite de tests pour certifier la compatibilité de la langue.
+* [La spécification](https://github.com/adobe/htl-spec)  HTL - Pour les avocats spécialisés en langues, la syntaxe formelle et la description de la fonction.
+* [Le TCK](https://github.com/adobe/htl-tck)  HTL - Une suite de tests pour certifier la compatibilité de la langue.
