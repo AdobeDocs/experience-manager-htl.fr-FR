@@ -12,7 +12,7 @@ ht-degree: 70%
 
 # Présentation de HTL {#what-is-htl}
 
-**Anciennement appelé&#x200B;*Sightly***
+**Anciennement appelé *Sightly***
 
 Mise à jour : août 2016
 
@@ -22,6 +22,6 @@ Dans AEM 6.0 et 6.1, HTL était connu sous le nom de **Sightly**. L’Adobe l�
 
 >[!NOTE]
 >
->Le changement de nom n’impacte pas le code ni l’API ; la compatibilité n’est donc pas affectée. Pour plus d&#39;informations, [reportez-vous à cette vidéo d&#39;annonce.](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html)
+>Le changement de nom n’impacte pas le code ni l’API ; la compatibilité n’est donc pas affectée. Pour plus d&#39;informations, [consultez cette vidéo d&#39;annonce.](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html)
 
 Pour en savoir plus sur HTL et faire vos premiers pas, consultez notre [Guide de prise en main du langage HTL](overview.md).
