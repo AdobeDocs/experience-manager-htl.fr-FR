@@ -14,10 +14,10 @@ ht-degree: 24%
 
 ## Présentation du TCK HTL
 
-The [HTML Template Language](overview.md), formerly known as Sightly, was introduced with [Adobe Experience Manager](http://www.adobe.com/fr/solutions/web-experience-management.html) 6.0 and takes the place of JSP (Java Server Pages) as the preferred and recommended server-side template system for HTML.
+Le [langage de modèle HTML](overview.md), anciennement connu sous le nom de Sightly, a été introduit avec [Adobe Experience Manager](http://www.adobe.com/fr/solutions/web-experience-management.html) 6.0 et remplace JSP (Java Server Pages) comme système de modèle côté serveur préféré et recommandé pour HTML.
 
-The HTML Template Language Technology Compatibility Kit - HTL TCK - provides a suite of tests meant to certify that an HTL implementation conforms with the official [language specification](https://github.com/adobe/htl-spec).
+Le kit de compatibilité de la technologie HTML Template Language Technology - HTL TCK - fournit une suite de tests destinés à certifier qu&#39;une mise en oeuvre HTL est conforme à la [spécification de langue](https://github.com/adobe/htl-spec) officielle.
 
 ## Informations supplémentaires
 
-[Vous trouverez ici toutes les informations relatives à l&#39;Adobe Experience Manager HTL TCK.](https://github.com/adobe/htl-tck)
+[Vous trouverez ici des informations complètes sur Adobe Experience Manager HTL TCK.](https://github.com/adobe/htl-tck)
