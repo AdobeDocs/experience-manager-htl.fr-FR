@@ -14,6 +14,6 @@ ht-degree: 31%
 
 Les outils de développement suivants sont disponibles pour HTL :
 
-* [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) - environnement d&#39;exécution en direct pour jouer avec la langue, idéal pour apprendre.
-* [AEM Brackets Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-brackets.html) - Outil facile à utiliser par les développeurs frontaux pour travailler sur les composants AEM.
-* [AEM Eclipse Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-eclipse.html) - Outil permettant aux développeurs principaux de créer des projets AEM et de les modifier facilement.
+* [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)  - environnement d&#39;exécution en direct pour jouer avec la langue, idéal pour apprendre.
+* [aem Brackets Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-brackets.html)  - Un outil facile pour les développeurs frontaux qui travaillent sur les composants AEM.
+* [aem Eclipse Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-eclipse.html)  - Un outil permettant aux développeurs back-end de créer des projets AEM et de les modifier facilement.
