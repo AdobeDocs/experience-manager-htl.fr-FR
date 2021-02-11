@@ -2,7 +2,7 @@
 title: Prise en main d’HTL
 description: HTL pris en charge par AEM remplace JSP en tant que système de modèle côté serveur favori et recommandé pour HTML dans AEM.
 translation-type: tm+mt
-source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '2471'
 ht-degree: 92%
@@ -49,7 +49,7 @@ Avant de commencer à utiliser le langage HTL, nous vous conseillons de lire d�
 
 Le langage HTL utilise un langage d’expression pour insérer des éléments de contenu dans l’annotation restituée et des attributs de données HTML5 pour définir des instructions sur des blocs d’annotation (comme des conditions ou des itérations). Tandis que HTL est compilé dans les servlets Java, les expressions et les attributs de données HTL sont entièrement évalué côté serveur et rien ne reste visible dans le code HTML résultant.
 
-### Blocs et expressions    {#blocks-and-expressions}
+### Blocs et expressions   {#blocks-and-expressions}
 
 Voici un premier exemple, qui peut être contenu tel quel dans un fichier **`template.html`** :
 
