@@ -2,7 +2,7 @@
 title: Langage d’expression HTL
 description: Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML.
 translation-type: tm+mt
-source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '1854'
 ht-degree: 79%
@@ -35,7 +35,7 @@ Les variables sont des conteneurs qui stockent des valeurs de données ou des ob
 
 Sans rien avoir à spécifier, HTL permet d’accéder à tous les objets qui étaient couramment disponibles en JSP après avoir inclus `global.jsp`. La page [Objets globaux](global-objects.md) contient la liste de tous les objets auxquels vous pouvez accéder avec HTL.
 
-### Accès à la propriété    {#property-access}
+### Accès à la propriété   {#property-access}
 
 Il existe deux manières d’accéder aux propriétés des variables : avec une notation par points ou avec une notation d’accolades :
 
