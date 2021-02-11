@@ -2,7 +2,7 @@
 title: Exemples de code
 description: Exemples de code incluant l’implémentation de référence We.Retail
 translation-type: tm+mt
-source-git-commit: d7efae3d1b4d1bc22c63c21f544a99bf0ae4b3c9
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 31%
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 Voici des exemples de code pour HTL :
 
-* [WKND Tutorial](https://docs.adobe.com/content/help/fr/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)  - Ce tutoriel vous guide tout au long de la mise en oeuvre d&#39;un site AEM pour une marque de style de vie fictif WKND et couvre des sujets fondamentaux tels que la configuration de projet, les composants principaux, les modèles modifiables, les bibliothèques côté client et le développement de composants avec Adobe Experience Manager Sites, tous mis en oeuvre dans HTL.
+* [WKND Tutorial](https://docs.adobe.com/content/help/fr-FR/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)  - Ce tutoriel vous guide tout au long de la mise en oeuvre d&#39;un site AEM pour une marque de style de vie fictif WKND et couvre des sujets fondamentaux tels que la configuration de projet, les composants principaux, les modèles modifiables, les bibliothèques côté client et le développement de composants avec Adobe Experience Manager Sites, tous mis en oeuvre dans HTL.
 * [Exemple](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)  HTL TodoMVC - Une mise en oeuvre AEM + HTL du célèbre exercice.
 
 Sessions Ask the Experts :
