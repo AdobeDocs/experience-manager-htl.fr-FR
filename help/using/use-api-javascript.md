@@ -2,7 +2,7 @@
 title: Use-API JavaScript HTL
 description: Le langage de modèle HTML - HTL - JavaScript Use-API permet à un fichier HTML d’accéder au code d’assistance écrit dans JavaScript.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 87%
@@ -36,7 +36,7 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 });
 ```
 
-## Un exemple simple    {#a-simple-example}
+## Un exemple simple   {#a-simple-example}
 
 Nous définissons un composant, `info`, situé à l’adresse
 
