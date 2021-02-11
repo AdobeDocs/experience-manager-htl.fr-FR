@@ -2,7 +2,7 @@
 title: Use-API Java HTL
 description: 'Use-API Java HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée. '
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 83%
@@ -29,7 +29,7 @@ Les POJO Use-API peuvent également exposer une méthode publique, appelée init
 
 La carte `bindings` peut contenir des objets qui fournissent un contexte au script HTML actuellement exécuté que l’objet Use-API peut utiliser pour son traitement.
 
-## Un exemple simple    {#a-simple-example}
+## Un exemple simple   {#a-simple-example}
 
 Nous allons commencer avec un composant HTL qui n’a pas de classe d’utilisation. Il se compose d’un seul fichier, `/apps/my-example/components/info.html`
 
