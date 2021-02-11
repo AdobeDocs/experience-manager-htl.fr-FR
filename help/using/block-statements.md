@@ -2,7 +2,7 @@
 title: Instructions du bloc HTL
 description: Les instructions du bloc HTL sont des attributs de données personnalisés ajoutés directement au code HTML existant.
 translation-type: tm+mt
-source-git-commit: 2336ce8860056f5bc6470b23ee4cda135f7107d8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 60%
@@ -67,7 +67,7 @@ Un certain nombre d&#39;instructions de bloc sont disponibles. Lorsqu’elle est
 
 Lorsque deux énoncés de blocs ont la même priorité, leur ordre d&#39;évaluation est de gauche à droite.
 
-### use {#use}
+### Utilisez {#use}
 
 `data-sly-use` initialise un objet d’assistance (défini dans JavaScript ou Java) et l’expose au moyen d’une variable.
 
@@ -125,7 +125,7 @@ Par exemple :
 >
 >Voir aussi la section [Chemin non toujours requis.](#path-not-required)
 
-### unwrap    {#unwrap}
+### unwrap   {#unwrap}
 
 `data-sly-unwrap` supprime l’élément hôte de l’annotation générée tout en conservant son contenu. Cela permet d’exclure les éléments qui sont requis dans le cadre de la logique de présentation de HTL, mais qui ne sont pas souhaités dans la sortie actuelle.
 
@@ -258,7 +258,7 @@ produit,
 
 `data-sly-element` remplace le nom de l’élément hôte.
 
-Par exemple :
+Par exemple,
 
 ```xml
 <h1 data-sly-element="${titleLevel}">text</h1>
