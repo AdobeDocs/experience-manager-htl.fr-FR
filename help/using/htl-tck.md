@@ -2,7 +2,7 @@
 title: TCK HTL
 description: HTL est le système de modèle côté serveur officiel pour AEM.
 translation-type: tm+mt
-source-git-commit: d7efae3d1b4d1bc22c63c21f544a99bf0ae4b3c9
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 24%
