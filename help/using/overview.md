@@ -1,10 +1,10 @@
 ---
-title: Présentation d’AEM HTL
+title: Présentation HTL de Adobe Experience Manager
 description: L’objectif de HTL, pris en charge par AEM, est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance du langage Java de participer de manière plus efficace aux projets AEM.
 translation-type: tm+mt
-source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
+source-git-commit: 88f6ad56a8d8f704b51aa84765de8da15e6c594e
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '667'
 ht-degree: 94%
 
 ---
@@ -22,7 +22,7 @@ Le langage HTL accroît la sécurité des sites qui l’utilisent dans leur mise
 
 Si le même résultat peut être obtenu avec des langages de modèle en JSP, le développeur doit s’assurer manuellement que l’échappement adéquat est appliqué à chaque variable. Comme une simple omission ou erreur sur un échappement appliqué suffit potentiellement à entraîner une vulnérabilité de type attaque multisite par scripts (XSS), nous avons décidé d’automatiser cette tâche avec HTL. Si nécessaire, les développeurs peuvent tout de même indiquer un échappement différent sur les expressions, mais avec HTL, le comportement par défaut est bien plus susceptible de corresponde au comportement souhaité, ce qui réduit la probabilité d’erreurs.
 
-## Développement simplifié    {#simplified-development}
+## Développement simplifié   {#simplified-development}
 
 Il est facile d’apprendre le langage de modèle HTML. Ses fonctionnalités sont volontairement limitées pour assurer un apprentissage simple et direct. Il comporte également des mécanismes performants pour structurer les balises et appeler la logique, tout en appliquant toujours une séparation stricte des problèmes entre l’annotation et la logique. HTL lui-même est aux standards du HTML5, car il utilise des expressions et des attributs de données pour annoter les balises avec le comportement dynamique souhaité, ce qui signifie qu’il n’interrompt pas la disponibilité des balises, qui restent lisibles. Notez que l’évaluation des expressions et des attributs de données est effectuée entièrement du côté serveur et ne sera pas visible du côté client, où toute autre structure JavaScript souhaitée peut être utilisée sans interférence.
 
