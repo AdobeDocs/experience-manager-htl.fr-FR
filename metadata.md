@@ -1,17 +1,13 @@
 ---
-product: Adobe Experience Manager
+solution: Experience Manager
+type: Documentation
+product: adobe experience manager
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.fr-FR
 index: y
-solution-title: Formation et support pour HTL
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html
-getting-started-title: Prise en main du développement pour AEM
-getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/core-concepts/home.html
-tutorials-title: Tutoriels AEM
-tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html
 translation-type: tm+mt
-source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '108'
 ht-degree: 97%
 
 ---
@@ -34,6 +30,9 @@ metadata.md
 * `product`
 * `git-repo`
 * `index: y`
+
+Plus utilisé :
+
 * `solution-title`
 * `solution-hub-url`
 * `getting-started-title`
@@ -52,4 +51,4 @@ Article
 * `description`
 * `index: n` (uniquement pour les versions précédentes des composants)
 
-Vous trouverez des informations supplémentaires sur les métadonnées dans le [guide de création interne.](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)
+Vous trouverez des informations supplémentaires sur les métadonnées dans le [guide de création interne.](https://docs.adobe.com/help/fr-FR/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)
