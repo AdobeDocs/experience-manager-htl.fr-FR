@@ -4,8 +4,8 @@ user-guide-title: Adobe Experience Manager HTL
 breadcrumb-title: Guide HTL
 user-guide-description: Utilisation du langage HTL (HTML Template Language) pour la création d’une structure web d’entreprise.
 feature-set: Experience Manager
-feature: Outils de développement
-role: Développeur
+feature: Developer Tools
+role: Developer
 translation-type: tm+mt
 source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
