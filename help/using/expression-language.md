@@ -1,14 +1,13 @@
 ---
 title: Langage d’expression HTL
 description: Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '1854'
 ht-degree: 79%
 
 ---
-
 
 # Langage d’expression HTL {#htl-expression-language}
 
@@ -21,11 +20,11 @@ Le langage HTL (HTML Template Language) utilise un langage d’expression pour a
 </h1>
 ```
 
-Les Expressions peuvent être échappées en préattendant un caractère `\`, par exemple `\${test}` sera rendu `${test}`.
+Les expressions peuvent être placées dans une séquence d’échappement en ajoutant un caractère `\` , par exemple, `\${test}` affichera `${test}`.
 
 >[!NOTE]
 >
->Pour tester les exemples fournis sur cette page, vous pouvez utiliser un environnement d&#39;exécution en direct appelé [boucle d&#39;impression en lecture seule ](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl).
+>Pour tester les exemples fournis sur cette page, un environnement d’exécution en direct appelé [Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) peut être utilisé.
 
 La syntaxe d’expression inclut des [variables](#variables), des [littéraux](#literals), des [opérateurs](#operators) et des [options](#options) :
 
@@ -50,11 +49,11 @@ Les propriétés accessibles peuvent être des fonctions. Cependant, la transmis
 
 L’exemple ci-dessus montre également que les fonctions getter Java, comme `getTitle()`, sont accessibles sans ajouter `get` et en mettant en minuscule le caractère qui suit.
 
-### Caractères d&#39;identificateur valides {#valid-identifier-characters}
+### Caractères valides de l’identifiant {#valid-identifier-characters}
 
-Les noms des variables, appelés identificateurs, respectent certaines règles. Ils doivent se début avec une lettre (`A`-`Z` et `a`-`z`) ou un trait de soulignement (`_`), et les caractères suivants peuvent également être des chiffres (`0`-`9`) ou des deux-points (`:`). Les lettres unicode telles que `å` et `ü` ne peuvent pas être utilisées dans les identificateurs.
+Les noms des variables, appelés identificateurs, respectent certaines règles. Ils doivent commencer par une lettre (`A`-`Z` et `a`-`z`) ou un trait de soulignement (`_`), et les caractères suivants peuvent également être des chiffres (`0`-`9`) ou deux-points (`:`). Les lettres unicode telles que `å` et `ü` ne peuvent pas être utilisées dans les identificateurs.
 
-Étant donné que le caractère deux-points (`:`) est commun dans les noms de propriété AEM, il convient de souligner qu’il s’agit bien d’un caractère d’identificateur valide :
+Étant donné que le caractère deux-points (`:`) est courant dans les noms de propriété AEM, il faut souligner qu’il s’agit bien d’un caractère d’identifiant valide :
 
 `${properties.jcr:title}`
 
@@ -78,7 +77,7 @@ ${currentPage.lastModified.time.toString}
 
 Un littéral est une notation qui représente une valeur fixe.
 
-### Booléen    {#boolean}
+### Booléen   {#boolean}
 
 Un booléen représente une entité logique et peut avoir deux valeurs : `true` et `false`.
 
@@ -92,7 +91,7 @@ Il n’existe qu’un seul type de nombre : les entiers positifs. D’autres fo
 
 ### Chaînes {#strings}
 
-Les chaînes représentent des données textuelles et peuvent être guillemets simples ou doublons :
+Les chaînes représentent des données textuelles et peuvent être placées entre guillemets simples ou doubles :
 
 `${'foo'} ${"bar"}`
 
@@ -101,7 +100,7 @@ En plus des caractères ordinaires, les caractères spéciaux suivants peuvent �
 * `\\` Barre oblique inverse
 * `\'` Guillemet simple (ou apostrophe)
 * `\"` Guillemet double
-* `\t` Tab
+* `\t` Tabulation
 * `\n` Nouvelle ligne
 * `\r` Retour chariot
 * `\f` Saut de page
@@ -112,7 +111,7 @@ En plus des caractères ordinaires, les caractères spéciaux suivants peuvent �
    * `\u0022` pour `"`
    * `\u0027` pour `'`
 
-Pour les caractères qui ne sont pas répertoriés ci-dessus, un caractère de barre oblique inverse s’affiche avant un message d’erreur.
+Pour les caractères qui ne sont pas répertoriés ci-dessus, un caractère de barre oblique inverse s’affiche avec une erreur.
 
 Voici quelques exemples d’utilisation d’échappement de chaîne :
 
@@ -128,7 +127,7 @@ ce qui entraînera le résultat suivant, car HTL applique un échappement en fon
 <p title="it&#39;s great, she said &#34;yes!&#34;">...</p>
 ```
 
-### Tableaux    {#arrays}
+### Tableaux   {#arrays}
 
 Un tableau est un ensemble de valeurs organisé qui peut être mentionné avec un nom et un index. Il peut combiner plusieurs types d’éléments.
 
@@ -145,7 +144,7 @@ Les tableaux permettent de fournir une liste de valeurs du modèle.
 </ul>
 ```
 
-## Opérateurs    {#operators}
+## Opérateurs   {#operators}
 
 ### Opérateurs logiques {#logical-operators}
 
@@ -155,7 +154,7 @@ Si une valeur peut être convertie en `true`, la valeur est dite vraie. Si une v
 
 #### Logique du « SAUF »{#logical-not}
 
-`${!myVar}` renvoie  `false` si son opérande unique peut être converti en  `true`; dans le cas contraire, elle renvoie  `true`.
+`${!myVar}` renvoie  `false` si son opérande unique peut être converti en  `true`; sinon, il renvoie  `true`.
 
 Cela peut par exemple être utilisé pour inverser une condition de test, par exemple l’affichage d’un élément uniquement s’il n’y a aucune page enfant :
 
@@ -165,7 +164,7 @@ Cela peut par exemple être utilisé pour inverser une condition de test, par ex
 
 #### Logique du « ET »    {#logical-and}
 
-`${varOne && varTwo}` renvoie  `varOne` s&#39;il est faux ; dans le cas contraire, elle renvoie  `varTwo`.
+`${varOne && varTwo}` renvoie  `varOne` s’il est faux ; sinon, il renvoie  `varTwo`.
 
 Cet opérateur peut être utilisé pour tester deux conditions en même temps, par exemple en vérifiant l’existence de deux propriétés :
 
@@ -184,7 +183,7 @@ L’opérateur logique ET peut également être utilisé pour afficher de maniè
 
 #### Logique du « OU »{#logical-or}
 
-`${varOne || varTwo}` renvoie  `varOne` s&#39;il s&#39;agit d&#39;une vérité ; dans le cas contraire, elle renvoie  `varTwo`.
+`${varOne || varTwo}` renvoie  `varOne` s’il est vrai ; sinon, il renvoie  `varTwo`.
 
 Cet opérateur peut être utilisé pour tester si l’une des deux conditions s’applique, par exemple en vérifiant l’existence d’au moins une propriété :
 
@@ -194,7 +193,7 @@ Cet opérateur peut être utilisé pour tester si l’une des deux conditions s�
 
 Comme l’opérateur logique OU renvoie la première variable correcte, il peut également être utilisé de manière pratique pour fournir des valeurs de substitution.
 
-Il peut également être utilisé pour afficher de manière conditionnelle des attributs HTML, car HTL supprime les attributs dont les valeurs sont définies par des expressions dont la valeur est false ou une chaîne vide. Ainsi, l&#39;exemple ci-dessous affiche le titre **`properties.jcr:`** s&#39;il existe et n&#39;est pas vide, sinon il revient à l&#39;affichage de **`properties.jcr:description`** s&#39;il existe et n&#39;est pas vide, sinon il affiche le message &quot;aucun titre ou description fourni&quot; :
+Il peut également être utilisé pour afficher de manière conditionnelle des attributs HTML, car HTL supprime les attributs avec des valeurs définies par des expressions qui évaluent sur false ou sur une chaîne vide. Ainsi, l’exemple ci-dessous affiche le **`properties.jcr:`** titre s’il existe et n’est pas vide. Sinon, il affiche **`properties.jcr:description`** s’il existe et n’est pas vide. Sinon, il affiche le message &quot;aucun titre ou description fourni&quot; :
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
@@ -212,7 +211,7 @@ Cet opérateur peut généralement être utilisé pour définir des conditions d
 
 >[!TIP]
 >
->Puisque les caractères deux-points sont également autorisés dans les identificateurs, il est préférable de séparer les opérateurs ternaires avec un espace blanc pour clarifier l’analyseur :
+>Puisque les caractères deux-points sont également autorisés dans les identificateurs, il est préférable de séparer les opérateurs ternaires avec un espace blanc afin de clarifier l’analyseur :
 
 ```xml
 <p>${properties.showDescription ? properties.jcr:description : properties.jcr:title}</p>
@@ -235,7 +234,7 @@ Les opérateurs relationnels prennent uniquement en charge les opérandes qui so
 
 `${varOne > varTwo}` renvoie  `true` si  `varOne` est supérieur à  `varTwo`.
 
-`${varOne < varTwo}` renvoie  `true` si  `varOne` est inférieur à  `varTwo`.
+`${varOne < varTwo}` renvoie  `true` si  `varOne` est plus petit que  `varTwo`.
 
 `${varOne >= varTwo}` renvoie `true` si `varOne` est plus grand ou égal à `varTwo`.
 
@@ -310,7 +309,7 @@ Ajoute l’extension html et un fragment (#value) à un chemin.
 <a href="${item.path @ extension = 'html', fragment=item.name}">${item.name}</a>
 ```
 
-`@extension` fonctionne dans tous les scénarios, en vérifiant si l&#39;extension doit être ajoutée ou non.
+`@extension` fonctionne dans tous les scénarios, en vérifiant si l’extension doit être ajoutée ou non.
 
 ```xml
 ${ link @ extension = 'html' }
@@ -318,7 +317,7 @@ ${ link @ extension = 'html' }
 
 ### Mise en forme des nombres et des dates {#number-date-formatting}
 
-HTL permet le formatage natif des nombres et des dates, sans écrire de code personnalisé. Il prend également en charge le fuseau horaire et le paramètre régional.
+HTL permet une mise en forme native des nombres et des dates, sans écrire de code personnalisé. Il prend également en charge le fuseau horaire et le paramètre régional.
 
 Les exemples suivants indiquent que le format est spécifié en premier, puis la valeur nécessitant la mise en forme :
 
@@ -333,9 +332,9 @@ Les exemples suivants indiquent que le format est spécifié en premier, puis la
 
 >[!NOTE]
 >
->Pour obtenir des détails complets sur le format que vous pouvez utiliser, voir [spécification HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
+>Pour plus d’informations sur le format que vous pouvez utiliser, voir [spécification HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
 
-### Internationalisation    {#internationalization}
+### Internationalisation   {#internationalization}
 
 Convertit la chaîne dans la langue de la *source* active (voir ci-dessous), en utilisant le [dictionnaire](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/internationalization/i18n-translator.html) actif. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
 
@@ -349,7 +348,7 @@ L’option hint peut être utilisée pour proposer un commentaire à des traduct
 ${'Page' @ i18n, hint='Translation Hint'}
 ```
 
-La source par défaut de la langue est `resource`, ce qui signifie que le texte est traduit dans la même langue que le contenu. Il est possible de remplacer cette valeur par `user`, ce qui signifie que la langue est prise à partir des paramètres régionaux du navigateur ou des paramètres régionaux de l’utilisateur connecté :
+La source par défaut de la langue est `resource`, ce qui signifie que le texte est traduit dans la même langue que le contenu. Cela peut être remplacé par `user`, ce qui signifie que la langue est prise dans la langue du navigateur ou dans la langue de l’utilisateur connecté :
 
 ```xml
 ${'Page' @ i18n, source='user'}
