@@ -1,20 +1,19 @@
 ---
 title: Use-API Java HTL
-description: 'Use-API Java HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée. '
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+description: Use-API Java HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée.
+exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 83%
 
 ---
 
-
 # Use-API Java HTL {#htl-java-use-api}
 
-L&#39;API Java Use-API du langage de modèle HTML (HTML Template Language) permet à un fichier HTML d&#39;accéder aux méthodes d&#39;assistance dans une classe Java personnalisée par `data-sly-use`. Cela permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code Java, tandis que le code HTL traite uniquement la production directe des balises.
+Use-API Java HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée via `data-sly-use`. Cela permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code Java, tandis que le code HTL traite uniquement la production directe des balises.
 
-Un objet Java Use-API peut être un POJO simple, instancié par une implémentation particulière via le constructeur par défaut du POJO.
+Un objet Use-API Java peut être un POJO simple, instancié par une implémentation particulière via le constructeur par défaut du POJO.
 
 Les POJO Use-API peuvent également exposer une méthode publique, appelée init, avec la signature suivante :
 
@@ -27,7 +26,7 @@ Les POJO Use-API peuvent également exposer une méthode publique, appelée init
     public void init(javax.script.Bindings bindings);
 ```
 
-La carte `bindings` peut contenir des objets qui fournissent un contexte au script HTML actuellement exécuté que l’objet Use-API peut utiliser pour son traitement.
+La carte `bindings` peut contenir des objets qui fournissent du contexte au script HTL actuellement exécuté que l’objet Use-API peut utiliser pour son traitement.
 
 ## Un exemple simple   {#a-simple-example}
 
@@ -54,7 +53,7 @@ Nous avons également ajouté du contenu pour que le rendu de ce composant s’e
 }
 ```
 
-Lorsque ce contenu est consulté, le fichier HTL est exécuté. Dans le code HTML, nous utilisons l&#39;objet contextuel `properties` pour accéder aux ressources `title` et `description` actuelles et les afficher. Le code HTML de sortie sera :
+Lorsque ce contenu est consulté, le fichier HTL est exécuté. Dans le code HTL, nous utilisons l’objet de contexte `properties` pour accéder aux `title` et `description` de la ressource actuelle et les afficher. Le code HTML de sortie sera :
 
 ### `view-source:http://<host>:<port>/content/my-example.html` {#view-source-http-localhost-content-my-example-html}
 
@@ -113,7 +112,7 @@ public class Info extends WCMUsePojo {
 
 Dans les sections suivantes, nous examinons les différentes parties du code.
 
-### Classe Java locale / Bundle {#local-vs-bundle-java-class}
+### Classe Java locale ou groupée {#local-vs-bundle-java-class}
 
 La classe d’utilisation Java peut être installée de deux manières : **en local** ou **groupée**.  Cet exemple utilise une installation locale.
 
@@ -170,7 +169,7 @@ public class Info extends WCMUsePojo
 
 ### Initialisation de la classe {#initializing-the-class}
 
-Lorsque la classe d&#39;utilisation est étendue à partir de `WCMUsePojo`, l&#39;initialisation est effectuée en remplaçant la méthode `activate` :
+Lorsque la classe d’utilisation est étendue à partir de `WCMUsePojo`, l’initialisation est effectuée en remplaçant la méthode `activate` :
 
 ### /apps/my-example/component/info/Info.java {#apps-my-example-component-info-info-java-3}
 
@@ -230,7 +229,7 @@ Pour permettre l’accès à ces valeurs à partir du fichier HTL, vous devez d�
 
 * Une méthode de formulaire `getXyz` exposera une propriété d’objet appelée `xyz` dans le fichier HTL.
 
-Dans l’exemple suivant, les méthodes `getTitle` et `getDescription` ont pour effet que les propriétés d’objet `title` et `description` deviennent accessibles dans le contexte du fichier HTL :
+Dans l’exemple suivant, les méthodes `getTitle` et `getDescription` rendent les propriétés d’objet `title` et `description` accessibles dans le contexte du fichier HTL :
 
 ### `/apps/my-example/component/info/Info.java` {#apps-my-example-component-info-info-java-4}
 
@@ -266,7 +265,7 @@ L’attribut `data-sly-use` est utilisé pour initialiser la classe d’utilisat
 
 ### Identifiant local {#local-identifier}
 
-L&#39;identifiant `info` (après le point dans `data-sly-use.info`) est utilisé dans le fichier HTL pour identifier la classe. La portée de cet identificateur est globale dans le fichier, une fois qu’il a été déclaré. Elle ne se limite pas à l’élément qui contient l’instruction `data-sly-use`. 
+L’identifiant `info` (après le point dans `data-sly-use.info`) est utilisé dans le fichier HTL pour identifier la classe. La portée de cet identificateur est globale dans le fichier, une fois qu’il a été déclaré. Elle ne se limite pas à l’élément qui contient l’instruction `data-sly-use`. 
 
 ### `/apps/my-example/component/info/info.html`{#apps-my-example-component-info-info-html-3}
 
@@ -305,7 +304,7 @@ Désormais, lorsque nous accédons à `/content/my-example.html`, elle renvoie l
 
 ## Au-delà des concepts de base {#beyond-the-basics}
 
-Dans cette section, nous présenterons d&#39;autres fonctionnalités qui vont au-delà de l&#39;exemple simple ci-dessus :
+Dans cette section, nous présenterons d’autres fonctionnalités qui vont au-delà de l’exemple simple ci-dessus :
 
 * Transmission de paramètres à une classe d’utilisation
 * Classe d’utilisation Java groupée
@@ -491,14 +490,14 @@ Le système traite l’instruction comme suit :
 
 (2)
 
-* Essayez d&#39;adapter le `Resource` actuel à `UseClass`. En cas de réussite, passez à (3).
+* Essayez d’adapter la `Resource` actuelle à `UseClass`. En cas de réussite, accédez à la partie (3).
 * Autrement, essayez d’adapter la `Request` active à `UseClass`. En cas de réussite, accédez à la partie (3).
 * Autrement, essayez d’instancier `UseClass` avec un constructeur sans argument. En cas de réussite, accédez à la partie (3).
 
 (3)
 
 * Dans HTL, liez l’objet nouvellement adapté ou créé au nom `localName`.
-* Si `UseClass` implémente [`io.sightly.java.api.Use`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html), appelez la méthode `init`, en transmettant le contexte d&#39;exécution actuel (sous la forme d&#39;un objet `javax.scripting.Bindings`).
+* Si `UseClass` implémente [`io.sightly.java.api.Use`](https://helpx.adobe.com/experience-manager/6-2/sites/developing/using/reference-materials/javadoc/io/sightly/java/api/Use.html) alors appelez la méthode `init`, en transmettant le contexte d’exécution actuel (sous la forme d’un objet `javax.scripting.Bindings` ).
 
 (4)
 
@@ -521,7 +520,7 @@ L’interface`Use` ne définit qu’une seule méthode :
 
 La méthode `init` sera appelée lors de l’initialisation de la classe avec un objet `Bindings` qui contient tous les objets de contexte et tous les paramètres transmis dans la classe d’utilisation.
 
-Toutes les fonctionnalités supplémentaires (telles que l’équivalent de `WCMUsePojo.getProperties()`) doivent être implémentées explicitement à l’aide de l’objet [`javax.script.Bindings`](http://docs.oracle.com/javase/7/docs/api/javax/script/Bindings.html). Par exemple :
+Toutes les fonctionnalités supplémentaires (comme l’équivalent de `WCMUsePojo.getProperties()`) doivent être mises en oeuvre explicitement à l’aide de l’objet [`javax.script.Bindings`](http://docs.oracle.com/javase/7/docs/api/javax/script/Bindings.html) . Par exemple :
 
 ### `Info.java` {#info-java}
 
@@ -603,7 +602,7 @@ Vous savez qu’un nœud `dam:Asset` possède le type de structure suivant :
 
 Nous montrons ici la ressource (une image JPEG) qui est fournie avec une installation par défaut d’AEM en tant qu’exemple de projet geometrixx. La ressource est appelée `jane_doe.jpg` et son mimetype est `image/jpeg`.
 
-Pour accéder à la ressource à partir de HTL, vous pouvez déclarer [`com.day.cq.dam.api.Asset`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/Asset.html) comme classe dans l&#39;instruction `data-sly-use`, puis utiliser une méthode get de `Asset` pour récupérer les informations souhaitées. Par exemple :
+Pour accéder à la ressource à partir de HTL, vous pouvez déclarer [`com.day.cq.dam.api.Asset`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/asset/api/Asset.html) en tant que classe dans l’instruction `data-sly-use`, puis utiliser une méthode get de `Asset` pour récupérer l’information souhaitée. Par exemple :
 
 ### `mimetype.html` {#mimetype-html}
 
@@ -617,6 +616,6 @@ L’instruction `data-sly-use` demande à HTL d’adapter la `Resource` active �
 
 ### Adaptable à partir de la requête {#adaptable-from-request}
 
-Il est également possible d&#39;utiliser comme classe d&#39;utilisation toute classe adaptable à partir de [`org.apache.sling.api.SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)
+Il est également possible d’utiliser comme classe d’utilisation toute classe qui est adaptable à partir de [`org.apache.sling.api.SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html)
 
-Comme pour le cas ci-dessus d&#39;une variable adaptable use-class de `Resource`, une variable use-class adaptable de [`SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) peut être spécifiée dans l&#39;instruction `data-sly-use`. Lors de l’exécution, la requête active sera adaptée à la classe donnée et l’objet produit sera rendu disponible dans HTL.
+Comme pour le cas ci-dessus d’une classe d’utilisation adaptable à partir de `Resource`, une classe d’utilisation adaptable à partir de [`SlingHttpServletRequest`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) peut être spécifiée dans l’instruction `data-sly-use`. Lors de l’exécution, la requête active sera adaptée à la classe donnée et l’objet produit sera rendu disponible dans HTL.
