@@ -1,19 +1,18 @@
 ---
 title: Outils de développement
 description: Liste des outils de développement HTL
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: c5683ee4-a052-4a6f-8ad1-e18a4201414e
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 31%
 
 ---
 
-
 # Outils de développement {#developer-tools}
 
 Les outils de développement suivants sont disponibles pour HTL :
 
-* [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)  - environnement d&#39;exécution en direct pour jouer avec la langue, idéal pour apprendre.
-* [aem Brackets Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-brackets.html)  - Un outil facile pour les développeurs frontaux qui travaillent sur les composants AEM.
-* [aem Eclipse Extension](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-eclipse.html)  - Un outil permettant aux développeurs back-end de créer des projets AEM et de les modifier facilement.
+* [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)  : environnement d’exécution en direct pour jouer avec la langue, idéal pour l’apprentissage.
+* [Extension AEM Brackets](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-brackets.html)  : outil facile à utiliser par les développeurs front-end pour travailler sur les composants AEM.
+* [AEM Extension Eclipse](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-eclipse.html)  : outil permettant aux développeurs back-end de créer des projets AEM et de les modifier facilement.
