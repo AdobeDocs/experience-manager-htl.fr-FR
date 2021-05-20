@@ -1,20 +1,19 @@
 ---
-title: Présentation HTL de Adobe Experience Manager
+title: Présentation d’Adobe Experience Manager HTL
 description: L’objectif de HTL, pris en charge par AEM, est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance du langage Java de participer de manière plus efficace aux projets AEM.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 94%
 
 ---
 
-
 # Présentation {#overview}
 
 L’objectif du langage HTL (HTML Template Language), pris en charge par Adobe Experience Manager (AEM), est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
 
-Le langage de modèle HTML est le système de modèle côté serveur recommandé et préféré pour le format HTML en AEM. HTL a été introduit avec AEM 6.0 et remplace JSP (JavaServer Pages). Pour les développeurs web qui souhaitent créer des sites web d’entreprise performants, le langage HTL contribue à améliorer l’efficacité au niveau de la sécurité et du développement.
+Le langage HTL est le système de modèle côté serveur préféré et recommandé pour HTML dans AEM. HTL a été introduit avec AEM 6.0 et remplace JSP (JavaServer Pages). Pour les développeurs web qui souhaitent créer des sites web d’entreprise performants, le langage HTL contribue à améliorer l’efficacité au niveau de la sécurité et du développement.
 
 ## Sécurité renforcée {#increased-security}
 
@@ -34,7 +33,7 @@ Une sécurité renforcée, un développement simplifié et une meilleure collabo
 
 Concrètement, d’après nos observations lors de la nouvelle mise en œuvre du site Adobe.com avec le langage HTL, le coût et la durée du projet peuvent être réduits d’environ 25 %.
 
-![Augmentation et réduction des coûts efficaces](assets/chlimage_1.png)
+![Augmentation efficace et diminution des coûts](assets/chlimage_1.png)
 
 Le diagramme ci-dessus montre que HTL permet potentiellement d’améliorer l’efficacité des domaines suivants :
 
