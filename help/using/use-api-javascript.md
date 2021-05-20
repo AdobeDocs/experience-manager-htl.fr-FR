@@ -1,18 +1,17 @@
 ---
 title: Use-API JavaScript HTL
-description: Le langage de modèle HTML - HTL - JavaScript Use-API permet à un fichier HTML d’accéder au code d’assistance écrit dans JavaScript.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript.
+exl-id: e98bfbd5-fa64-48c7-bd14-477d4c5e1788
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 87%
 
 ---
 
-
 # Use-API JavaScript HTL {#htl-javascript-use-api}
 
-L’API JavaScript Use-API HTML Template Language (HTML Template Language) permet à un fichier HTML d’accéder au code d’assistance écrit en JavaScript. Cela permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code JavaScript, tandis que le code HTL traite uniquement la production directe des balises.
+Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript. Cela permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code JavaScript, tandis que le code HTL traite uniquement la production directe des balises.
 
 Les conventions suivantes sont utilisées.
 
@@ -157,7 +156,7 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## Extension    {#extending}
+## Extension   {#extending}
 
 Le motif de dépendance peut également être utilisé pour améliorer la logique d’un autre composant (en général, le `sling:resourceSuperType` du composant actif).
 
