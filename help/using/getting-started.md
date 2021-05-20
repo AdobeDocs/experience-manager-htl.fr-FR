@@ -1,18 +1,17 @@
 ---
 title: Prise en main d’HTL
 description: HTL pris en charge par AEM remplace JSP en tant que système de modèle côté serveur favori et recommandé pour HTML dans AEM.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
 workflow-type: tm+mt
 source-wordcount: '2471'
 ht-degree: 92%
 
 ---
 
-
 # Prise en main d’HTL {#getting-started-with-htl}
 
-Le langage de modèle HTML (HTML Template Language) pris en charge par Adobe Experience Manager (AEM) est le système de modèle côté serveur recommandé et préféré pour HTML en AEM. Il remplace JSP (JavaServer Pages) comme utilisé dans les versions précédentes d’AEM.
+Le langage HTL (HTML Template Language) pris en charge par Adobe Experience Manager (AEM) est le système de modèle côté serveur préféré et recommandé pour HTML dans AEM. Il remplace JSP (JavaServer Pages) comme utilisé dans les versions précédentes d’AEM.
 
 >[!NOTE]
 >
@@ -35,15 +34,15 @@ Même au sein d’un même composant, des fichiers HTL peuvent être utilisés e
 
 Avant de commencer à utiliser le langage HTL, nous vous conseillons de lire d’abord les réponses aux questions liées à la comparaison entre JSP et HTL.
 
-**HTL est-il plus limité que JSP ?** - HTL n&#39;a pas vraiment de limites par rapport à JSP en ce sens que ce qui peut être fait avec JSP devrait également être possible avec HTL. Cependant, la conception de HTL est plus stricte que celle de JSP sur plusieurs aspects. C’est pourquoi ce qui peut être réalisé à partir d’un seul fichier JSP peut devoir être divisé dans une classe Java ou un fichier JavaScript pour être réalisable en HTL. Mais cela est généralement souhaitable pour garantir une bonne séparation des problèmes entre la logique et l’annotation.
+**HTL est-il plus limité que JSP ?** - HTL n’a pas vraiment de limites par rapport à JSP dans la mesure où ce qui peut être réalisé avec JSP doit également être faisable avec HTL. Cependant, la conception de HTL est plus stricte que celle de JSP sur plusieurs aspects. C’est pourquoi ce qui peut être réalisé à partir d’un seul fichier JSP peut devoir être divisé dans une classe Java ou un fichier JavaScript pour être réalisable en HTL. Mais cela est généralement souhaitable pour garantir une bonne séparation des problèmes entre la logique et l’annotation.
 
 **HTL prend-il en charge les bibliothèques de balises JSP ?** - Non, mais comme l’indique la section [Téléchargement des bibliothèques client](getting-started.md#loading-client-libraries), les instructions [template &amp; call](block-statements.md#template-call) offrent un schéma similaire.
 
 **Les fonctionnalités HTL peuvent-elles être élargies pour un projet AEM ?** - Non, cela n’est pas possible. HTL dispose de mécanismes d’extension puissants pour la réutilisation de la logique ([Use-API](getting-started.md#use-api-for-accessing-logic)) et du balisage (les instructions [template &amp; call](block-statements.md#template-call)), qui peuvent être utilisés pour modulariser le code des projets.
 
-**Quels sont les principaux avantages de HTL par rapport à JSP ?** - La sécurité et l&#39;efficacité des projets sont les principaux avantages, qui sont décrits en détail dans le  [Aperçu](overview.md).
+**Quels sont les principaux avantages de HTL par rapport à JSP ?** - La sécurité et l’efficacité des projets sont les principaux avantages, qui sont détaillés dans la  [Présentation](overview.md).
 
-**JSP finira-t-il par disparaître ?** - À l&#39;heure actuelle, il n&#39;y a pas de plans de ce genre.
+**JSP finira-t-il par disparaître ?** - À ce jour, il n&#39;existe aucun plan de ce type.
 
 ## Concepts fondamentaux de HTL {#fundamental-concepts-of-htl}
 
@@ -61,9 +60,9 @@ Voici un premier exemple, qui peut être contenu tel quel dans un fichier **`tem
 
 Nous pouvons distinguer deux différents types de syntaxe :
 
-* **[Bloquer les instructions](block-statements.md)**  - Pour afficher de façon conditionnelle la variable  **&lt;h1>** , un attribut de données  [`data-sly-test`](block-statements.md#test) HTML5 est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec `data-sly`.
+* **[Instructions de bloc](block-statements.md)**  : pour afficher de manière conditionnelle la variable  **&lt;h1>** , un attribut de données  [`data-sly-test`](block-statements.md#test) HTML5 est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et ils sont tous préfixés avec `data-sly`.
 
-* **[Langue](expression-language.md)**  d’Expression - Les expressions HTML sont délimitées par des caractères  `${` et  `}`des caractères. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
+* **[Langage d’expression](expression-language.md)**  : les expressions HTL sont délimitées par des caractères  `${` et  `}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
 Les deux pages liées ci-dessus fournissent une liste détaillée des fonctionnalités disponibles pour la syntaxe.
 
@@ -82,14 +81,14 @@ C’est pourquoi l’exemple suivant :
 </sly>
 ```
 
-génère un résultat similaire au code HTML suivant, mais uniquement s’il existe les deux, une propriété **`jcr:title`** et une propriété **`jcr:description`** définies, et si aucune d’elles n’est vide :
+génère quelque chose comme le code HTML suivant, mais uniquement s’il existe à la fois une propriété **`jcr:title`** et **`jcr:description`** définie, et si aucun d’eux n’est vide :
 
 ```xml
 <h1>MY TITLE</h1>
 <p>MY DESCRIPTION</p>
 ```
 
-Une chose à garder à l&#39;esprit est de n&#39;utiliser l&#39;élément SLY que lorsqu&#39;aucun élément existant n&#39;aurait pu être annoté avec l&#39;instruction de bloc, parce que les éléments SLY dissuadent la valeur offerte par la langue de ne pas modifier le code HTML statique lors de sa création dynamique.
+Gardez à l’esprit que l’élément SLY est utilisé lorsqu’aucun élément existant n’a pu être annoté avec l’instruction block, car les éléments SLY dissuadent la valeur proposée par la langue de ne pas modifier le code HTML statique lors de sa mise en dynamique.
 
 Par exemple, si l’exemple précédent avait déjà été imbriqué dans un élément DIV, l’élément SLY supplémentaire aurait été problématique :
 
