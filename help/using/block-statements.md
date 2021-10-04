@@ -2,7 +2,7 @@
 title: Instructions du bloc HTL
 description: Les instructions du bloc HTL sont des attributs de données personnalisés ajoutés directement au code HTML existant.
 exl-id: a517dcef-ab7a-4d4c-a1a9-2e57aad034f7
-source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 60%
@@ -104,8 +104,8 @@ Initialisez un autre modèle HTL qui peut être appelé en utilisant `data-sly-c
 >
 >Pour plus d’informations sur Use-API, reportez-vous à la section :
 >
->* [Utilisation d’une API Java ](use-api-java.md)
-* [Use-API JavaScript](use-api-javascript.md)
+>* [Utilisation d’une API Java](use-api-java.md) 
+>* [Utilisation d’une API JavaScript](use-api-javascript.md) 
 
 
 #### data-sly-use avec des ressources {#data-sly-use-with-resources}
@@ -121,7 +121,8 @@ Par exemple :
 ```
 
 >[!TIP]
-Voir également la section [Chemin non toujours requis.](#path-not-required)
+>
+>Voir également la section [Chemin non toujours requis.](#path-not-required)
 
 ### unwrap   {#unwrap}
 
@@ -256,7 +257,7 @@ produit,
 
 `data-sly-element` remplace le nom de l’élément hôte.
 
-Par exemple,
+Par exemple :
 
 ```xml
 <h1 data-sly-element="${titleLevel}">text</h1>
@@ -460,7 +461,8 @@ cssClassName='className'}"></article>
 ```
 
 >[!NOTE]
-AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, voir [Balise décorative](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/decoration-tag.html) dans la documentation sur le développement de composants.
+>
+>AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, voir [Balise décorative](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html) dans la documentation sur le développement de composants.
 
 ### inclusion {#include}
 

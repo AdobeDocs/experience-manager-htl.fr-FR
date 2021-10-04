@@ -2,10 +2,10 @@
 title: Langage d’expression HTL
 description: Le langage HTL (HTML Template Language) utilise un langage d’expression pour accéder aux structures de données qui fournissent les éléments dynamiques de la sortie HTML.
 exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
-source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
-source-wordcount: '1854'
-ht-degree: 79%
+source-wordcount: '1852'
+ht-degree: 80%
 
 ---
 
@@ -152,7 +152,7 @@ Ces opérateurs sont généralement utilisés avec des valeurs booléennes. Cepe
 
 Si une valeur peut être convertie en `true`, la valeur est dite vraie. Si une valeur peut être convertie en `false`, la valeur est dite fausse. Les valeurs qui peuvent être converties en `false` sont des variables non définies, des valeurs nulles, le nombre zéro et des chaînes vides.
 
-#### Logique du « SAUF »{#logical-not}
+#### Logique du « SAUF » {#logical-not}
 
 `${!myVar}` renvoie  `false` si son opérande unique peut être converti en  `true`; sinon, il renvoie  `true`.
 
@@ -162,7 +162,7 @@ Cela peut par exemple être utilisé pour inverser une condition de test, par ex
 <p data-sly-test="${!currentPage.hasChild}">current page has no children</p>
 ```
 
-#### Logique du « ET »    {#logical-and}
+#### Logique du « ET »   {#logical-and}
 
 `${varOne && varTwo}` renvoie  `varOne` s’il est faux ; sinon, il renvoie  `varTwo`.
 
@@ -181,7 +181,7 @@ L’opérateur logique ET peut également être utilisé pour afficher de maniè
 <div class="${logic.showClass && logic.className}">...</div>
 ```
 
-#### Logique du « OU »{#logical-or}
+#### Logique du « OU » {#logical-or}
 
 `${varOne || varTwo}` renvoie  `varOne` s’il est vrai ; sinon, il renvoie  `varTwo`.
 
@@ -199,7 +199,7 @@ Il peut également être utilisé pour afficher de manière conditionnelle des a
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
 ```
 
-### Opérateur conditionnel (ternaire){#conditional-ternary-operator}
+### Opérateur conditionnel (ternaire) {#conditional-ternary-operator}
 
 `${varCondition ? varOne : varTwo}` renvoie `varOne` si `varCondition` est vrai ; autrement il renvoie `varTwo`.
 
@@ -217,7 +217,7 @@ Cet opérateur peut généralement être utilisé pour définir des conditions d
 <p>${properties.showDescription ? properties.jcr:description : properties.jcr:title}</p>
 ```
 
-### Opérateurs de comparaison    {#comparison-operators}
+### Opérateurs de comparaison   {#comparison-operators}
 
 Les opérateurs d’égalité et d’inégalité prennent uniquement en charge les opérandes de même type. Lorsque les types ne correspondent pas, un message d’erreur s’affiche.
 
@@ -277,7 +277,7 @@ Les expressions paramétriques contenant uniquement des options sont également 
 ${@ optOne, optTwo=bar}
 ```
 
-### Format de chaîne    {#string-formatting}
+### Format de chaîne   {#string-formatting}
 
 Option qui remplace les espaces réservés répertoriés {*n*} avec la variable correspondante :
 
@@ -336,7 +336,7 @@ Les exemples suivants indiquent que le format est spécifié en premier, puis la
 
 ### Internationalisation   {#internationalization}
 
-Convertit la chaîne dans la langue de la *source* active (voir ci-dessous), en utilisant le [dictionnaire](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/internationalization/i18n-translator.html) actif. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
+Convertit la chaîne dans la langue de la *source* active (voir ci-dessous), en utilisant le [dictionnaire](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-translator.html) actif. Si aucune traduction n’est trouvée, la chaîne d’origine est utilisée.
 
 ```xml
 ${'Page' @ i18n}
@@ -366,7 +366,7 @@ Pour inclure des variables dans une chaîne traduite, l’option format peut êt
 ${'Page {0} of {1}' @ i18n, format=[current, total]}
 ```
 
-### Jonction des tableaux    {#array-join}
+### Jonction des tableaux   {#array-join}
 
 Par défaut, lors de l’affichage d’un tableau en texte, HTL affiche des valeurs séparées par des virgules (sans espace).
 
@@ -376,7 +376,7 @@ Utilisez une option de jonction pour spécifier un autre séparateur :
 ${['one', 'two'] @ join='; '}
 ```
 
-### Contexte d’affichage    {#display-context}
+### Contexte d’affichage   {#display-context}
 
 Le contexte de l’affichage d’une expression HTL fait référence à son emplacement dans la structure de la page HTML. Par exemple, si l’expression apparaît à un endroit qui générerait un nœud de texte lors du rendu, on dit qu’elle se trouve dans un contexte `text`. Si elle se trouve dans la valeur d’un attribut, on dit qu’elle se trouve dans un contexte `attribute`, et ainsi de suite.
 
@@ -418,7 +418,7 @@ L’échappement et la protection XSS peuvent également être désactivées :
 <div>${myScript @ context='unsafe'}</div>
 ```
 
-### Paramètres de contexte    {#context-settings}
+### Paramètres de contexte   {#context-settings}
 
 | Contexte | Quand utiliser la personnalisation | Effets |
 |--- |--- |--- |
