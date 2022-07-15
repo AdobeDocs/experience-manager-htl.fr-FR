@@ -1,21 +1,21 @@
 ---
-title: Que sont les instructions de bloc HTL ?
+title: À quoi renvoient les instructions de bloc HTL ?
 description: Découvrez les instructions de bloc HTL ou le langage de modèle de HTML (HTL). Les instructions de bloc sont des attributs de données personnalisés ajoutés directement au HTML existant.
 exl-id: a517dcef-ab7a-4d4c-a1a9-2e57aad034f7
 source-git-commit: 79d299766da07dae001708b396b05c73cd70d4cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1563'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
-# Instructions du bloc HTL {#htl-block-statements}
+# Instructions de bloc HTL {#htl-block-statements}
 
 Les instructions du bloc HTL sont des attributs `data` personnalisés ajoutés directement au code HTML existant. Cela permet l’annotation simple et discrète d’une page HTML statique du prototype, qui la convertit en un modèle dynamique de fonctionnement sans rompre la validité du code HTML.
 
 ## Présentation des blocs {#overview}
 
-Les modules externes de bloc HTL sont définis par `data-sly-*` attributs définis sur des éléments de HTML. Les éléments peuvent avoir une balise de fermeture ou être auto-fermants. Les attributs peuvent avoir des valeurs (qui peuvent être des chaînes ou des expressions statiques) ou simplement des attributs booléens (sans valeur).
+Les plug-ins du bloc HTL sont définis par les attributs `data-sly-*` définis sur des éléments HTML. Les éléments peuvent contenir une balise de fermeture ou peuvent se fermer automatiquement. Les attributs peuvent contenir des valeurs (qui peuvent être des chaînes ou des expressions statiques) ou simplement des attributs booléens (sans valeur).
 
 ```xml
 <tag data-sly-BLOCK></tag>                                 <!--/* A block is simply consists in a data-sly attribute set on an element. */-->
@@ -26,17 +26,17 @@ Les modules externes de bloc HTL sont définis par `data-sly-*` attributs défin
 <tag data-sly-BLOCKONE="value" data-sly-BLOCKTWO="value"/> <!--/* Several block statements can be set on a same element. */-->
 ```
 
-Toutes les évaluations `data-sly-*` Les attributs sont supprimés des balises générées.
+Tous les attributs `data-sly-*` évalués sont supprimés des balises générées.
 
-### Identificateurs {#identifiers}
+### Identifiants {#identifiers}
 
-Une instruction block peut également être suivie d’un identifiant :
+Une instruction de bloc peut également être suivie d’un identifiant :
 
 ```xml
 <tag data-sly-BLOCK.IDENTIFIER="value"></tag>
 ```
 
-L’identifiant peut être utilisé par l’instruction block de différentes manières. Voici quelques exemples :
+L’identifiant peut être utilisé par l’instruction de bloc de différentes manières. Voici quelques exemples :
 
 ```xml
 <!--/* Example of statements that use the identifier to set a variable with their result: */-->
@@ -49,11 +49,11 @@ L’identifiant peut être utilisé par l’instruction block de différentes ma
 <div data-sly-attribute.title="${properties.jcr:title}"></div> <!--/* This will create a title attribute */-->
 ```
 
-Les identifiants de niveau supérieur ne sont pas sensibles à la casse (car ils peuvent être définis par le biais d’attributs de HTML qui ne respectent pas la casse), mais toutes leurs propriétés sont sensibles à la casse.
+Les identifiants de niveau supérieur ne respectent pas la casse (car ils peuvent être définis par des attributs HTML qui ne respectent pas la casse), mais toutes leurs propriétés respectent la casse.
 
 ## Instructions de bloc disponibles {#available-block-statements}
 
-Un certain nombre d’instructions de bloc sont disponibles. Lorsqu’elles sont utilisées sur le même élément, la liste de priorité suivante définit la manière dont les instructions de bloc sont évaluées :
+Un certain nombre d’instructions de bloc sont disponibles. Lorsqu’elles sont utilisées sur le même élément, la liste de priorités suivante définit la manière dont les instructions de bloc sont évaluées :
 
 1. `data-sly-template`
 1. `data-sly-set`, `data-sly-test`, `data-sly-use`
@@ -64,11 +64,11 @@ Un certain nombre d’instructions de bloc sont disponibles. Lorsqu’elles sont
 1. `data-sly-list`, `data-sly-repeat`
 1. `data-sly-attribute`
 
-Lorsque deux instructions block ont la même priorité, leur ordre d’évaluation se situe de gauche à droite.
+Lorsque deux instructions de bloc ont la même priorité, leur ordre d’évaluation va de gauche à droite.
 
-### Utilisez {#use}
+### utiliser {#use}
 
-`data-sly-use` initialise un objet d’assistance (défini dans JavaScript ou Java) et l’expose au moyen d’une variable.
+`data-sly-use` initialise un objet d’assistance (défini dans JavaScript ou Java) et l’expose par une variable.
 
 Initialisez un objet JavaScript dont le fichier source se situe dans le même répertoire que le modèle. Notez que le nom du fichier doit être utilisé :
 
@@ -76,7 +76,7 @@ Initialisez un objet JavaScript dont le fichier source se situe dans le même r�
 <div data-sly-use.nav="navigation.js">${nav.foo}</div>
 ```
 
-Initialisez une classe Java dont le fichier source se situe dans le même répertoire que le modèle. Notez que le nom de classe doit être utilisé, et non le nom de fichier :
+Initialisez une classe Java dont le fichier source se situe dans le même répertoire que le modèle. Notez que vous devez utiliser le nom de la classe, et non le nom du fichier :
 
 ```xml
 <div data-sly-use.nav="Navigation">${nav.foo}</div>
@@ -88,7 +88,7 @@ Initialisez une classe Java dont la classe est installée en tant que partie int
 <div data-sly-use.nav="org.example.Navigation">${nav.foo}</div>
 ```
 
-Les paramètres peuvent être transmis à l’initialisation à l’aide d’options. En général, cette fonction doit être utilisée uniquement avec du code HTL, qui se trouve lui-même dans un bloc `data-sly-template` :
+Les paramètres peuvent être transmis à l’initialisation à l’aide d’options. En général, cette fonction ne doit être utilisée qu’avec un code HTL, qui se trouve lui-même dans un bloc `data-sly-template` :
 
 ```xml
 <div data-sly-use.nav="${'navigation.js' @parentPage=currentPage}">${nav.foo}</div>
@@ -122,11 +122,11 @@ Par exemple :
 
 >[!TIP]
 >
->Voir aussi la section [Chemin d’accès non toujours requis.](#path-not-required)
+>Voir aussi la section [Chemin d’accès pas toujours obligatoire](#path-not-required).
 
-### unwrap   {#unwrap}
+### unwrap {#unwrap}
 
-`data-sly-unwrap` supprime l’élément hôte de la balise générée tout en conservant son contenu. Cela permet d’exclure les éléments qui sont requis dans le cadre de la logique de présentation de HTL, mais qui ne sont pas souhaités dans la sortie actuelle.
+`data-sly-unwrap` supprime l’élément hôte du balisage généré tout en conservant son contenu. Cela permet d’exclure les éléments qui sont requis dans le cadre de la logique de présentation de HTL, mais qui ne sont pas souhaités dans la sortie actuelle.
 
 Toutefois, cette instruction doit être utilisée avec modération. En général, il est préférable de conserver la balise HTL aussi près que possible de la balise de sortie attendue. En d’autres termes, en ajoutant des instructions de bloc HTL, essayez autant que possible d’annoter simplement le HTML existant, sans ajouter de nouveaux éléments.
 
@@ -160,7 +160,7 @@ Il est également possible de déployer un élément de manière conditionnelle�
 <div class="popup" data-sly-unwrap="${isPopup}">content</div>
 ```
 
-### set {#set}
+### définir {#set}
 
 `data-sly-set` définit un nouvel identifiant avec une valeur prédéfinie.
 
@@ -169,7 +169,7 @@ Il est également possible de déployer un élément de manière conditionnelle�
 <a class="profile-link" href="${profile.url}">Edit your profile</a>
 ```
 
-### text {#text}
+### texte {#text}
 
 `data-sly-text` remplace le contenu de son élément hôte par le texte spécifié.
 
@@ -185,11 +185,11 @@ est équivalent à
 <p data-sly-text="${properties.jcr:description}">Lorem ipsum</p>
 ```
 
-Tous deux afficheront la valeur `jcr:description` comme texte du paragraphe. L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur d’origine.
+Les deux affichent la valeur de `jcr:description` sous forme de texte du paragraphe. L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur d’origine.
 
 ### attribut   {#attribute}
 
-`data-sly-attribute` ajoute des attributs à l’élément hôte.
+`data-sly-attribute` ajoute des attributs à l’élément hôte.
 
 Par exemple, cela
 
@@ -203,11 +203,11 @@ est équivalent à
 <div title="Lorem Ipsum" data-sly-attribute.title="${properties.jcr:title}"></div>
 ```
 
-Tous deux définissent l’attribut `title` sur la valeur `jcr:title`. L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur d’origine.
+Tous deux définissent l’attribut `title` à la valeur de `jcr:title`. L’avantage de la deuxième méthode est qu’elle permet l’annotation discrète du HTML tout en conservant le contenu statique de l’espace réservé du concepteur original.
 
-Les attributs sont résolus de gauche à droite. L’instance la plus à droite d’un attribut (littéral ou défini par l’intermédiaire de l’attribut `data-sly-attribute`) a la priorité sur toutes les autres instances d’un même attribut (littéral ou défini par l’intermédiaire de l’attribut `data-sly-attribute`) définies à sa gauche.
+Les attributs sont résolus de gauche à droite. L’instance la plus à droite d’un attribut (littéral ou défini via `data-sly-attribute`) étant prioritaire sur toutes les instances du même attribut (défini littéralement ou via `data-sly-attribute`) définies à sa gauche.
 
-Notez qu’un attribut (`literal` ou défini par l’intermédiaire de `data-sly-attribute`) dont la valeur correspond à la chaîne vide sera supprimé dans le balisage final. La seule exception à cette règle : un attribut littéral défini sur une chaîne vide littérale est conservé. Par exemple :
+Notez qu’un attribut (`literal` ou défini via `data-sly-attribute`) dont la valeur correspond à la chaîne vide sera supprimé dans le balisage final. La seule exception à cette règle est qu’un attribut littéral défini sur une chaîne vide littérale sera préservé. Par exemple :
 
 ```xml
 <div class="${''}" data-sly-attribute.id="${''}"></div>
@@ -255,7 +255,7 @@ produit,
 
 ### element   {#element}
 
-`data-sly-element` remplace le nom de l’élément hôte.
+`data-sly-element` remplace le nom de l’élément hôte.
 
 Par exemple,
 
@@ -263,9 +263,9 @@ Par exemple,
 <h1 data-sly-element="${titleLevel}">text</h1>
 ```
 
-Remplace `h1` par la valeur de `titleLevel`.
+Remplace le `h1` par la valeur de `titleLevel`.
 
-Pour des raisons de sécurité, `data-sly-element` accepte uniquement les noms d’éléments suivants :
+Pour des raisons de sécurité, `data-sly-element` accepte uniquement les noms d’éléments suivants :
 
 ```xml
 a abbr address article aside b bdi bdo blockquote br caption cite code col colgroup
@@ -278,7 +278,7 @@ Pour définir d’autres éléments, la sécurité XSS doit être désactivée (
 
 ### test {#test}
 
-`data-sly-test` supprime de manière conditionnelle l’élément hôte et son contenu. La valeur `false` supprime l’élément ; la valeur `true` conserve l’élément.
+`data-sly-test` supprime de manière conditionnelle l’élément hôte et son contenu. La valeur `false` supprime l’élément ; la valeur `true` conserve l’élément.
 
 Par exemple, le rendu de l’élément `p` et de son contenu ne sera effectué que si `isShown` a la valeur `true` :
 
@@ -309,25 +309,25 @@ Voici quelques exemples de comparaison de valeurs :
 </div>
 ```
 
-### repeat {#repeat}
+### répéter {#repeat}
 
-Avec `data-sly-repeat` vous pouvez répéter un élément plusieurs fois en fonction de la liste spécifiée.
+Avec `data-sly-repeat`, vous pouvez répéter un élément plusieurs fois en fonction de la liste spécifiée.
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}">${item.name}</div>
 ```
 
-Cela fonctionne de la même manière que `data-sly-list`, sauf que vous n’avez pas besoin d’élément de conteneur.
+Cela fonctionne de la même manière que `data-sly-list`, sauf que vous n’avez pas besoin d’un élément conteneur.
 
-L’exemple suivant montre que vous pouvez également faire référence à *item* pour les attributs :
+L’exemple suivant montre que vous pouvez également faire référence à l’*élément* pour les attributs :
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}" data-sly-attribute.class="${item.name}">${item.name}</div>
 ```
 
-### list {#list}
+### liste {#list}
 
-`data-sly-list` répète le contenu de l’élément hôte pour chaque propriété énumérable dans l’objet fourni.
+`data-sly-list` répète le contenu de l’élément hôte pour chaque propriété énumérable de l’objet fourni.
 
 Voici une boucle simple :
 
@@ -342,15 +342,15 @@ Les variables par défaut suivantes sont disponibles dans le cadre de la liste 
 
 * `item` : l’élément actuel dans l’itération.
 * `itemList` : objet contenant les propriétés suivantes :
-* `index` : compteur de base zéro (`0..length-1`).
-* `count` : compteur de base un (`1..length`).
+* `index` : compteur basé sur zéro (`0..length-1`).
+* `count` : compteur basé sur un (`1..length`).
 * `first` : `true` si l’élément actif est le premier élément.
-* `middle`: `true` si l’élément actif n’est ni le premier ni le dernier élément.
-* `last`: `true` si l’élément actif est le dernier élément.
-* `odd`: `true` if `index` est impair.
-* `even`: `true` if `index` est pair.
+* `middle` : `true` si l’élément actif n’est ni le premier ni le dernier élément.
+* `last` : `true` si l’élément actif est le dernier élément.
+* `odd` : `true` si `index` est impair.
+* `even` : `true` si `index` est pair.
 
-La définition d’un identificateur dans l’instruction `data-sly-list` vous permet de renommer les variables `itemList` et `item`. `item` sera `<variable>` et `itemList` sera `<variable>List`.
+La définition d’un identificateur sur l’instruction `data-sly-list` vous permet de renommer les variables `itemList` et `item`. `item` deviendra `<variable>` et `itemList` deviendra `<variable>List`.
 
 ```xml
 <dl data-sly-list.child="${currentPage.listChildren}">
@@ -370,17 +370,17 @@ Vous pouvez également accéder aux propriétés de façon dynamique :
 
 ### ressource   {#resource}
 
-`data-sly-resource` inclut le résultat du rendu de la ressource indiquée par la résolution sling et le processus de rendu.
+`data-sly-resource` comprend le résultat du rendu de la ressource indiquée par le processus de résolution et de rendu Sling.
 
-Une ressource unique inclut :
+Une ressource simple comprend :
 
 ```xml
 <article data-sly-resource="path/to/resource"></article>
 ```
 
-#### Chemin non toujours requis {#path-not-required}
+#### Chemin d’accès pas toujours obligatoire {#path-not-required}
 
-Notez que l’utilisation d’un chemin avec `data-sly-resource` n’est pas nécessaire si vous disposez déjà de la ressource. Si vous disposez déjà de la ressource, vous pouvez l’utiliser directement.
+Notez que l’utilisation d’un chemin avec `data-sly-resource` n’est pas obligatoire si vous avez déjà la ressource. Si vous avez déjà la ressource, vous pouvez l’utiliser directement.
 
 Par exemple, ce qui suit est correct.
 
@@ -394,10 +394,10 @@ Toutefois, ce qui suit est également parfaitement acceptable.
 <sly data-sly-resource="${resource @ decorationTagName='div'}"></sly>
 ```
 
-Il est recommandé d&#39;utiliser la ressource directement, si possible, pour les raisons suivantes.
+Il est recommandé d’utiliser directement la ressource, lorsque c’est possible, pour les raisons suivantes.
 
-* Si vous disposez déjà de la ressource, la résolution à nouveau à l’aide du chemin d’accès est un travail supplémentaire inutile.
-* L’utilisation du chemin alors que vous disposez déjà de la ressource peut entraîner des résultats inattendus, car les ressources Sling peuvent être enveloppées ou synthétiques et ne pas être fournies sur le chemin donné.
+* Si vous disposez déjà de la ressource, une nouvelle résolution à l’aide du chemin d’accès représente un travail supplémentaire et inutile.
+* L’utilisation du chemin d’accès lorsque vous disposez déjà de la ressource peut entraîner des résultats inattendus, car les ressources Sling peuvent être enveloppées ou synthétiques et ne pas être fournies au chemin d’accès donné.
 
 #### Options {#resource-options}
 
@@ -462,11 +462,11 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus d’informations, voir [Balise décorative](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html) dans la documentation sur le développement de composants.
+>AEM offre une logique claire et simple pour contrôler les balises de décoration qui encapsulent les éléments inclus. Pour plus de détails, consultez la rubrique [Balise de décoration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html?lang=fr) dans la documentation sur les composants de développement.
 
-### inclusion {#include}
+### inclure {#include}
 
-`data-sly-include` remplace le contenu de l’élément hôte par le balisage généré par le fichier de modèle de HTML indiqué (HTL, JSP, ESP, etc.) lorsqu’il est traité par le moteur de modèle correspondant. Le contexte de rendu du fichier inclus ne comprend pas le contexte HTL actif (celui du fichier inclus). Par conséquent, pour l’inclusion des fichiers HTL, le `data-sly-use` actif doit être répété dans le fichier inclus (dans ce cas, il est généralement préférable d’utiliser `data-sly-template` et `data-sly-call`)
+`data-sly-include` : remplace le contenu de l’élément hôte par le balisage généré par le fichier modèle HTML indiqué (HTL, JSP, ESP, etc.) lorsqu’il est traité par son moteur de modèle correspondant. Le contexte de rendu du fichier inclus ne comprendra pas le contexte HTL actif (celui du fichier d’inclusion). Par conséquent, pour l’inclusion des fichiers HTL, le `data-sly-use` actif doit être répété dans le fichier inclus (dans ce cas, il est généralement préférable d’utiliser `data-sly-template` et `data-sly-call`)
 
 Une simple inclusion :
 
@@ -496,7 +496,7 @@ Vous pouvez également modifier le mode WCM :
 
 ### Request-attributes {#request-attributes}
 
-Dans le `data-sly-include` et `data-sly-resource` vous pouvez passer `requestAttributes` afin de les utiliser dans le script HTL de réception.
+Dans `data-sly-include` et `data-sly-resource`, vous pouvez transmettre les `requestAttributes` pour les utiliser dans le script HTL récepteur.
 
 Vous pouvez ainsi transmettre des paramètres correctement dans des scripts ou des composants.
 
@@ -520,9 +520,9 @@ public class Settings extends WCMUsePojo {
 }
 ```
 
-Par exemple, via un modèle Sling, vous pouvez utiliser la valeur de la variable `requestAttributes`.
+Par exemple, via un modèle Sling, vous pouvez consommer la valeur des `requestAttributes` spécifiés.
 
-Dans cet exemple, layout est injecté via Map de la classe d’utilisation :
+Dans cet exemple, la disposition est injectée via le Map de la classe Use :
 
 ```xml
 @Model(adaptables=SlingHttpServletRequest.class)
@@ -533,13 +533,13 @@ public class ProductSettings {
 }
 ```
 
-### modèle et appels   {#template-call}
+### modèle et appels {#template-call}
 
-Les blocs de modèle peuvent être utilisés comme des appels de fonction : dans leur déclaration, ils peuvent obtenir des paramètres, qui peuvent ensuite être transmis lors de leur appel. Elles permettent également la récursion.
+Les blocs de modèle peuvent être utilisés comme des appels de fonction : dans leur déclaration, ils peuvent obtenir des paramètres, qui peuvent ensuite être transmis lors de leur appel. Ils permettent également la récursion.
 
-`data-sly-template` définit un modèle. L’élément hôte et son contenu ne sont pas rendus par HTL
+`data-sly-template` définit un modèle. L’élément hôte et son contenu ne sont pas rendus par HTL.
 
-`data-sly-call` appelle un modèle défini avec data-sly-template. Le contenu du modèle appelé (paramétrable de manière optionnelle) remplace le contenu de l’élément hôte de l’appel.
+`data-sly-call` appelle un modèle défini avec data-sly-template. Le contenu du modèle appelé (paramétrable de manière optionnelle) remplace le contenu de l’élément hôte de l’appel.
 
 Définissez un modèle statique, puis appelez-le :
 
@@ -578,21 +578,21 @@ Le risque de récursivité de modèle est pris en charge :
 <div data-sly-call="${nav @ page=currentPage}" data-sly-unwrap></div>
 ```
 
-## élément sly {#sly-element}
+## Élément sly {#sly-element}
 
-Le `<sly>` La balise de HTML peut être utilisée pour supprimer l’élément actif, ce qui permet d’afficher uniquement ses enfants. Sa fonctionnalité est similaire à la fonction `data-sly-unwrap` élément block :
+La balise HTML `<sly>` peut être utilisée pour supprimer l’élément actif et ne laisser s’afficher que ses tâches enfants. Sa fonctionnalité est similaire à celle de l’élément de bloc `data-sly-unwrap` :
 
 ```xml
 <!--/* This will display only the output of the 'header' resource, without the wrapping <sly> tag */-->
 <sly data-sly-resource="./header"></sly>
 ```
 
-Bien que la balise de HTML 5 ne soit pas valide, la variable `<sly>` peut être affichée dans la sortie finale à l’aide de la balise `data-sly-unwrap`:
+Bien que n’étant pas une balise HTML 5 valide, la balise `<sly>` peut être affichée dans la sortie finale à l’aide de `data-sly-unwrap` :
 
 ```xml
 <sly data-sly-unwrap="${false}"></sly> <!--/* outputs: <sly></sly> */-->
 ```
 
-L’objectif de la variable `<sly>` est de rendre plus évident le fait que l’élément n’est pas une sortie. Si vous le souhaitez, vous pouvez continuer à utiliser `data-sly-unwrap`.
+L’objectif de l’élément `<sly>` est de rendre plus évident le fait que l’élément n’est pas une sortie. Si vous le souhaitez, vous pouvez continuer à utiliser `data-sly-unwrap`.
 
-Comme avec `data-sly-unwrap`, essayez de minimiser l’utilisation de .
+Comme avec `data-sly-unwrap`, essayez de réduire l’utilisation de cet élément.
