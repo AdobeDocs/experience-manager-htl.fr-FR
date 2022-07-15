@@ -1,19 +1,19 @@
 ---
 title: Présentation d’Adobe Experience Manager HTL
-description: L’objectif de HTL, pris en charge par AEM, est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance du langage Java de participer de manière plus efficace aux projets AEM.
+description: L’objectif de HTL, pris en charge par AEM, est d’offrir un cadre web d’entreprise hautement productif qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
 source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '667'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 # Présentation {#overview}
 
-L’objectif du langage HTL (HTML Template Language), pris en charge par Adobe Experience Manager (AEM), est d’offrir une structure web extrêmement productive au niveau de l’entreprise qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
+L’objectif du langage HTL (HTML Template Language), pris en charge par Adobe Experience Manager (AEM), est d’offrir un cadre web d’entreprise hautement productif qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
 
-Le langage HTL est le système de modèle côté serveur préféré et recommandé pour HTML dans AEM. HTL a été introduit avec AEM 6.0 et remplace JSP (JavaServer Pages). Pour les développeurs web qui souhaitent créer des sites web d’entreprise performants, le langage HTL contribue à améliorer l’efficacité au niveau de la sécurité et du développement.
+Le langage HTL (HTML Template Language) est le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM. HTL a été introduit avec AEM 6.0 et remplace JSP (JavaServer Pages). Pour les développeurs Web qui souhaitent créer des sites Web d’entreprise robustes, le langage HTL (HTML Template Language) permet d’améliorer la sécurité et l’efficacité du développement.
 
 ## Sécurité renforcée {#increased-security}
 
@@ -27,13 +27,13 @@ Il est facile d’apprendre le langage de modèle HTML. Ses fonctionnalités son
 
 Ces fonctionnalités permettent aux développeurs HTML sans connaissance préalable de Java et avec peu de connaissances spécifiques du produit de modifier les modèles HTL. Ils peuvent ainsi faire partie de l’équipe de développement et cela simplifie la collaboration avec les développeurs Java de plein-pile. Réciproquement, cela permet aux développeurs Java de se concentrer sur le code principal sans se soucier du HTML.
 
-## Réduction des coûts    {#reduced-costs}
+## Réduction des coûts   {#reduced-costs}
 
 Une sécurité renforcée, un développement simplifié et une meilleure collaboration des équipes se traduisent dans les projets AEM par des efforts réduits, une mise sur le marché plus rapide et un moindre coût total de propriété du parc.
 
 Concrètement, d’après nos observations lors de la nouvelle mise en œuvre du site Adobe.com avec le langage HTL, le coût et la durée du projet peuvent être réduits d’environ 25 %.
 
-![Augmentation efficace et diminution des coûts](assets/chlimage_1.png)
+![Augmentation de l’efficacité et diminution des coûts](assets/chlimage_1.png)
 
 Le diagramme ci-dessus montre que HTL permet potentiellement d’améliorer l’efficacité des domaines suivants :
 
@@ -43,4 +43,4 @@ Le diagramme ci-dessus montre que HTL permet potentiellement d’améliorer l’
 
 **À lire aussi :**
 
-* [Prise en main du langage HTL](getting-started.md)
+* [Prise en main du langage HTL (HTML Template Language)](getting-started.md)
