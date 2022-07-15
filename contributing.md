@@ -1,11 +1,11 @@
 ---
 source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '532'
 ht-degree: 100%
 
 ---
-# Contribution à la documentation d’Adobe Experience Manager
+# Contribution à la documentation d’Adobe Experience Manager
 
 Merci d’avoir choisi de contribuer à la documentation d’Adobe Experience Manager Cloud Service. Nous apprécions toute contribution relative au contenu proposée par notre communauté de lecteurs, ainsi que par nos collègues d’Adobe.
 
@@ -38,7 +38,7 @@ Vous avez une suggestion, une observation à propos des documents actuels ou une
 
 Les propositions relatives aux problèmes vous permettent de décrire facilement vos idées d’amélioration de documents, avant examen par un membre de l’équipe AEM Docs. Pour créer un problème, il suffit de cliquer sur le lien **Log an issue** (Soumettre un problème) en haut du panneau de navigation de droite d’une page.
 
-### Créer une requête d’extraction {#create-a-pull-request}
+### Créer une demande d’extraction {#create-a-pull-request}
 
 Si vous rencontrez un problème et savez exactement comment le résoudre, envisagez de créer une demande d’extraction. Les demandes d’extraction vous permettent d’apporter vos propres modifications à la documentation, qui sont ensuite examinées pour inclusion par un membre de l’équipe AEM Docs. Pour effectuer les modifications suggérées et créer la demande d’extraction, il suffit de cliquer sur le lien **Edit this page** (Modifier cette page) en haut du panneau de navigation de droite d’une page.
 
