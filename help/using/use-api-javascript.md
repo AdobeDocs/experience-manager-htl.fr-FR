@@ -1,17 +1,17 @@
 ---
-title: Use-API JavaScript HTL
-description: Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript.
+title: HTL JavaScript Use-API
+description: Le langage HTL (HTML Template Language) Use-API JavaScript permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript.
 exl-id: e98bfbd5-fa64-48c7-bd14-477d4c5e1788
 source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# Use-API JavaScript HTL {#htl-javascript-use-api}
+# HTL Use-API JavaScript {#htl-javascript-use-api}
 
-Use-API JavaScript HTL permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript. Cela permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code JavaScript, tandis que le code HTL traite uniquement la production directe des balises.
+Le langage HTL (HTML Template Language) Use-API JavaScript permet à un fichier HTL d’accéder au code d’assistance écrit en JavaScript. Ainsi, toute la logique commerciale complexe est encapsulée dans le code JavaScript, tandis que le code HTL traite uniquement la production directe des balises.
 
 Les conventions suivantes sont utilisées.
 
@@ -35,7 +35,7 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 });
 ```
 
-## Un exemple simple   {#a-simple-example}
+## Un exemple simple {#a-simple-example}
 
 Nous définissons un composant, `info`, situé à l’adresse
 
@@ -46,7 +46,7 @@ Il contient deux fichiers :
 * **`info.js`** : un fichier JavaScript qui définit la classe de l’utilisation.
 * **`info.html`** : un fichier HTL qui définit le composant `info`. Ce code utilisera la fonctionnalité `info.js` via Use-API.
 
-### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
+### /apps/mon-exemple/composant/info/info.js {#apps-my-example-component-info-info-js}
 
 ```java
 "use strict";
@@ -58,7 +58,7 @@ use(function () {
 });
 ```
 
-### /apps/my-example/component/info/info.html {#apps-my-example-component-info-info-html}
+### /apps/mon-exemple/composant/info/info.html {#apps-my-example-component-info-info-html}
 
 ```xml
 <div data-sly-use.info="info.js">
@@ -69,15 +69,15 @@ use(function () {
 
 Nous créons également un nœud de contenu qui utilise le composant `info` à l’adresse
 
-`/content/my-example`, avec les propriétés :
+`/content/my-example`, avec des propriétés :
 
 * `sling:resourceType = "my-example/component/info"`
 * `title = "My Example"`
 * `description = "This is some example content."`
 
-Voici la structure de référentiel obtenue :
+Voici la structure de référentiel qui en résulte :
 
-### Structure du référentiel {#repository-structure}
+### Structure du référentiel   {#repository-structure}
 
 ```java
 {
@@ -105,7 +105,7 @@ Voici la structure de référentiel obtenue :
 }
 ```
 
-Envisagez le modèle de composant suivant :
+Considérez le modèle de composant suivant :
 
 ```xml
 <section class="component-name" data-sly-use.component="component.js">
@@ -114,7 +114,7 @@ Envisagez le modèle de composant suivant :
 </section>
 ```
 
-La logique correspondante peut être écrite à l’aide du code JavaScript côté serveur suivant, situé dans un fichier `component.js` à côté du modèle :
+La logique correspondante peut être écrite en utilisant le code JavaScript côté serveur suivant, situé dans un fichier `component.js` à côté du modèle :
 
 ```javascript
 use(function () {
@@ -133,7 +133,7 @@ use(function () {
 });
 ```
 
-Cette option tente de récupérer `title` à partir de différentes sources et coupe la description à 50 caractères.
+Il tente de récupérer le `title` à partir de différentes sources et de réduire la description à 50 caractères.
 
 ## Dépendances {#dependencies}
 
@@ -158,9 +158,9 @@ use(['../utils/MyUtils.js'], function (utils) {
 
 ## Extension   {#extending}
 
-Le motif de dépendance peut également être utilisé pour améliorer la logique d’un autre composant (en général, le `sling:resourceSuperType` du composant actif).
+Le motif de dépendance peut également être utilisé pour étendre la logique d’un autre composant (en général, le `sling:resourceSuperType` du composant actif).
 
-Imaginez que le composant parent fournisse déjà le `title` et que nous souhaitions également ajouter une `description` :
+Imaginons que le composant parent fournisse déjà le `title` et que nous voulions également ajouter une `description` :
 
 ```javascript
 use(['../parent-component/parent-component.js'], function (component) {
@@ -175,9 +175,9 @@ use(['../parent-component/parent-component.js'], function (component) {
 });
 ```
 
-## Transmission des paramètres à un modèle {#passing-parameters-to-a-template}
+## Transmettre des paramètres à un modèle {#passing-parameters-to-a-template}
 
-Dans le cas des instructions `data-sly-template` qui peuvent être indépendantes des composants, il peut être utile de transmettre des paramètres à l’Use-API associée.
+Dans le cas des instructions `data-sly-template` qui peuvent être indépendantes des composants, il peut être utile de transmettre des paramètres à la Use-API associée.
 
 Par conséquent, dans notre composant, appelons un modèle qui se trouve dans un autre fichier :
 
@@ -194,7 +194,7 @@ Il s’agit alors du modèle situé dans `template.html` :
 </template>
 ```
 
-La logique correspondante peut être écrite à l’aide du JavaScript côté serveur suivant, situé dans le fichier `template.js` à côté du fichier de modèle :
+La logique correspondante peut être écrite en utilisant le JavaScript côté serveur suivant, situé dans un fichier `template.js` juste à côté du fichier du modèle :
 
 ```javascript
 use(function () {
