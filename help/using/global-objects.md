@@ -1,11 +1,11 @@
 ---
 title: Objets globaux HTL
-description: Sans rien avoir à spécifier, HTL permet d’accéder à tous les objets qui étaient couramment disponibles en JSP après avoir inclus global.jsp.
+description: Découvrez les objets énumérables, les objets pris en charge par Java et les objets pris en charge par JavaScript. Recherchez les noms et descriptions de variable pour ces objets globaux HTL utilisés dans AEM.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
-workflow-type: ht
-source-wordcount: '220'
-ht-degree: 100%
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 88%
 
 ---
 
@@ -20,8 +20,8 @@ Ces objets vous permettent d’accéder facilement aux informations fréquemment
 | Nom de variable | Description |
 |--- |--- |
 | `properties` | Liste des propriétés de la ressource active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Liste des propriétés de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `inheritedPageProperties` | Liste des propriétés de page héritées de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Liste des propriétés de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `inheritedPageProperties` | Liste des propriétés de page héritées de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Objets pris en charge par Java {#java-backed-objects}
 

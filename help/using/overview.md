@@ -1,11 +1,11 @@
 ---
-title: Présentation d’Adobe Experience Manager HTL
-description: L’objectif de HTL, pris en charge par AEM, est d’offrir un cadre web d’entreprise hautement productif qui renforce la sécurité et permet aux développeurs HTML sans connaissance de Java de participer de manière plus efficace aux projets AEM.
+title: Présentation de HTL
+description: Découvrez comment AEM prend en charge le langage de modèle de HTML (HTL) pour offrir une structure web productive au niveau de l’entreprise. HTL renforce la sécurité et permet aux développeurs de HTMLS sans connaissance de Java de participer de manière plus efficace aux projets AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
-source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
-workflow-type: ht
-source-wordcount: '667'
-ht-degree: 100%
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
+workflow-type: tm+mt
+source-wordcount: '663'
+ht-degree: 95%
 
 ---
 
