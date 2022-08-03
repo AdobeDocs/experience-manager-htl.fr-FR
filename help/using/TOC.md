@@ -9,26 +9,26 @@ role: Developer
 source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
 
-# Adobe Experience Manager HTL Aide {#using}
+# Aide d’Adobe Experience Manager HTL {#using}
 
 + [Présentation](overview.md)
-+ Prise en main{#getting-started}
-   + [Présentation de HTL?](update.md)
-   + [Prise en main d’HTL](getting-started.md)
-   + [Spécification HTL](htl-specification.md)
-+ HTML Template Language{#htl}
++ Prise en main {#getting-started}
+   + [Qu’est-ce que HTL ?](update.md)
+   + [Prise en main de HTL](getting-started.md)
+   + [La spécification HTL](htl-specification.md)
++ Langage HTL (HTML Template Language) {#htl}
    + [Objets globaux HTL](global-objects.md)
-   + [Use-API Java HTL](use-api-java.md)
-   + [Use-API JavaScript HTL](use-api-javascript.md)
-   + [Instructions du bloc HTL](block-statements.md)
-   + [Use-API HTL](use-api.md)
-   + [Outils de développement](dev-tools.md)
-   + [TCK HTL](htl-tck.md)
+   + [HTL Java Use-API](use-api-java.md)
+   + [HTL JavaScript Use-API](use-api-javascript.md)
+   + [Instructions de bloc HTL](block-statements.md)
+   + [HTL Use-API](use-api.md)
+   + [Outils pour les développeurs](dev-tools.md)
+   + [Le HTL TCK](htl-tck.md)
    + [Langage d’expression HTL](expression-language.md)
    + [Exemples de code](code-samples.md)
    + [Normalisation](standardization.md)
