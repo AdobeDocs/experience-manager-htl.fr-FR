@@ -1,11 +1,11 @@
 ---
 title: Objets globaux HTL
-description: Découvrez les objets énumérables, les objets pris en charge par Java et les objets pris en charge par JavaScript. Recherchez les noms et descriptions de variable pour ces objets globaux HTL utilisés dans AEM.
+description: Découvrez les objets énumérables, pris en charge par Java et pris en charge par JavaScript. Recherchez les noms et descriptions de variable pour ces objets globaux HTL utilisés dans AEM.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Ces objets vous permettent d’accéder facilement aux informations fréquemment
 
 | Nom de variable | Description |
 |--- |--- |
-| `properties` | Liste des propriétés de la ressource active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/fr/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Liste des propriétés de la ressource active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 | `pageProperties` | Liste des propriétés de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 | `inheritedPageProperties` | Liste des propriétés de page héritées de la page active. Pris en charge par [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
