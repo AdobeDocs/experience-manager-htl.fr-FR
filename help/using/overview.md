@@ -1,11 +1,11 @@
 ---
 title: Présentation de HTL
-description: Découvrez comment AEM prend en charge le langage de modèle de HTML (HTL) pour offrir une structure web productive au niveau de l’entreprise. HTL renforce la sécurité et permet aux développeurs de HTMLS sans connaissance de Java de participer de manière plus efficace aux projets AEM.
+description: Découvrez comment AEM prend en charge le langage HTL (HTML Template Language) pour offrir un framework web productif au niveau de l’entreprise. HTL renforce la sécurité et permet aux développeurs HTML qui ne maîtrisent pas Java de participer plus efficacement aux projets AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
 source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '663'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
