@@ -1,34 +1,34 @@
 ---
 title: Prise en main de HTL
-description: Découvrez HTL, le système de modèle côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses concepts fondamentaux.
+description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 source-git-commit: 5ab1275c984135fe946f36905bbc979cf19edd80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2170'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
 
 # Prise en main de HTL {#getting-started-with-htl}
 
-Le langage HTL (HTML Template Language) est le système de modèle côté serveur préféré et recommandé pour le HTML dans Adobe Experience Manager. Comme dans tous les systèmes de modèle HTML côté serveur, un fichier HTL définit la sortie envoyée au navigateur en spécifiant le HTML lui-même, une logique de présentation de base et des variables à évaluer au moment de l’exécution.
+Le langage HTL (HTML Template Language) est le système de modèles côté serveur préféré et recommandé pour le HTML dans Adobe Experience Manager. Comme dans tous les systèmes de modèles HTML côté serveur, un fichier HTL définit la sortie envoyée au navigateur en spécifiant le code HTML lui-même, une logique de présentation de base et des variables à évaluer au moment de l’exécution.
 
-Ce document donne un aperçu de l’objectif de HTL ainsi qu’une introduction aux concepts et concepts fondamentaux du langage.
+Ce document donne un aperçu de l’objectif du HTL et offre une introduction aux concepts et éléments fondamentaux du langage.
 
 >[!TIP]
 >
->Ce document présente l’objectif de HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la section [Spécification HTL.](specification.md)
+>Ce document présente l’objectif du HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL.](specification.md)
 
 ## Calques HTL {#layers}
 
-HTL utilisé dans AEM peut être défini par plusieurs calques.
+Le HTL tel qu’utilisé dans AEM peut être défini par plusieurs calques.
 
-1. **[Spécification HTL](specification.md)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en oeuvre.
+1. **[Spécification HTL](specification.md)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
 1. **[Moteur de script HTL Sling](specification.md)** - Le projet Sling a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
-1. **[Extensions d’AEM](specification.md)** - AEM s’appuie sur le moteur de script HTL Sling pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
+1. **[Extensions AEM](specification.md)** - AEM s’appuie sur le moteur de script HTL Sling pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
 
-Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Il touche donc les trois couches, liant les ressources externes selon les besoins.
+Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Par conséquent, elle couvre les trois aspects, associant les ressources externes selon les besoins.
 
 ## Concepts fondamentaux de HTL {#fundamental-concepts-of-htl}
 
@@ -48,20 +48,20 @@ Voici un premier exemple qui peut être présenté tel quel dans un fichier `tem
 </h1>
 ```
 
-On peut distinguer deux types différents de syntaxes :
+Nous pouvons distinguer deux différents types de syntaxe :
 
-* **Instructions de bloc** - Pour afficher de manière conditionnelle la variable `<h1>` élément , un `data-sly-test` L’attribut de données HTML5 est utilisé. HTL fournit plusieurs attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément de HTML, et tous sont précédés du préfixe `data-sly`.
-* **Langage d’expression** - Les expressions HTL sont délimitées par la variable `${` et `}` caractères. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
+* **Instructions de bloc** - pour afficher de manière conditionnelle l’élément `<h1>`, un attribut de données HTML5 `data-sly-test` est utilisé. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et tous ont le préfixe `data-sly`.
+* **Langage d’expression** - les expressions HTL sont délimitées par les caractères `${` et `}`. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
-Voir [Spécification HTL](specification.md) pour plus d’informations sur les deux syntaxes.
+Voir la [Spécification HTL](specification.md) pour plus d’informations sur les deux syntaxes.
 
 ### Élément SLY   {#the-sly-element}
 
-Un concept central de HTL consiste à offrir la possibilité de réutiliser des éléments de HTML existants pour définir des instructions de bloc, ce qui évite d’avoir à insérer des délimiteurs supplémentaires pour définir l’endroit où l’instruction commence et se termine. Cette annotation discrète de la balise pour transformer un HTML statique en modèle dynamique offre l’avantage de ne pas rompre la validité du code HTML. Par conséquent, l’affichage reste correct, même lorsque les fichiers sont statiques.
+Un concept central de HTL est d’offrir la possibilité de réutiliser les éléments HTML existants pour définir des instructions de bloc, ce qui évite le besoin d’insérer des délimiteurs supplémentaires pour définir le début et la fin de l’instruction. Cette annotation discrète de la balise pour transformer un HTML statique en modèle dynamique offre l’avantage de ne pas rompre la validité du code HTML. Par conséquent, l’affichage reste correct, même lorsque les fichiers sont statiques.
 
-Toutefois, il se peut parfois qu’il n’existe pas d’élément à l’emplacement exact où une instruction de bloc doit être insérée. Dans ce cas, il est possible d’insérer une `sly` élément qui sera automatiquement supprimé de la sortie, lors de l’exécution des instructions de bloc jointes et de l’affichage de son contenu en conséquence.
+Toutefois, il se peut parfois qu’il n’existe pas d’élément à l’emplacement exact où une instruction de bloc doit être insérée. Dans ce cas, il est possible d’insérer un élément `sly` spécial qui est automatiquement supprimé de la sortie lors de l’exécution des instructions du bloc joint et de l’affichage de son contenu qui en découle.
 
-L’exemple suivant...
+L’exemple suivant…
 
 ```xml
 <sly data-sly-test="${properties.jcr:title && properties.jcr:description}">
@@ -70,16 +70,16 @@ L’exemple suivant...
 </sly>
 ```
 
-...produit quelque chose comme le HTML suivant, mais uniquement s’il existe les deux, une `jcr:title` et un `jcr:description` définie, et si aucun d’eux n’est vide :
+…produit quelque chose comme le code HTML suivant, mais uniquement s’il existe à la fois une propriété `jcr:title` et `jcr:description` définies, et si aucune d’elles n’est vide :
 
 ```xml
 <h1>MY TITLE</h1>
 <p>MY DESCRIPTION</p>
 ```
 
-Gardez à l’esprit que si vous utilisez le `sly` lorsqu’aucun élément existant n’aurait pu être annoté avec l’instruction block . Ceci est dû au fait que `sly` les éléments dissuadent la valeur proposée par la langue de ne pas altérer le HTML statique lors de sa mise en dynamique.
+Pensez à n’utiliser l’élément `sly` que lorsqu’aucun élément existant n’aurait pu être annoté avec l’instruction de bloc. Ceci est dû au fait que les éléments `sly` empêchent la valeur proposée par le langage de ne pas modifier le HTML statique lors du rendu dynamique.
 
-Par exemple, si l’exemple précédent aurait été encapsulé dans une balise `div` , puis l’élément ajouté `sly` serait abusif :
+Donc, si l’exemple précédent avait déjà été encapsulé dans un élément `div`, alors l’élément supplémentaire `sly` aurait été problématique :
 
 ```xml
 <div>
@@ -90,7 +90,7 @@ Par exemple, si l’exemple précédent aurait été encapsulé dans une balise 
 </div>
 ```
 
-et le `div` aurait pu être annoté avec la condition :
+et l’élément `div` pourrait avoir été annoté avec la condition :
 
 ```xml
 <div data-sly-test="${properties.jcr:title && properties.jcr:description}">
@@ -101,7 +101,7 @@ et le `div` aurait pu être annoté avec la condition :
 
 ### Commentaires HTL   {#htl-comments}
 
-L’exemple suivant illustre un commentaire HTL sur la première ligne et un commentaire de HTML sur la deuxième ligne.
+L’exemple suivant illustre un commentaire HTL sur la première ligne et un commentaire HTML sur la deuxième ligne.
 
 ```xml
 <!--/* An HTL Comment */-->
@@ -116,13 +116,13 @@ Les commentaires HTML ne peuvent pas contenir de commentaires HTL et vice versa.
 
 ### Contextes spéciaux   {#special-contexts}
 
-Pour pouvoir tirer le meilleur parti de HTL, il est important de bien comprendre ce qu’implique le fait qu’il soit basé sur la syntaxe HTML.
+Pour pouvoir tirer le meilleur parti du HTL, il est important de bien comprendre ce qu’implique le fait qu’il soit basé sur la syntaxe HTML.
 
-Reportez-vous à la section [Afficher le contexte](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) de la spécification HTL pour plus d’informations.
+Reportez-vous à la [section Afficher le contexte](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) de la spécification HTL pour plus d’informations.
 
 ### Noms des éléments et attributs   {#element-and-attribute-names}
 
-Les expressions peuvent uniquement être placées dans du texte de HTML ou des valeurs d’attribut, mais pas dans des noms d’élément ou d’attribut, ou cela ne serait plus un HTML valide. Pour définir dynamiquement des noms d’éléments, l’instruction `data-sly-element` peut être utilisée sur les éléments souhaités. Pour définir dynamiquement des noms d’attributs, et même pour définir plusieurs attributs en même temps, vous pouvez utiliser l’instruction `data-sly-attribute`.
+Des expressions peuvent uniquement être placées dans du texte HTML ou des valeurs d’attribut, mais pas dans des noms d’éléments ou d’attributs, car le HTML ne serait alors plus valide. Pour définir dynamiquement des noms d’éléments, l’instruction `data-sly-element` peut être utilisée sur les éléments souhaités. Pour définir dynamiquement des noms d’attributs, et même pour définir plusieurs attributs en même temps, vous pouvez utiliser l’instruction `data-sly-attribute`.
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
@@ -138,7 +138,7 @@ Comme HTL utilise des attributs de données pour définir les instructions de bl
 
 Cela s’explique par le fait que le contenu de ces contextes est textuel et non pas HTML. Les éléments HTML contenus seraient donc considérés en tant que simples données de caractères. Ainsi, sans véritables éléments HTML, les attributs `data-sly` ne peuvent pas non plus être exécutés.
 
-Cela peut sembler une restriction importante, mais il s’agit d’une restriction souhaitée, car le langage de modèle de HTML ne doit pas être utilisé à mauvais escient pour générer une sortie qui n’est pas HTML. La section [Use-API pour accéder à la logique](#use-api-for-accessing-logic) ci-dessous explique comment une logique supplémentaire peut être appelée à partir du modèle, ce qui peut être employé si nécessaire afin de préparer une sortie complexe pour ces contextes. Par exemple, un moyen simple d’envoyer des données d’un script principal à un script frontal est d’utiliser la logique du composant pour générer une chaîne JSON, qui peut alors être placée dans un attribut de données avec une simple expression HTL.
+Cela peut sembler particulièrement restrictif. Pourtant, cela est souhaitable, car le langage HTL ne doit pas être utilisé abusivement pour générer une sortie qui n’est pas HTML. La section [Use-API pour accéder à la logique](#use-api-for-accessing-logic) ci-dessous explique comment une logique supplémentaire peut être appelée à partir du modèle, ce qui peut être employé si nécessaire afin de préparer une sortie complexe pour ces contextes. Par exemple, un moyen simple d’envoyer des données d’un script principal à un script frontal est d’utiliser la logique du composant pour générer une chaîne JSON, qui peut alors être placée dans un attribut de données avec une simple expression HTL.
 
 L’exemple suivant illustre le comportement des commentaires HTML. Mais le même comportement pourrait être observé dans un script ou des éléments de style :
 
@@ -171,9 +171,9 @@ Voici un exemple de la façon de définir le contexte des expressions placées d
 <style> a { font-family: "${myFont @ context='styleString'}"; } </style>
 ```
 
-Pour plus d’informations sur le contrôle de l’échappement, reportez-vous à la section [Contexte d’affichage du langage d’expression](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) des spécifications HTL.
+Pour plus de détails sur la façon de contrôler l’échappement, référez-vous à la section [Contexte d’affichage du langage d’expression](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) des spécifications HTL.
 
-## Capacités générales de HTL   {#general-capabilities-of-htl}
+## Capacités générales du HTL   {#general-capabilities-of-htl}
 
 Cette section décrit brièvement les fonctionnalités générales du langage HTL.
 
@@ -195,9 +195,9 @@ Examinez l’exemple suivant :
 </p>
 ```
 
-Dans la plupart des langages de modèle, cet exemple devrait créer une vulnérabilité de type attaque multisite par scripts (XSS), car même si toutes les variables sont automatiquement placées dans une séquence d’échappement en HTML, l’attribut `href` doit toujours être placé dans une séquence d’échappement spécifiquement par l’URL. Cette omission est l’une des erreurs les plus courantes, car elle peut facilement être oubliée et il est difficile de la repérer de manière automatisée.
+Dans la plupart des langages de modèle, cet exemple devrait créer une vulnérabilité de type attaque multisite par scripts (XSS), car même si toutes les variables sont automatiquement placées dans une séquence d’échappement en HTML, l’attribut `href` doit toujours être placé dans une séquence d’échappement spécifiquement par l’URL. Cette omission est l’une des erreurs les plus courantes, car cet élément peut facilement être oublié et il est difficile de le repérer de manière automatique.
 
-Pour faciliter la tâche, le langage de modèle HTML échappe automatiquement chaque variable en fonction du contexte dans lequel elle se trouve. Cela est possible grâce au fait que HTL comprend la syntaxe du HTML.
+Pour faciliter la tâche, le langage de modèle HTML présente automatiquement une séquence d’échappement pour chaque variable en fonction du contexte dans lequel elle se trouve. Cela est possible parce que le HTL comprend la syntaxe du HTML.
 
 Considérons le fichier `logic.js` suivant :
 
@@ -221,9 +221,9 @@ L’exemple initial peut entraîner le résultat suivant :
 </p>
 ```
 
-Notez comment les deux attributs ont été placées dans une séquence d’échappement différemment, car HTL sait que `href` et `src` Les attributs doivent être précédés d’une séquence d’échappement pour le contexte URI. En outre, si l’URI commençait par `javascript:`, l’attribut aurait été entièrement supprimé, à moins que le contexte ne soit explicitement changé en autre chose.
+Notez comment les deux attributs sont placées dans une séquence d’échappement différemment, parce que le HTL sait que les attributs `href` et `src` doivent être placées dans une séquence d’échappement pour le contexte d’URI. En outre, si l’URI commençait par `javascript:`, l’attribut aurait été entièrement supprimé, à moins que le contexte ne soit explicitement changé en autre chose.
 
-Pour plus d’informations sur le contrôle de l’échappement, reportez-vous à la section [Contexte d’affichage du langage d’expression](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) des spécifications HTL.
+Pour plus de détails sur la façon de contrôler l’échappement, référez-vous à la section [Contexte d’affichage du langage d’expression](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) des spécifications HTL.
 
 ### Suppression automatique des attributs vides {#automatic-removal-of-empty-attributes}
 
@@ -235,7 +235,7 @@ Examinez l’exemple suivant :
 
 Si la valeur de la propriété `class` est vide, le langage HTL supprime automatiquement l’ensemble de l’attribut `class` de la sortie.
 
-Encore une fois, cela est possible, car HTL comprend la syntaxe du HTML et peut donc afficher de manière conditionnelle les attributs avec des valeurs dynamiques uniquement si leur valeur n’est pas vide. Cela s’avère très pratique, car cela évite d’ajouter un bloc de condition autour des attributs, ce qui aurait rendu le balisage non valide et illisible.
+Encore une fois, cela est possible parce que le HTL comprend la syntaxe HTML et peut donc afficher de manière conditionnelle les attributs avec des valeurs dynamiques uniquement si leur valeur n’est pas vide. Cette fonction est très pratique, car cela évite d’ajouter un bloc de condition aux attributs, ce qui aurait rendu les balises invalides et illisibles.
 
 En outre, le type de variable placé dans l’expression est important :
 
@@ -249,7 +249,7 @@ En outre, le type de variable placé dans l’expression est important :
    * **true :** affiche l’attribut sans valeur (en tant qu’attribut HTML booléen
    * **false :** supprime l’attribut.
 
-Voici un exemple de la manière dont une expression booléenne permettrait le contrôle d’un attribut de HTML booléen :
+Voici un exemple de la manière dont une expression booléenne peut contrôler un attribut HTML booléen :
 
 ```xml
 <input type="checkbox" checked="${properties.isChecked}"/>
@@ -271,9 +271,9 @@ Dans le langage HTL, les bibliothèques clientes sont chargées par le biais d�
 
 Chaque modèle d’assistance exige une option `categories` pour référencer les bibliothèques clientes souhaitées. Cette option peut être un tableau de valeurs de chaîne ou une chaîne contenant une liste de valeurs séparées par des virgules.
 
-Voici deux exemples courts.
+Voici deux courts exemples.
 
-#### Chargement de plusieurs bibliothèques client en même temps   {#loading-multiple-client-libraries-fully-at-once}
+#### Chargement de plusieurs bibliothèques clientes en même temps {#loading-multiple-client-libraries-fully-at-once}
 
 ```xml
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
@@ -296,15 +296,15 @@ Voici deux exemples courts.
 </html>
 ```
 
-Dans cet exemple, si le HTML `head` et `body` sont placés dans des fichiers différents, les `clientlib.html` doit ensuite être chargé dans chaque fichier qui en a besoin.
+Dans cet exemple, si les éléments HTML `head` et `body` sont placés dans des fichiers différents, le modèle `clientlib.html` doit alors être chargé dans chaque fichier qui le requiert.
 
-La section sur les instructions template &amp; call dans la variable [Spécification HTL](specification.md) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels modèles.
+La section sur les instructions de modèle et d’appel de la [Spécification HTL](specification.md) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
 
 ### Transmission des données au client {#passing-data-to-the-client}
 
-La meilleure et la plus élégante manière de transmettre des données au client en général, mais plus encore avec HTL, consiste à utiliser `data` attributs.
+En général, la meilleure et la plus élégante des manières de transmettre des données au client, et d’autant plus avec HTL, est d’utiliser des attributs `data`.
 
-L’exemple suivant montre comment la logique (qui peut également être écrite en Java) peut être utilisée pour sérialiser facilement en JSON l’objet à transmettre au client, qui peut ensuite facilement être placé dans une `data` attribute:
+L’exemple suivant indique comment la logique (qui peut également être écrite en Java) peut être utilisée pour sérialiser de manière très pratique en JSON l’objet qui doit être transmis au client, qui peut ensuite être défini très facilement dans un attribut `data` :
 
 ```xml
 <!--/* template.html file: */-->
@@ -325,7 +325,7 @@ use(function () {
 });
 ```
 
-Ensuite, il est facile d’imaginer comment un JavaScript côté client peut accéder à cet attribut et analyser à nouveau le JSON. Il s’agit, par exemple, du code JavaScript correspondant à placer dans une bibliothèque cliente :
+Ensuite, il est facile d’imaginer comment un JavaScript côté client peut accéder à cet attribut et analyser à nouveau le JSON. Ce code pourrait être un exemple de JavaScript correspondant à placer dans une bibliothèque cliente :
 
 ```javascript
 var elements = document.querySelectorAll("[data-json]");
@@ -335,9 +335,9 @@ for (var i = 0; i < elements.length; i++) {
 }
 ```
 
-### Utilisation des modèles côté client   {#working-with-client-side-templates}
+### Utilisation des modèles côté client {#working-with-client-side-templates}
 
-Il existe un cas spécial où la technique décrite dans la section [Suppression des limites liées aux contextes spéciaux](#lifting-limitations-of-special-contexts) peut légitimement être utilisée : lors de l’écriture de modèles côté client (comme des Guidons par exemple) qui sont situés dans des éléments de `scrip`. Cette technique peut être utilisée sans risque dans ce cas, parce que l’élément de `script` ne contient alors pas le JavaScript prévu, mais d’autres éléments HTML. Voici un exemple de la manière dont elle peut s’exécuter :
+Il existe un cas spécial où la technique décrite dans la section [Suppression des limites liées aux contextes spéciaux](#lifting-limitations-of-special-contexts) peut légitimement être utilisée : lors de l’écriture de modèles côté client (comme Handlebars par exemple) qui sont situés dans des éléments `scrip`. Cette technique peut être utilisée sans risque dans ce cas, parce que l’élément `script` ne contient alors pas le JavaScript prévu, mais d’autres éléments HTML. Voici un exemple de la manière dont elle peut s’exécuter :
 
 ```xml
 <!--/* template.html file: */-->
@@ -353,7 +353,7 @@ Il existe un cas spécial où la technique décrite dans la section [Suppression
 </div>
 ```
 
-Comme illustré ci-dessus, les balises qui seront incluses dans la variable `script` peut contenir des instructions de bloc HTL et les expressions n’ont pas besoin de fournir de contextes explicites, car le contenu du modèle Handlebars a été isolé dans son propre fichier . En outre, cet exemple montre comment le HTL exécuté côté serveur (comme sur l’élément `h2`) peut être mélangé à un langage de modèle exécuté côté client, comme Handlebars (montré sur l’élément `h3`).
+Comme illustré ci-dessus, les balises qui seront incluses dans l’élément `script` peuvent contenir des instructions de bloc HTL, et les expressions n’ont pas besoin de fournir des contextes explicites, car le contenu du modèle Handlebars a été isolé dans son propre fichier. En outre, cet exemple montre comment le HTL exécuté côté serveur (comme sur l’élément `h2`) peut être mélangé à un langage de modèle exécuté côté client, comme Handlebars (montré sur l’élément `h3`).
 
 Une technique plus moderne consisterait toutefois à utiliser l’élément HTML `template` à la place, car l’avantage serait alors de ne pas avoir à isoler le contenu des modèles dans des fichiers séparés.
 
@@ -365,4 +365,4 @@ Voir la section [Utilisation des modèles côté client](#working-with-client-si
 
 >[!CAUTION]
 >
->Cette technique peut introduire des vulnérabilités de script de site à site, et les aspects liés à la sécurité doivent être soigneusement étudiés si cela doit être fait. Il y a généralement de meilleures façons d’implémenter le même élément que de s’appuyer sur cette pratique.
+>Cette technique peut présenter des vulnérabilités de type cross-site scripting (XSS). C’est pourquoi les aspects liés à la sécurité doivent être soigneusement étudiés au cas où son utilisation est requise. Il y a généralement de meilleures façons d’implémenter le même élément que de s’appuyer sur cette pratique.
