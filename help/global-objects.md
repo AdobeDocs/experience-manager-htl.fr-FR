@@ -1,32 +1,32 @@
 ---
 title: Objets globaux HTL
-description: Découvrez les objets énumérables, les objets pris en charge par Java et les objets pris en charge par JavaScript dans HTL.
+description: Découvrez les objets énumérables, pris en charge par Java et pris en charge par JavaScript dans HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 5ab1275c984135fe946f36905bbc979cf19edd80
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '200'
+ht-degree: 100%
 
 ---
 
 
 # Objets globaux HTL {#htl-global-objects}
 
-Sans rien avoir à spécifier, HTL permet d’accéder à de nombreux objets utiles au développeur. Ces objets s’ajoutent à tout autre objet qui a pu être intégré avec [Use-API.](java-use-api.md)
+Sans rien avoir à spécifier, HTL permet d’accéder à de nombreux objets utiles au développeur. Ces objets s’ajoutent à tout autre objet qui a pu être intégré à [Use-API.](java-use-api.md)
 
 >[!NOTE]
 >
->Pour les développeurs familiarisés avec le développement JSP dans AEM, HTL permet d’accéder à tous les objets qui étaient couramment disponibles en JSP après avoir inclus `global.jsp`.
+>Pour les développeurs habitués au développement JSP dans AEM, HTL permet d’accéder à tous les objets qui étaient couramment disponibles dans JSP après avoir inclus `global.jsp`.
 
 ## Objets énumérables {#enumerable-objects}
 
-Ces objets vous permettent d’accéder facilement aux informations fréquemment utilisées. Leur contenu est accessible avec notation par points et ils peuvent être itérés à l’aide de `data-sly-list` ou `data-sly-repeat`.
+Ces objets vous permettent d’accéder facilement aux informations fréquemment utilisées. Vous pouvez accéder à leur contenu avec la notation de point et procéder à leur itération à l’aide de `data-sly-list` ou `data-sly-repeat`.
 
-| Nom de variable | Description | Prise en charge par |
+| Nom de variable | Description | Pris en charge par |
 |--- |--- |--- |
-| `properties` | Liste des propriétés de la ressource active | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Liste des propriétés de page de la page active | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `inheritedPageProperties` | Liste des propriétés de page héritées de la page active | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Liste des propriétés de la ressource activ | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Liste des propriétés de la page active | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `inheritedPageProperties` | Liste des propriétés héritées de la page active | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Objets pris en charge par Java {#java-backed-objects}
 
