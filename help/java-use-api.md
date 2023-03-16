@@ -2,9 +2,9 @@
 title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: da2375a2390f0254dba9745d9f4970e88788e5d5
-workflow-type: ht
-source-wordcount: '1518'
+source-git-commit: f295fe81062f87d4f3f46705fb1e3d706d2a9d49
+workflow-type: tm+mt
+source-wordcount: '1510'
 ht-degree: 100%
 
 ---
@@ -131,11 +131,11 @@ Pour savoir quelle méthode utiliser et à quel moment, tenez compte des deux po
 
 Cet exemple utilise une installation locale.
 
-### Le pack Java est le chemin d’accès du référentiel. {#java-package-is-repository-path}
+### Le package Java est le chemin d’accès du référentiel. {#java-package-is-repository-path}
 
-Lorsqu’une installation locale est utilisée, le nom du pack de la classe d’utilisation doit correspondre à l’emplacement du dossier du référentiel, les traits d’union du chemin étant remplacés par des traits de soulignement dans le nom du pack.
+Lorsqu’une installation locale est utilisée, le nom du package de la classe d’utilisation doit correspondre à l’emplacement du dossier du référentiel, les traits d’union du chemin étant remplacés par des traits de soulignement dans le nom du package.
 
-Dans ce cas, `Info.java` se trouve à l’adresse `/apps/my-example/components/info`. Par conséquent, le pack est `apps.my_example.components.info` :
+Dans ce cas, `Info.java` se trouve à l’adresse `/apps/my-example/components/info`. Par conséquent, le package est `apps.my_example.components.info` :
 
 ```java
 package apps.my_example.components.info;
@@ -151,7 +151,7 @@ public class Info extends WCMUsePojo {
 
 >[!NOTE]
 >
->L’utilisation de traits d’union dans les noms des éléments du référentiel est une pratique recommandée dans le développement AEM. Toutefois, les traits d’union sont des caractères interdits dans les noms de packs Java. C’est pourquoi **tous les tirets dans le chemin d’accès au référentiel doivent être convertis en traits de soulignement dans le nom du package**.
+>L’utilisation de traits d’union dans les noms des éléments du référentiel est une pratique recommandée dans le développement AEM. Toutefois, les traits d’union sont des caractères interdits dans les noms de packages Java. C’est pourquoi **tous les tirets dans le chemin d’accès au référentiel doivent être convertis en traits de soulignement dans le nom du package**.
 
 ### Extension   `WCMUsePojo` {#extending-wcmusepojo}
 
@@ -310,7 +310,7 @@ Dans cette section, prenez connaissance de quelques autres fonctionnalités qui 
 
 ### Transmission des paramètres {#passing-parameters}
 
-Les paramètres peuvent être transmis à un chemin de classe d’utilisation lors de l’initialisation. Par exemple, nous pouvons effectuer ce qui suit :
+Les paramètres peuvent être transmis à un chemin de classe d’utilisation lors de l’initialisation.
 
 Pour plus d’informations, veuillez vous reporter à la section [Documentation du moteur de script HTL Sling.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
 
