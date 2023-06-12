@@ -3,9 +3,9 @@ title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2170'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ Voir la [Spécification HTL](specification.md) pour plus d’informations sur le
 
 ### Élément SLY   {#the-sly-element}
 
-Un concept central de HTL est d’offrir la possibilité de réutiliser les éléments HTML existants pour définir des instructions de bloc, ce qui évite le besoin d’insérer des délimiteurs supplémentaires pour définir le début et la fin de l’instruction. Cette annotation discrète du balisage permettant de transformer un HTML statique en modèle dynamique opérationnel offre l’avantage de ne pas rompre la validité du code de HTML et donc de s’afficher correctement, même sous la forme de fichiers statiques.
+Un concept central de HTL est d’offrir la possibilité de réutiliser les éléments HTML existants pour définir des instructions de bloc, ce qui évite le besoin d’insérer des délimiteurs supplémentaires pour définir le début et la fin de l’instruction. Cette annotation discrète du balisage permettant de transformer un HTML statique en modèle dynamique opérationnel offre l’avantage de ne pas rompre la validité du code HTML et donc de s’afficher correctement, même sous la forme de fichiers statiques.
 
 Cependant, il arrive parfois qu’il n’y ait pas d’élément existant à l’emplacement exact où une instruction de bloc doit être insérée. Dans ce cas, il est possible d’insérer un élément `sly` spécial qui est automatiquement supprimé de la sortie lors de l’exécution des instructions du bloc joint et de l’affichage de son contenu qui en découle.
 
@@ -108,11 +108,11 @@ L’exemple suivant illustre un commentaire HTL sur la première ligne et un com
 <!-- An HTML Comment -->
 ```
 
-Les commentaires HTL sont des commentaires de HTML avec une syntaxe JavaScript supplémentaire. L’ensemble du commentaire HTL, ainsi que tout élément contenu dans , seront entièrement ignorés par le processeur et supprimés de la sortie.
+Les commentaires HTL sont des commentaires HTML avec une syntaxe JavaScript supplémentaire. L’ensemble du commentaire HTL, ainsi que tout les éléments qu’il contient, seront entièrement ignorés par le processeur et supprimés de la sortie.
 
 Le contenu des commentaires HTML standard sera toutefois transmis et les expressions du commentaire seront évaluées.
 
-Les commentaires de HTML ne peuvent pas contenir de commentaires HTL et vice versa.
+Les commentaires HTML ne peuvent pas contenir de commentaires HTL et vice versa.
 
 ### Contextes spéciaux   {#special-contexts}
 
@@ -130,17 +130,17 @@ Des expressions peuvent uniquement être placées dans du texte HTML ou des vale
 
 ### Contextes sans instructions de bloc {#contexts-without-block-statements}
 
-Comme HTL utilise des attributs de données pour définir des instructions de bloc, il n’est pas possible de définir de telles instructions de bloc dans les contextes suivants, et seules les expressions peuvent être utilisées à cet endroit :
+Comme HTL utilise des attributs de données pour définir des instructions de bloc, il n’est pas possible de définir de telles instructions de bloc dans les contextes suivants, et seules les expressions peuvent être utilisées à cet endroit :
 
 * Commentaires HTML
-* Eléments de script
+* Éléments de script
 * Éléments de style
 
 Cela s’explique par le fait que le contenu de ces contextes est textuel et non pas HTML. Les éléments HTML contenus seraient donc considérés en tant que simples données de caractères. Ainsi, sans véritables éléments HTML, les attributs `data-sly` ne peuvent pas non plus être exécutés.
 
 Cela peut sembler particulièrement restrictif. Pourtant, cela est souhaitable, car le langage HTL ne doit pas être utilisé abusivement pour générer une sortie qui n’est pas HTML. La section [Use-API pour accéder à la logique](#use-api-for-accessing-logic) ci-dessous explique comment une logique supplémentaire peut être appelée à partir du modèle, ce qui peut être employé si nécessaire afin de préparer une sortie complexe pour ces contextes. Par exemple, un moyen simple d’envoyer des données d’un script principal à un script frontal est d’utiliser la logique du composant pour générer une chaîne JSON, qui peut alors être placée dans un attribut de données avec une simple expression HTL.
 
-L’exemple suivant illustre le comportement des commentaires de HTML, mais dans les éléments de script ou de style, le même comportement est observé :
+L’exemple suivant illustre le comportement des commentaires HTML, mais dans les éléments de script ou de style, le même comportement est observé :
 
 ```xml
 <!--
@@ -149,7 +149,7 @@ L’exemple suivant illustre le comportement des commentaires de HTML, mais dans
 -->
 ```
 
-génère quelque chose comme le HTML suivant :
+produit un HTML comparable à ceci :
 
 ```xml
 <!--
@@ -160,11 +160,11 @@ génère quelque chose comme le HTML suivant :
 
 ### Contextes explicites requis   {#explicit-contexts-required}
 
-Comme expliqué dans la section [Échappement automatique en fonction du contexte](#automatic-context-aware-escaping) ci-dessous, l’un des objectifs de HTL est de réduire les risques de vulnérabilité de type attaque multisite par scripts (XSS) en appliquant automatiquement l’échappement automatique à toutes les expressions en fonction du contexte. Bien que HTL puisse détecter automatiquement le contexte des expressions placées à l’intérieur du balisage de HTML, il n’analyse pas la syntaxe du code JavaScript ou CSS intégré et s’appuie donc sur le développeur pour spécifier explicitement le contexte exact à appliquer à ces expressions.
+Comme expliqué dans la section [Échappement automatique en fonction du contexte](#automatic-context-aware-escaping) ci-dessous, l’un des objectifs de HTL est de réduire les risques de vulnérabilité de type attaque multisite par scripts (XSS) en appliquant automatiquement l’échappement automatique à toutes les expressions en fonction du contexte. Bien que HTL puisse détecter automatiquement le contexte des expressions placées à l’intérieur du balisage HTML, il n’analyse pas la syntaxe du code JavaScript ou CSS intégré et s’appuie donc sur le développement pour spécifier explicitement le contexte exact à appliquer à ces expressions.
 
-Comme il n’applique pas les résultats d’échappement corrects dans les vulnérabilités XSS, HTL supprime donc la sortie de toutes les expressions qui se trouvent dans les contextes de script et de style lorsque le contexte n’a pas été déclaré.
+Comme il n’applique pas les résultats d’échappement corrects dans les vulnérabilités XSS, HTL supprime la sortie de toutes les expressions qui se trouvent dans les contextes de script et de style lorsque le contexte n’a pas été déclaré.
 
-Voici un exemple de la façon de définir le contexte des expressions placées dans les scripts et les styles :
+Voici un exemple de la façon de définir le contexte des expressions placées dans les scripts et les styles :
 
 ```xml
 <script> var trackingID = "${myTrackingID @ context='scriptString'}"; </script>
@@ -237,11 +237,11 @@ Si la valeur de la propriété `class` est vide, le langage HTL supprime automat
 
 Encore une fois, cela est possible parce que le HTL comprend la syntaxe HTML et peut donc afficher de manière conditionnelle les attributs avec des valeurs dynamiques uniquement si leur valeur n’est pas vide. Cette fonction est très pratique, car cela évite d’ajouter un bloc de condition aux attributs, ce qui aurait rendu les balises invalides et illisibles.
 
-De plus, le type de variable placé dans l’expression est important :
+De plus, le type de variable placé dans l’expression est important :
 
 * **Chaîne :**
-   * **non vide :** Définit la chaîne comme valeur d’attribut.
-   * **empty:** Supprime complètement l’attribut.
+   * **non vide :** définit la chaîne comme valeur d’attribut.
+   * **vide :** supprime l’attribut.
 
 * **Nombre :** définit la valeur en tant que valeur d’attribut.
 
