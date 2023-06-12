@@ -3,9 +3,9 @@ title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1510'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ Lorsque l’on accède à ce contenu, le fichier HTL est exécuté. Dans le code
 
 ### Ajouter une classe d’utilisation {#adding-a-use-class}
 
-Le composant `info` en tant que tel n’a pas besoin d’une classe d’utilisation pour remplir sa simple fonction. Cependant, il existe des cas où vous devez effectuer des tâches qui ne peuvent pas être effectuées dans HTL. Vous avez donc besoin d’une classe d’utilisation. Mais gardez à l’esprit les points suivants :
+Le composant `info` en tant que tel n’a pas besoin d’une classe d’utilisation pour remplir sa simple fonction. Cependant, il existe des cas où vous devez effectuer des tâches qui ne peuvent pas être réalisées en HTL. Vous avez donc besoin d’une classe d’utilisation. Gardez toutefois à l’esprit les points suivants :
 
 >[!NOTE]
 >
@@ -222,7 +222,7 @@ Vous pouvez également accéder directement aux objets de contexte fréquemment 
 
 ### Méthodes getter {#getter-methods}
 
-Une fois la classe d’utilisation initialisée, le fichier HTL est exécuté. Au cours de cette étape, HTL extrait généralement l’état de différentes variables membres de la classe d’utilisation et les effectue pour présentation.
+Une fois la classe d’utilisation initialisée, le fichier HTL est exécuté. Au cours de cette étape, HTL extrait généralement l’état de différentes variables membres de la classe d’utilisation et effectue le rendu pour leur présentation.
 
 Pour permettre l’accès à ces valeurs à partir du fichier HTL, vous devez définir des méthodes getter personnalisées dans la classe d’utilisation, en respectant la convention de nommage suivante :
 
