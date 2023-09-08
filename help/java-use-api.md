@@ -3,9 +3,9 @@ title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 source-git-commit: 83f07cab5e2f4604701708f6a1a4bc19e3b54107
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1505'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ Les POJO Use-API peuvent également exposer une méthode publique, appelée init
 
 La carte `bindings` peut contenir des objets qui fournissent du contexte au script HTL actuellement exécuté que l’objet Use-API peut utiliser pour son traitement.
 
-## Un exemple simple   {#a-simple-example}
+## Un exemple simple {#a-simple-example}
 
 Cet exemple illustre l’utilisation du Use-API.
 
@@ -153,9 +153,9 @@ public class Info extends WCMUsePojo {
 >
 >L’utilisation de traits d’union dans les noms des éléments du référentiel est une pratique recommandée dans le développement AEM. Toutefois, les traits d’union sont des caractères interdits dans les noms de packages Java. C’est pourquoi **tous les tirets dans le chemin d’accès au référentiel doivent être convertis en traits de soulignement dans le nom du package**.
 
-### Extension   `WCMUsePojo` {#extending-wcmusepojo}
+### Extension `WCMUsePojo` {#extending-wcmusepojo}
 
-Bien qu’il existe plusieurs façons d’incorporer une classe Java avec HTL, le plus simple est d’étendre la variable `WCMUsePojo` classe . Pour notre exemple `/apps/my-example/component/info/Info.java` :
+Bien qu’il existe plusieurs façons d’intégrer une classe Java à HTL, la plus simple est d’étendre la classe `WCMUsePojo`. Pour notre exemple `/apps/my-example/component/info/Info.java` :
 
 ```java
 package apps.my_example.components.info;
