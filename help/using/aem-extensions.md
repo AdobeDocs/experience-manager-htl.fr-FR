@@ -3,8 +3,8 @@ title: Extensions AEM
 description: AEM propose des extensions de spécification HTL spécifiques à AEM pour votre commodité en tant que développeur.
 exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: tm+mt
-source-wordcount: '308'
+workflow-type: ht
+source-wordcount: '234'
 ht-degree: 100%
 
 ---

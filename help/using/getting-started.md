@@ -4,7 +4,7 @@ description: Découvrez HTL, le système de modèles côté serveur préféré e
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
 workflow-type: ht
-source-wordcount: '2170'
+source-wordcount: '2147'
 ht-degree: 100%
 
 ---
@@ -138,7 +138,7 @@ Comme HTL utilise des attributs de données pour définir des instructions de bl
 
 Cela s’explique par le fait que le contenu de ces contextes est textuel et non pas HTML. Les éléments HTML contenus seraient donc considérés en tant que simples données de caractères. Ainsi, sans véritables éléments HTML, les attributs `data-sly` ne peuvent pas non plus être exécutés.
 
-Cela peut sembler particulièrement restrictif. Pourtant, cela est souhaitable, car le langage HTL ne doit pas être utilisé abusivement pour générer une sortie qui n’est pas HTML. La section [Use-API pour accéder à la logique](#use-api-for-accessing-logic) ci-dessous explique comment une logique supplémentaire peut être appelée à partir du modèle, ce qui peut être employé si nécessaire afin de préparer une sortie complexe pour ces contextes. Par exemple, un moyen simple d’envoyer des données d’un script principal à un script frontal est d’utiliser la logique du composant pour générer une chaîne JSON, qui peut alors être placée dans un attribut de données avec une simple expression HTL.
+Cela peut sembler particulièrement restrictif. Pourtant, cela est souhaitable, car le langage HTL ne doit pas être utilisé abusivement pour générer une sortie qui n’est pas HTML. La section [Use-API pour accéder à la logique](#use-api-for-accessing-logic) ci-dessous explique comment une logique supplémentaire peut être appelée à partir du modèle, ce qui peut être employé si nécessaire afin de préparer une sortie complexe pour ces contextes. Par exemple, un moyen simple d’envoyer des données d’un script back-end à un script front-end consiste à utiliser la logique du composant pour générer une chaîne JSON, qui peut alors être placée dans un attribut de données avec une simple expression HTL.
 
 L’exemple suivant illustre le comportement des commentaires HTML, mais dans les éléments de script ou de style, le même comportement est observé :
 

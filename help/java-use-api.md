@@ -4,7 +4,7 @@ description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méth
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 source-git-commit: 83f07cab5e2f4604701708f6a1a4bc19e3b54107
 workflow-type: ht
-source-wordcount: '1505'
+source-wordcount: '1162'
 ht-degree: 100%
 
 ---
@@ -153,7 +153,7 @@ public class Info extends WCMUsePojo {
 >
 >L’utilisation de traits d’union dans les noms des éléments du référentiel est une pratique recommandée dans le développement AEM. Toutefois, les traits d’union sont des caractères interdits dans les noms de packages Java. C’est pourquoi **tous les tirets dans le chemin d’accès au référentiel doivent être convertis en traits de soulignement dans le nom du package**.
 
-### Extension `WCMUsePojo` {#extending-wcmusepojo}
+### Extension de `WCMUsePojo` {#extending-wcmusepojo}
 
 Bien qu’il existe plusieurs façons d’intégrer une classe Java à HTL, la plus simple est d’étendre la classe `WCMUsePojo`. Pour notre exemple `/apps/my-example/component/info/Info.java` :
 
