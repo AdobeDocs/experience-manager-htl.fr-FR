@@ -3,7 +3,7 @@ title: Exemples de code
 description: Découvrez HTL à l’aide d’exemples de code, y compris l’implémentation de référence WKND et des exemples tels que les composants principaux.
 exl-id: cdc0a525-e5d1-4d7f-97ae-b9192163caee
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 100%
 

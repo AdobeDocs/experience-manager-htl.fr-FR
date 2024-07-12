@@ -3,7 +3,7 @@ title: Présentation de HTL
 description: Découvrez comment AEM prend en charge le langage HTL (HTML Template Language) pour fournir un framework web productif au niveau de l’entreprise, ce qui renforce la sécurité et permet aux développeurs de HTML qui n’ont aucune connaissance sur Java de mieux participer aux projets AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: Objets globaux HTL
 description: Découvrez les objets énumérables, pris en charge par Java et pris en charge par JavaScript dans HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 100%
 
