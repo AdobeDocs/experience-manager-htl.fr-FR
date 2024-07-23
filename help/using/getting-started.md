@@ -2,10 +2,10 @@
 title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 62%
+ht-degree: 61%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document donne un aperçu de l’objectif du HTL et offre une introduction au
 
 >[!TIP]
 >
->Ce document présente l’objectif du HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL.](specification.md)
+>Ce document présente l’objectif du HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [spécification HTL](specification.md).
 
 ## Calques HTL {#layers}
 

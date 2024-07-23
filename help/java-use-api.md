@@ -2,10 +2,10 @@
 title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '1137'
-ht-degree: 69%
+ht-degree: 66%
 
 ---
 
@@ -194,7 +194,7 @@ public class Info extends WCMUsePojo {
 
 En règle générale, la méthode [activate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) est utilisé pour précalculer et stocker (dans des variables membres) les valeurs nécessaires dans votre code HTL, en fonction du contexte actif (la requête et la ressource actives, par exemple).
 
-La classe `WCMUsePojo` permet d’accéder au même ensemble d’objets de contexte qui est disponible dans un fichier HTL (voir le document [Objets globaux.](global-objects.md)).
+La classe `WCMUsePojo` permet d’accéder au même ensemble d’objets de contexte que celui disponible dans un fichier HTL (voir le document [Global Objects](global-objects.md)).
 
 Dans une classe étendue à `WCMUsePojo`, vous pouvez accéder aux objets de contexte à l’aide de leurs noms :
 
@@ -312,7 +312,7 @@ Cette section présente d’autres fonctionnalités qui vont au-delà de l’exe
 
 Les paramètres peuvent être transmis à un chemin de classe d’utilisation lors de l’initialisation.
 
-Pour plus d’informations, veuillez vous reporter à la section [Documentation du moteur de script HTL Sling.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
+Pour plus d’informations, reportez-vous à la [documentation du moteur de script HTL](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects) de Sling.
 
 ### Classe Java groupée {#bundled-java-class}
 

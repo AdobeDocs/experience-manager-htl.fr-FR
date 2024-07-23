@@ -1,5 +1,5 @@
 ---
-source-git-commit: 22f62868df0fcfc558e5d62434dde843a9f3ca83
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 96%
@@ -30,7 +30,7 @@ La méthode choisie dépend de votre aisance pour modifier vous-même la documen
 
 >[!NOTE]
 >
->Les contributions proposées entrent dans le champ d’application des [Conditions d’utilisation d’Adobe.](https://www.adobe.com/fr/legal/terms.html)
+>Les contributions proposées entrent dans le champ d’application des [Conditions d’utilisation d’Adobe](https://www.adobe.com/fr/legal/terms.html).
 
 ### Création d’une demande {#create-an-issue}
 

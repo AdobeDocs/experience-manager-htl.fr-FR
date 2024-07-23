@@ -2,17 +2,17 @@
 title: Objets globaux HTL
 description: Découvrez les objets énumérables, pris en charge par Java et pris en charge par JavaScript dans HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 100%
+source-wordcount: '164'
+ht-degree: 87%
 
 ---
 
 
 # Objets globaux HTL {#htl-global-objects}
 
-Sans rien avoir à spécifier, HTL permet d’accéder à de nombreux objets utiles au développeur. Ces objets s’ajoutent à tout autre objet qui a pu être intégré à [Use-API.](java-use-api.md)
+Sans rien avoir à spécifier, HTL permet d’accéder à de nombreux objets utiles au développeur. Ces objets s’ajoutent à tout autre objet qui a pu être intégré avec [Use-API](java-use-api.md).
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Ces objets vous permettent d’accéder facilement aux informations fréquemment
 
 ## Objets pris en charge par Java {#java-backed-objects}
 
-Chacun des objets suivants est pris en charge par l’objet Java correspondant.
+L’objet Java correspondant renvoie chacun des objets suivants.
 
 | Nom de variable | Description |
 |---|---|
@@ -62,4 +62,4 @@ Chacun des objets suivants est pris en charge par l’objet Java correspondant.
 
 ## Objets pris en charge par JavaScript {#javascript-backed-objects}
 
-Il est possible de prendre en charge la logique HTL avec JavaScript. Toutefois, la méthode préférée ou recommandée est l’utilisation de [Modèles Sling](https://sling.apache.org/documentation/bundles/models.html).
+Il est possible de prendre en charge la logique HTL avec JavaScript. Cependant, la méthode préférée ou recommandée consiste à utiliser les [modèles Sling](https://sling.apache.org/documentation/bundles/models.html).
