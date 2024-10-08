@@ -1,16 +1,16 @@
 ---
-title: Objets globaux HTL
-description: Découvrez les objets énumérables et les objets pris en charge par Java dans HTL.
+title: Objets globaux HTL
+description: Découvrez les objets énumérables et les objets pris en charge par Java dans HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: b585f03d600319414b92a95f98cf9293d91538b6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '205'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
 
-# Objets globaux HTL {#htl-global-objects}
+# Objets globaux HTL {#htl-global-objects}
 
 Sans rien avoir à spécifier, HTL permet d’accéder à de nombreux objets utiles au développeur. Ces objets s’ajoutent à tout autre objet qui a pu être intégré avec [Use-API](java-use-api.md).
 
@@ -66,6 +66,6 @@ Il est possible de prendre en charge la logique HTL avec JavaScript. Toutefois, 
 
 >[!NOTE]
 >
->[L’API d’utilisation de JavaScript](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) a été abandonnée pour une utilisation avec AEM as a Cloud Service. Veuillez utiliser [l’API Java Use à la place.](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-ap)
+>[L’API JavaScript Use](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) a été abandonnée pour une utilisation avec AEM as a Cloud Service. Utilisez [l’API Java Use à la place.](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/java-use-ap)
 >
->[Pour plus d’informations sur les fonctionnalités obsolètes et supprimées, reportez-vous aux notes de mise à jour d’AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).
+>Pour plus d’informations sur les fonctionnalités obsolètes et supprimées, [reportez-vous aux notes de mise à jour d’AEM as a Cloud Service](https://experienceleague.adobe.com/fr/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).
