@@ -2,14 +2,14 @@
 sub-product: Adobe Experience Manager HTL
 user-guide-title: Adobe Experience Manager HTL
 breadcrumb-title: Guide HTL
-user-guide-description: Pour les projets AEM traditionnels, utilisez le langage de modèle HTML (HTL) afin de créer un framework web au niveau de l’entreprise.
+user-guide-description: Pour les projets AEM traditionnels, utilisez le langage HTL (HTML Template Language) pour la création d’une structure web d’entreprise.
 feature-set: Experience Manager
 feature: Developer Tools
 role: Developer
 source-git-commit: e9148a152c5b9298233346d93809c80e35f980d0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
