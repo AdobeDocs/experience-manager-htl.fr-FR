@@ -2,10 +2,10 @@
 title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
-workflow-type: ht
-source-wordcount: '2050'
-ht-degree: 100%
+source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
+workflow-type: tm+mt
+source-wordcount: '2045'
+ht-degree: 97%
 
 ---
 
@@ -18,15 +18,15 @@ Ce document donne un aperçu de l’objectif du HTL et offre une introduction au
 
 >[!TIP]
 >
->Ce document présente l’objectif du HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL](specification.md).
+>Ce document présente l’objectif du HTL et un aperçu de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, consultez la [Spécification HTL](specification.md).
 
 ## Calques HTL {#layers}
 
 Dans AEM, plusieurs calques définissent HTL.
 
 1. **[Spécification HTL](specification.md)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
-1. **[Moteur de script HTL Sling](specification.md)** - Le projet Sling a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
-1. **[Extensions AEM](specification.md)** - AEM s’appuie sur le moteur de script HTL Sling pour offrir à l’équipe de développement des fonctionnalités pratiques spécifiques à AEM.
+1. **[`Sling`moteur de script HTL](specification.md)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
+1. **[Extensions AEM](specification.md)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
 
 Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Par conséquent, elle couvre les trois aspects, associant les ressources externes selon les besoins.
 
