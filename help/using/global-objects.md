@@ -2,8 +2,9 @@
 title: Objets globaux HTL
 description: Découvrez les objets énumérables et les objets pris en charge par Java dans HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
-workflow-type: ht
+index: false
+source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 
