@@ -1,16 +1,10 @@
 ---
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
+source-git-commit: 02589df40c255743c29ecf0233b05af8ed941570
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 84%
+source-wordcount: '9'
+ht-degree: 11%
 
 ---
-# Documentation d’Adobe Experience Manager HTL
+# ARCHIVÉ
 
-Le référentiel pour la documentation du langage de modèle Adobe Experience Manager HTML (HTL) .
-
-Vos contributions à la documentation sont les bienvenues. Reportez-vous aux ressources suivantes :
-
-* [contributing.md](contributing.md) Pour obtenir un aperçu de la contribution à la documentation.
-* [guidelines.md](guidelines.md) Pour obtenir une vue d’ensemble de ce qui est attendu dans les contributions et comment composer vos contributions à la documentation.
-* [code-of-conduct.md](code-of-conduct.md) Pour obtenir une vue d’ensemble du type de comportement qu’Adobe attend de vous lorsque vous contribuez à ce projet de documentation.
+Ce référentiel a été migré vers GitHub Cloud : <https://github.com/Adobe-Enterprise-Docs/experience-manager-htl.en>
