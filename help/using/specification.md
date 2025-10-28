@@ -21,6 +21,6 @@ Vous pouvez définir HTL dans AEM par plusieurs calques.
 
 1. **[Spécification HTL](https://github.com/adobe/htl-spec)** - Le HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre. Ses spécifications sont conservées dans son référentiel GitHub.
 1. **[Moteur de script HTL Sling](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** : le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM. Le projet `Sling` conserve sa documentation.
-1. **[Extensions AEM &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/aem-extensions)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM. Ces extensions sont documentées dans le cadre de ce jeu de documentation.
+1. **[Extensions AEM &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/aem-extensions)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM. Ces extensions sont documentées dans le cadre de ce jeu de documentation.
 
 Suivez les liens ci-dessus vers la documentation dédiée pour tous les calques de HTL utilisés par AEM.

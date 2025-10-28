@@ -24,7 +24,7 @@ Ce document donne un aperçu de l’objectif du HTL et offre une introduction au
 
 >[!TIP]
 >
->Ce document présente l’objectif du HTL et une vue d’ensemble de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification).
+>Ce document présente l’objectif du HTL et une vue d’ensemble de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification).
 
 <!--
 specification.md
@@ -34,9 +34,9 @@ specification.md
 
 Dans AEM, plusieurs calques définissent HTL.
 
-1. **[Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
-1. **[`Sling`moteur de script HTL &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
-1. **[Extensions AEM &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
+1. **[Spécification HTL](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
+1. **[`Sling`moteur de script HTL &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
+1. **[Extensions AEM &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
 
 Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Par conséquent, elle couvre les trois aspects, associant les ressources externes selon les besoins.
 
@@ -63,7 +63,7 @@ Nous pouvons distinguer deux différents types de syntaxe :
 * **Instructions de bloc** - Si vous souhaitez afficher l’élément `<h1>` de manière conditionnelle, utilisez un attribut de données HTML5 `data-sly-test`. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et tous ont le préfixe `data-sly`.
 * **Langage d’expression** - Les caractères `${` et `}` délimitent les expressions HTL. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
-Voir la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) pour plus d’informations sur les deux syntaxes.
+Voir la [Spécification HTL](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification) pour plus d’informations sur les deux syntaxes.
 
 ### Élément SLY   {#the-sly-element}
 
@@ -308,7 +308,7 @@ Voici deux courts exemples.
 
 Dans cet exemple, si les éléments HTML `head` et `body` sont placés dans des fichiers séparés, le modèle `clientlib.html` doit alors être chargé dans chaque fichier qui le requiert.
 
-La section sur les instructions de modèle et d’appel de la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
+La section sur les instructions de modèle et d’appel de la [Spécification HTL](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/specification) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
 
 ### Transmission des données au client {#passing-data-to-the-client}
 

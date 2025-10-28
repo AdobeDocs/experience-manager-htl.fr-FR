@@ -20,7 +20,7 @@ ht-degree: 99%
 
 Le langage HTL, pris en charge par Adobe Experience Manager (AEM), vise à fournir un framework web extrêmement productif au niveau de l’entreprise et à renforcer ainsi la sécurité. Il permet aux développeurs et développeuses HTML ne disposant pas de connaissance de Java de mieux prendre part aux projets AEM.
 
-[Introduit dans AEM 6.0](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/history), le langage HTL (HTML Template Language) est le système de modèles côté serveur préféré et recommandé pour HTML dans AEM. Pour les développeurs Web qui souhaitent créer des sites Web d’entreprise robustes, le langage HTL (HTML Template Language) permet d’améliorer la sécurité et l’efficacité du développement.
+[Introduit dans AEM 6.0](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/history), le langage HTL (HTML Template Language) est le système de modèles côté serveur préféré et recommandé pour HTML dans AEM. Pour les développeurs Web qui souhaitent créer des sites Web d’entreprise robustes, le langage HTL (HTML Template Language) permet d’améliorer la sécurité et l’efficacité du développement.
 
 <!--
 history.md
@@ -58,7 +58,7 @@ La vidéo suivante, tirée d’une [session d’AEM Gems](https://experienceleag
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 
-Veuillez noter que la vidéo fait référence à HTL par [son ancien nom, Sightly](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/history).
+Veuillez noter que la vidéo fait référence à HTL par [son ancien nom, Sightly](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/history).
 
 <!--
 history.md
@@ -66,7 +66,7 @@ history.md
 
 ## Étapes suivantes {#next-steps}
 
-Maintenant que vous connaissez les objectifs et les avantages de HTL, vous pouvez commencer à utiliser ce langage. Voir [Prise en main du langage HTL (HTML Template Language)](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/getting-started).
+Maintenant que vous connaissez les objectifs et les avantages de HTL, vous pouvez commencer à utiliser ce langage. Voir [Prise en main du langage HTL (HTML Template Language)](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/getting-started).
 
 <!--
 getting-started.md
