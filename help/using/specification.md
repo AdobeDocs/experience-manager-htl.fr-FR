@@ -3,10 +3,10 @@ title: La spécification HTL
 description: Reportez-vous à la spécification HTL pour obtenir des informations de syntaxe détaillées.
 exl-id: c0657476-4db6-4fad-ad87-9252b5003237
 index: false
-source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
-workflow-type: ht
-source-wordcount: '134'
-ht-degree: 100%
+source-git-commit: 391c5279f0021dbedaffb0c63e67e037d6c782e1
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 85%
 
 ---
 
@@ -21,6 +21,6 @@ Vous pouvez définir HTL dans AEM par plusieurs calques.
 
 1. **[Spécification HTL](https://github.com/adobe/htl-spec)** - Le HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre. Ses spécifications sont conservées dans son référentiel GitHub.
 1. **[Moteur de script HTL Sling](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** : le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM. Le projet `Sling` conserve sa documentation.
-1. **[Extensions AEM](aem-extensions.md)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir à l’équipe de développement des fonctionnalités pratiques spécifiques à AEM. Ces extensions sont documentées dans le cadre de ce jeu de documentation.
+1. **[Extensions AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/aem-extensions)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM. Ces extensions sont documentées dans le cadre de ce jeu de documentation.
 
 Suivez les liens ci-dessus vers la documentation dédiée pour tous les calques de HTL utilisés par AEM.

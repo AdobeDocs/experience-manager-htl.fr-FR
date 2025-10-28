@@ -2,10 +2,10 @@
 title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
-workflow-type: ht
-source-wordcount: '2077'
-ht-degree: 100%
+source-git-commit: 391c5279f0021dbedaffb0c63e67e037d6c782e1
+workflow-type: tm+mt
+source-wordcount: '2084'
+ht-degree: 97%
 
 ---
 
@@ -24,15 +24,19 @@ Ce document donne un aperçu de l’objectif du HTL et offre une introduction au
 
 >[!TIP]
 >
->Ce document présente l’objectif du HTL et une vue d’ensemble de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL](specification.md).
+>Ce document présente l’objectif du HTL et une vue d’ensemble de sa structure et de ses concepts fondamentaux. Si vous avez des questions sur une syntaxe spécifique, reportez-vous à la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification).
+
+<!--
+specification.md
+-->
 
 ## Calques HTL {#layers}
 
 Dans AEM, plusieurs calques définissent HTL.
 
-1. **[Spécification HTL](specification.md)** : HTL est une spécification open source indépendante de la plateforme, que tout le monde est libre de mettre en œuvre.
-1. **[`Sling`Moteur de script HTL](specification.md)** : le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
-1. **[Extensions AEM](specification.md)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir à l’équipe de développement des fonctionnalités pratiques spécifiques à AEM.
+1. **[Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
+1. **[`Sling`moteur de script HTL ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
+1. **[Extensions AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
 
 Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Par conséquent, elle couvre les trois aspects, associant les ressources externes selon les besoins.
 
@@ -59,7 +63,7 @@ Nous pouvons distinguer deux différents types de syntaxe :
 * **Instructions de bloc** - Si vous souhaitez afficher l’élément `<h1>` de manière conditionnelle, utilisez un attribut de données HTML5 `data-sly-test`. HTL fournit des attributs de ce type, ce qui permet d’associer un comportement à n’importe quel élément HTML, et tous ont le préfixe `data-sly`.
 * **Langage d’expression** - Les caractères `${` et `}` délimitent les expressions HTL. Au moment de l’exécution, ces expressions sont évaluées et leur valeur est insérée dans le flux de sortie HTML.
 
-Voir la [Spécification HTL](specification.md) pour plus d’informations sur les deux syntaxes.
+Voir la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) pour plus d’informations sur les deux syntaxes.
 
 ### Élément SLY   {#the-sly-element}
 
@@ -187,7 +191,7 @@ Cette section décrit brièvement les fonctionnalités générales du langage HT
 
 L’API Use-API Java HTML Template Language (HTL) permet à un fichier HTL d’accéder aux méthodes d’assistance en classe Java personnalisée via `data-sly-use`. Ce processus permet à l’ensemble de la logique commerciale complexe d’être encapsulée dans le code Java tandis que le code HTL traite uniquement la production directe des balises.
 
-Voir le document [Use-API Java HTL](java-use-api.md) pour plus d’informations.
+Voir le document [Use-API Java HTL](https://experienceleague.adobe.com/fr/docs/experience-manager-htl/content/java-use-api) pour plus d’informations.
 
 ### Échappement automatique basé sur le contexte {#automatic-context-aware-escaping}
 
@@ -304,7 +308,7 @@ Voici deux courts exemples.
 
 Dans cet exemple, si les éléments HTML `head` et `body` sont placés dans des fichiers séparés, le modèle `clientlib.html` doit alors être chargé dans chaque fichier qui le requiert.
 
-La section sur les instructions de modèle et d’appel de la [Spécification HTL](specification.md) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
+La section sur les instructions de modèle et d’appel de la [Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) fournit des détails supplémentaires sur la manière de déclarer et d’appeler de tels travaux de modèle.
 
 ### Transmission des données au client {#passing-data-to-the-client}
 
