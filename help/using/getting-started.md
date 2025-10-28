@@ -35,8 +35,8 @@ specification.md
 Dans AEM, plusieurs calques définissent HTL.
 
 1. **[Spécification HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - HTL est une spécification open source indépendante des plateformes, que tout le monde est libre de mettre en œuvre.
-1. **[`Sling`moteur de script HTL ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
-1. **[Extensions AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
+1. **[`Sling`moteur de script HTL &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - Le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
+1. **[Extensions AEM &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - AEM s’appuie sur le moteur de script HTL `Sling` pour offrir aux développeurs des fonctionnalités pratiques spécifiques à AEM.
 
 Cette documentation HTL se concentre sur l’utilisation de HTL pour développer des solutions AEM. Par conséquent, elle couvre les trois aspects, associant les ressources externes selon les besoins.
 
