@@ -2,13 +2,16 @@
 title: Vue d’ensemble de HTL
 description: Découvrez comment AEM prend en charge HTL (HTML Template Language) pour fournir un framework web productif au niveau de l’entreprise et renforcer ainsi la sécurité. Ce framework permet aux développeurs et développeuses HTML ne disposant pas de connaissance de Java de mieux prendre part aux projets AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
-source-git-commit: 5a493aea198f5e70834f5882fc0af9ac855717df
+TQID: https://experienceleague.adobe.com/aJOvBYeraXDv104qRJqUlp7d0as9YW1lSIg0EKaAUD0
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3a
+source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: 677
 ht-degree: 100%
 
 ---
-
 
 # Vue d’ensemble {#overview}
 

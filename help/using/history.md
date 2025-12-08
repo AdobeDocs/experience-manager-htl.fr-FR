@@ -2,14 +2,16 @@
 title: Historique de HTL
 description: Pour les utilisateurs de longue date d’AEM, ce document fournit l’arrière-plan de HTL, comment il remplace JSP et le changement de nom de Sightly.
 exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
-index: false
-source-git-commit: 84db446b019d74070ce4af64091dd0674dab9d33
+index: no
+TQID: https://experienceleague.adobe.com/GKmIxjLoe0Dv0-fU0z4cX62b8R2HqCPccATWfwhxPGI
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: 530
 ht-degree: 100%
 
 ---
-
 
 # Historique de HTL {#history-of-htl}
 

@@ -2,13 +2,16 @@
 title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: 84db446b019d74070ce4af64091dd0674dab9d33
+TQID: https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJbJ4s
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3aid: ea99d093-20a6-45a0-99ac-a82e7018eb37
+source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: 2077
 ht-degree: 100%
 
 ---
-
 
 # Prise en main de HTL {#getting-started-with-htl}
 
