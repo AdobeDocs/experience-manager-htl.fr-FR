@@ -2,15 +2,15 @@
 title: Extensions AEM
 description: AEM propose des extensions de spécification HTL pour AEM pour votre commodité en tant que développeur ou développeuse.
 exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
-index: no
+index: false
 TQID: https://experienceleague.adobe.com/DstGHNLbStXG1SHZgLhmMz2tYVV056CvxWOsl4tuGW4
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
+source-git-commit: 944fa924e7ccba0a195b2c92584ab75df86b1f83
 workflow-type: tm+mt
-source-wordcount: 228
+source-wordcount: 325
 ht-degree: 100%
 
 ---

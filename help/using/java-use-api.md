@@ -2,7 +2,7 @@
 title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-index: no
+index: false
 TQID: https://experienceleague.adobe.com/lCMIs0khRwcDzk97TQcNMMl4h7OZNf3KlK2YA4ANbZQ
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
@@ -11,9 +11,9 @@ role_v2:
 topic_v2:
   - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
   - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
-source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
+source-git-commit: 944fa924e7ccba0a195b2c92584ab75df86b1f83
 workflow-type: tm+mt
-source-wordcount: 1132
+source-wordcount: 1643
 ht-degree: 100%
 
 ---
@@ -270,7 +270,7 @@ Notez l’utilisation dans cet exemple : `/apps/my-example/component/info/info.
 
 ### Identifiant local {#local-identifier}
 
-L’identificateur `info` (après le point dans `data-sly-use.info`) est utilisé dans le fichier HTL pour identifier la classe. La portée de cet identificateur est globale dans le fichier, une fois qu’il a été déclaré. Elle ne se limite pas à l’élément qui contient l’instruction `data-sly-use`. 
+L’identificateur `info` (après le point dans `data-sly-use.info`) est utilisé dans le fichier HTL pour identifier la classe. La portée de cet identificateur est globale dans le fichier, une fois qu’il a été déclaré. Elle ne se limite pas à l’élément qui contient l’instruction `data-sly-use`.
 
 Notez l’utilisation dans cet exemple : `/apps/my-example/component/info/info.html`.
 
