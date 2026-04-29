@@ -10,8 +10,8 @@ role_v2:
 topic_v2:
   - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
 source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
-workflow-type: tm+mt
-source-wordcount: 677
+workflow-type: ht
+source-wordcount: 716
 ht-degree: 100%
 
 ---
@@ -34,7 +34,7 @@ Le langage HTL (HTML Template Language) renforce la sécurité du site en appliq
 
 Bien que le même résultat puisse être obtenu avec des langages de modèle tels que JSP, le développement doit garantir que l’échappement manuel approprié est appliqué à chaque variable. Comme une seule omission ou erreur dans l’échappement appliqué est potentiellement suffisante pour provoquer une vulnérabilité de type XSS (cross-site scripting), Adobe a décidé d’automatiser cette tâche avec HTL. Si nécessaire, les développeurs et développeuses peuvent toujours spécifier une séquence d’échappement différente sur les expressions, mais avec HTL, le comportement par défaut est beaucoup plus susceptible de correspondre au comportement souhaité, ce qui réduit la probabilité d’erreurs.
 
-## Développement simplifié   {#simplified-development}
+## Développement simplifié {#simplified-development}
 
 Le langage du modèle HTML est facile à apprendre et ses fonctionnalités sont volontairement limitées pour s’assurer qu’il reste simple et direct. Il dispose également de mécanismes puissants pour structurer les balises et appeler la logique, tout en appliquant toujours une séparation stricte des préoccupations entre les balises et la logique. HTL est un HTML5 standard, qui utilise des expressions et des attributs de données pour annoter le balisage d’un comportement dynamique. Cette approche permet de conserver la validité et la lisibilité du balisage. L’évaluation des expressions et des attributs de données est effectuée entièrement côté serveur et ne sera pas visible côté client, où tout framework JavaScript souhaité peut être utilisé sans interférence.
 
