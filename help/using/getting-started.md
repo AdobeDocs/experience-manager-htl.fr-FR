@@ -3,23 +3,19 @@ title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 TQID: https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJbJ4s
-product_v2:
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
-  - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3aid: ea99d093-20a6-45a0-99ac-a82e7018eb37
 source-git-commit: f487047a68e98d1b089e0e7124ab91f3281d51ad
-workflow-type: tm+mt
-source-wordcount: 2077
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: 2153
+ht-degree: 100%
 
 ---
 
 # Prise en main de HTL {#getting-started-with-htl}
 
-Le langage de modèle HTML (HTL) est le système de modèle côté serveur préféré et recommandé pour HTML dans Adobe Experience Manager. Comme dans tous les systèmes de modèles HTML côté serveur, un fichier HTL définit la sortie envoyée au navigateur en spécifiant le code HTML lui-même, une logique de présentation de base et des variables à évaluer au moment de l’exécution.
+Le langage HTL (HTML Template Language) est le système de modèles côté serveur favori et recommandé pour HTML dans Adobe Experience Manager.Comme dans tous les systèmes de modèles HTML côté serveur, un fichier HTL définit la sortie envoyée au navigateur en spécifiant le code HTML lui-même, une logique de présentation de base et des variables à évaluer au moment de l’exécution.
 
 Ce document donne un aperçu de l’objectif du HTL et offre une introduction aux concepts et éléments fondamentaux du langage.
 
@@ -51,7 +47,7 @@ Le langage HTL utilise un langage d’expression pour insérer des éléments de
 >
 >Pour exécuter la plupart des exemples fournis sur cette page, vous pouvez utiliser un environnement d’exécution en temps réel appelé [Read Eval Print Loop](https://github.com/adobe/aem-htl-repl).
 
-### Blocs et expressions   {#blocks-and-expressions}
+### Blocs et expressions {#blocks-and-expressions}
 
 Voici un premier exemple qui peut être présenté tel quel dans un fichier `template.html` :
 
@@ -68,7 +64,7 @@ Nous pouvons distinguer deux différents types de syntaxe :
 
 Voir la [Spécification HTL](specification.md) pour plus d’informations sur les deux syntaxes.
 
-### Élément SLY   {#the-sly-element}
+### Élément SLY {#the-sly-element}
 
 Un concept central de HTL est d’offrir la possibilité de réutiliser des éléments HTML existants pour définir des instructions de bloc. Cette réutilisation évite d’insérer des délimiteurs supplémentaires pour définir l’endroit où l’instruction commence et se termine. L’annotation des balises transforme discrètement le HTML statique en modèle dynamique sans rompre la validité du HTML, assurant un affichage correct même sous la forme de fichiers statiques.
 
@@ -112,7 +108,7 @@ Et l’élément `div` pourrait avoir été annoté avec la condition suivante 
 </div>
 ```
 
-### Commentaires HTL   {#htl-comments}
+### Commentaires HTL {#htl-comments}
 
 L’exemple suivant illustre un commentaire HTL sur la première ligne et un commentaire HTML sur la deuxième ligne.
 
@@ -127,13 +123,13 @@ Le contenu des commentaires HTML standard est toutefois transmis et les expressi
 
 Les commentaires HTML ne peuvent pas contenir de commentaires HTL et vice versa.
 
-### Contextes spéciaux   {#special-contexts}
+### Contextes spéciaux {#special-contexts}
 
 Pour pouvoir tirer le meilleur parti de HTL, il est important de bien comprendre ce qu’implique le fait qu’il soit basé sur la syntaxe HTML.
 
 Reportez-vous à la [section Afficher le contexte](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) de la spécification HTL pour plus d’informations.
 
-### Noms des éléments et attributs   {#element-and-attribute-names}
+### Noms des éléments et attributs {#element-and-attribute-names}
 
 Des expressions peuvent uniquement être placées dans du texte HTML ou des valeurs d’attribut, mais pas dans des noms d’éléments ou d’attributs, car le HTML ne serait alors plus valide. Pour définir dynamiquement des noms d’éléments, l’instruction `data-sly-element` peut être utilisée sur les éléments souhaités. Pour définir dynamiquement des noms d’attributs, et même pour définir plusieurs attributs en même temps, vous pouvez utiliser l’instruction `data-sly-attribute`.
 
@@ -186,11 +182,11 @@ Voici un exemple de la façon de définir le contexte des expressions placées d
 
 Pour plus de détails sur la façon de contrôler l’échappement, référez-vous à la section [Contexte d’affichage du langage d’expression](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) des spécifications HTL.
 
-## Capacités générales du HTL   {#general-capabilities-of-htl}
+## Capacités générales du HTL {#general-capabilities-of-htl}
 
 Cette section décrit brièvement les fonctionnalités générales du langage HTL.
 
-### Use-API pour accéder à la logique   {#use-api-for-accessing-logic}
+### Use-API pour accéder à la logique {#use-api-for-accessing-logic}
 
 L’API Use-API Java HTML Template Language (HTL) permet à un fichier HTL d’accéder aux méthodes d’assistance en classe Java personnalisée via `data-sly-use`. Ce processus permet à l’ensemble de la logique commerciale complexe d’être encapsulée dans le code Java tandis que le code HTL traite uniquement la production directe des balises.
 
