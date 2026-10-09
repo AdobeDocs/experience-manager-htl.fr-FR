@@ -2,26 +2,23 @@
 title: Prise en main de HTL
 description: Découvrez HTL, le système de modèles côté serveur préféré et recommandé pour le HTML dans AEM, et comprenez les concepts majeurs du langage et ses éléments fondamentaux.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-TQID: https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJbJ4s
+TQID: 'https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJbJ4s'
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
-  - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
-source-git-commit: f487047a68e98d1b089e0e7124ab91f3281d51ad
+    internal-label: Developer
+source-git-commit: ad1e15465b8b969663842d4946a1fa182821bcc1
 workflow-type: tm+mt
-source-wordcount: 2153
+source-wordcount: '2153'
 ht-degree: 100%
-
 ---
-
 # Prise en main de HTL {#getting-started-with-htl}
 
 Le langage HTL (HTML Template Language) est le système de modèles côté serveur favori et recommandé pour HTML dans Adobe Experience Manager. Comme dans tous les systèmes de modèles HTML côté serveur, un fichier HTL définit la sortie envoyée au navigateur en spécifiant le code HTML lui-même, une logique de présentation de base et des variables à évaluer au moment de l’exécution.
 
-Ce document donne un aperçu de l’objectif du HTL et offre une introduction aux concepts et éléments fondamentaux du langage.
+Ce document donne une vue d’ensemble de l’objectif du HTL et offre une introduction aux concepts et éléments fondamentaux du langage.
 
 >[!TIP]
 >
@@ -35,7 +32,7 @@ Ce document donne un aperçu de l’objectif du HTL et offre une introduction au
 
 ## Calques HTL {#layers}
 
-Dans AEM, plusieurs calques définissent HTL.
+Dans AEM, plusieurs couches définissent HTL.
 
 1. **[Spécification HTL](specification.md)** : HTL est une spécification open source indépendante de la plateforme, que tout le monde est libre de mettre en œuvre.
 1. **[`Sling`Moteur de script HTL](specification.md)** : le projet `Sling` a créé l’implémentation de référence de HTL, qui est utilisée par AEM.
@@ -45,7 +42,7 @@ Cette documentation HTL se concentre sur l’utilisation de HTL pour développer
 
 ## Concepts fondamentaux de HTL {#fundamental-concepts-of-htl}
 
-Le langage HTL utilise un langage d’expression pour insérer des éléments de contenu dans l’annotation restituée et des attributs de données HTML5 pour définir des instructions sur des blocs d’annotation (comme des conditions ou des itérations). Lorsque HTL est compilé dans des servlets Java, les expressions et les attributs de données HTL sont tous deux entièrement évalués côté serveur, et rien ne reste visible dans le HTML résultant.
+Le langage de modèle HTML (HTL) utilise un langage d’expression pour insérer des éléments de contenu dans le balisage restitué et des attributs de données HTML5 pour définir des instructions sur des blocs de balisage (tels que des conditions ou des itérations). Lorsque HTL est compilé dans des servlets Java, les expressions et les attributs de données HTL sont tous deux entièrement évalués côté serveur, et rien ne reste visible dans le HTML résultant.
 
 >[!TIP]
 >
@@ -121,7 +118,7 @@ L’exemple suivant illustre un commentaire HTL sur la première ligne et un com
 <!-- An HTML Comment -->
 ```
 
-Les commentaires HTL sont des commentaires HTML avec une syntaxe JavaScript supplémentaire. La personne responsable du traitement ignore entièrement le commentaire HTL entier et tout ce qui se trouve à l’intérieur, le supprimant de la sortie.
+Les commentaires HTL sont des commentaires HTML avec une syntaxe JavaScript supplémentaire. Le processeur ignore entièrement le commentaire HTL et tout ce qui se trouve à l’intérieur, en le supprimant de la sortie.
 
 Le contenu des commentaires HTML standard est toutefois transmis et les expressions du commentaire sont évaluées.
 
@@ -133,7 +130,7 @@ Pour pouvoir tirer le meilleur parti de HTL, il est important de bien comprendre
 
 Reportez-vous à la [section Afficher le contexte](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) de la spécification HTL pour plus d’informations.
 
-### Noms des éléments et attributs {#element-and-attribute-names}
+### Noms des éléments et des attributs {#element-and-attribute-names}
 
 Des expressions peuvent uniquement être placées dans du texte HTML ou des valeurs d’attribut, mais pas dans des noms d’éléments ou d’attributs, car le HTML ne serait alors plus valide. Pour définir dynamiquement des noms d’éléments, l’instruction `data-sly-element` peut être utilisée sur les éléments souhaités. Pour définir dynamiquement des noms d’attributs, et même pour définir plusieurs attributs en même temps, vous pouvez utiliser l’instruction `data-sly-attribute`.
 
@@ -162,7 +159,7 @@ L’exemple suivant illustre le comportement des commentaires HTML, mais dans l
 -->
 ```
 
-Génère quelque chose semblable au HTML suivant :
+Génère quelque chose de semblable au HTML suivant :
 
 ```xml
 <!--
@@ -173,9 +170,9 @@ Génère quelque chose semblable au HTML suivant :
 
 ### Contextes explicites requis {#explicit-contexts-required}
 
-Comme expliqué dans la section [Échappement automatique en fonction du contexte](#automatic-context-aware-escaping) ci-dessous, l’un des objectifs de HTL est de réduire les risques de vulnérabilité de type attaque cross-site scripting (XSS) en appliquant automatiquement l’échappement automatique à toutes les expressions en fonction du contexte. HTL détecte le contexte des expressions dans les balises HTML, mais n’analyse pas les balises JavaScript ou CSS intégrées. L’équipe de développement doit donc spécifier le contexte exact de ces expressions.
+Comme expliqué dans la section [Échappement automatique en fonction du contexte](#automatic-context-aware-escaping) ci-dessous, l’un des objectifs de HTL est de réduire les risques de vulnérabilité de type attaque cross-site scripting (XSS) en appliquant automatiquement l’échappement automatique à toutes les expressions en fonction du contexte. HTL détecte le contexte des expressions dans les balises HTML, mais n’analyse pas le JavaScript ou le CSS en ligne. L’équipe de développement doit donc spécifier le contexte exact de ces expressions.
 
-Comme il n’applique pas les résultats d’échappement corrects dans les vulnérabilités XSS, HTL supprime la sortie de toutes les expressions qui se trouvent dans les contextes de script et de style lorsque le contexte n’a pas été déclaré.
+Comme le fait de ne pas appliquer l’échappement correct entraîne des vulnérabilités XSS, HTL supprime donc la sortie de toutes les expressions qui se trouvent dans les contextes de script et de style lorsque le contexte n’a pas été déclaré.
 
 Voici un exemple de la façon de définir le contexte des expressions placées dans les scripts et les styles :
 
@@ -188,7 +185,7 @@ Pour plus de détails sur la façon de contrôler l’échappement, référez-vo
 
 ## Capacités générales du HTL {#general-capabilities-of-htl}
 
-Cette section décrit brièvement les fonctionnalités générales du langage HTL.
+Cette section décrit brièvement les fonctionnalités générales du langage de modèles HTL.
 
 ### Use-API pour accéder à la logique {#use-api-for-accessing-logic}
 
@@ -210,7 +207,7 @@ Considérez l’exemple suivant :
 
 Dans la plupart des langages de modèle, cet exemple devrait créer une vulnérabilité de type cross-site scripting (XSS), car même si toutes les variables sont automatiquement placées dans une séquence d’échappement en HTML, l’attribut `href` doit toujours être placé dans une séquence d’échappement spécifiquement par l’URL. Cette omission est l’une des erreurs les plus courantes, car cet élément peut facilement être oublié et il est difficile de le repérer de manière automatique.
 
-Pour plus de facilité, le langage de modèle HTML présente automatiquement une séquence d’échappement pour chaque variable en fonction du contexte dans lequel elle se trouve. Cette approche est possible parce que le HTL comprend la syntaxe du HTML.
+Pour plus de facilité, le langage de modèle HTML échappe automatiquement chaque variable en fonction du contexte dans lequel elle se trouve. Cette approche est possible parce que le HTL comprend la syntaxe du HTML.
 
 Considérons le fichier `logic.js` suivant :
 
@@ -253,14 +250,14 @@ Encore une fois, ce processus est possible parce que le HTL comprend la syntaxe 
 De plus, le type de variable placé dans l’expression est important :
 
 * **Chaîne :**
-   * **Non vide :** définit la chaîne comme valeur d’attribut.
-   * **Vide :** supprime l’attribut.
+  * **Non vide :** définit la chaîne comme valeur d’attribut.
+  * **Vide :** supprime l’attribut.
 
 * **Nombre :** définit la valeur en tant que valeur d’attribut.
 
 * **Booléen :**
-   * **true :** affiche l’attribut sans valeur (en tant qu’attribut HTML booléen
-   * **false :** supprime l’attribut.
+  * **true :** affiche l’attribut sans valeur (en tant qu’attribut HTML booléen
+  * **false :** supprime l’attribut.
 
 Voici un exemple de la manière dont une expression booléenne peut contrôler un attribut HTML booléen :
 
@@ -293,7 +290,7 @@ Voici deux courts exemples.
      data-sly-call="${clientlib.all @ categories=['myCategory1', 'myCategory2']}"/>
 ```
 
-#### Référencement d’une bibliothèque cliente dans différentes sections d’une page {#referencing-a-client-library-in-different-sections-of-a-page}
+#### Référencement d’une Bibliothèque cliente dans différentes sections d’une page {#referencing-a-client-library-in-different-sections-of-a-page}
 
 ```xml
 <!doctype html>
