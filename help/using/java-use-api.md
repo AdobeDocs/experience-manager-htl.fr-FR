@@ -3,30 +3,27 @@ title: Java Use-API HTL
 description: Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 index: false
-TQID: https://experienceleague.adobe.com/lCMIs0khRwcDzk97TQcNMMl4h7OZNf3KlK2YA4ANbZQ
+TQID: 'https://experienceleague.adobe.com/lCMIs0khRwcDzk97TQcNMMl4h7OZNf3KlK2YA4ANbZQ'
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
-  - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
-source-git-commit: 944fa924e7ccba0a195b2c92584ab75df86b1f83
-workflow-type: ht
-source-wordcount: 1643
+    internal-label: Developer
+source-git-commit: ad1e15465b8b969663842d4946a1fa182821bcc1
+workflow-type: tm+mt
+source-wordcount: '1643'
 ht-degree: 100%
-
 ---
-
 # Java Use-API HTL {#htl-java-use-api}
 
-Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance de classe Java personnalisées.
+Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance d’une classe Java personnalisée.
 
 ## Cas d’utilisation {#use-case}
 
-Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée via `data-sly-use`. Cette méthode permet à l’ensemble de la logique commerciale complexe d’être encapsulée dans le code Java tandis que le code HTL traite uniquement la production directe des balises.
+Le Java Use-API HTL permet à un fichier HTL d’accéder aux méthodes d’assistance dans une classe Java personnalisée via `data-sly-use`. Cette méthode permet à l’ensemble de la logique métier complexe d’être encapsulée dans le code Java tandis que le code HTL traite uniquement la production directe des balises.
 
-Un objet java Use-API peut être un POJO simple, instancié par une implémentation particulière à travers le constructeur par défaut du POJO.
+Un objet java Use-API peut être un POJO simple, instancié par une mise en œuvre particulière à travers le constructeur par défaut du POJO.
 
 Les POJO Use-API peuvent également exposer une méthode publique, appelée init, avec la signature suivante :
 
@@ -230,7 +227,7 @@ Vous pouvez également accéder directement aux objets de contexte fréquemment 
 
 ### Méthodes getter {#getter-methods}
 
-Une fois la classe d’utilisation initialisée, le fichier HTL est exécuté. Au cours de cette étape, HTL extrait généralement l’état de différentes variables membres de la classe d’utilisation et effectue le rendu pour leur présentation.
+Une fois la classe d’utilisation initialisée, le fichier HTL est exécuté. Au cours de cette étape, HTL extrait généralement l’état de différentes variables membres de la classe d’utilisation et les restitue pour l’affichage.
 
 Pour permettre l’accès à ces valeurs à partir du fichier HTL, vous devez définir des méthodes getter personnalisées dans la classe d’utilisation, en respectant la convention de nommage suivante :
 
@@ -257,7 +254,7 @@ public class Info extends WCMUsePojo {
 
 ### Attribut `data-sly-use` {#data-sly-use-attribute}
 
-L’attribut `data-sly-use` est utilisé pour initialiser la classe d’utilisation dans votre code HTL. Dans cet exemple, l’attribut `data-sly-use` déclare que la classe `Info` est utilisée. Vous pouvez utiliser uniquement le nom local de la classe, car vous utilisez une installation locale (le fichier source Java ayant été placé dans le même dossier que le fichier HTL). Si vous utilisiez une installation groupée, vous devriez spécifier le nom de classe entièrement qualifié.
+L’attribut `data-sly-use` est utilisé pour initialiser la classe d’utilisation dans votre code HTL. Dans cet exemple, l’attribut `data-sly-use` déclare que la classe `Info` est utilisée. Vous pouvez utiliser uniquement le nom local de la classe, car vous utilisez une installation locale (le fichier source Java ayant été placé dans le même dossier que le fichier HTL). Si vous utilisiez une installation de bundle, vous devriez spécifier le nom de classe entièrement qualifié.
 
 Notez l’utilisation dans cet exemple : `/apps/my-example/component/info/info.html`.
 
@@ -318,7 +315,7 @@ Cette section présente quelques autres fonctionnalités qui vont au-delà du si
 
 ### Transmission des paramètres {#passing-parameters}
 
-Les paramètres peuvent être transmis à un chemin de classe d’utilisation lors de l’initialisation.
+Les paramètres peuvent être transmis à une classe d’utilisation lors de l’initialisation.
 
 Pour plus d’informations, consultez la [documentation du moteur de script HTL `Sling`](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
 
